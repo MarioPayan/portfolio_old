@@ -6,14 +6,15 @@ import FacebookIcon from "@mui/icons-material/Facebook"
 import InstagramIcon from "@mui/icons-material/Instagram"
 import GitHubIcon from "@mui/icons-material/GitHub"
 
-type LandingCard = ({id, data}: { id: string; data: any }) => JSX.Element;
+type data = { name: string; title: string; subtitle: string; summary: string };
+type LandingCard = ({id, data}: { id: string; data: data }) => JSX.Element;
 
 const LandingCard: LandingCard = ({
   id = "",
-  data = {},
+  data,
 }: {
   id: string;
-  data: any;
+  data: data;
 }) => {
   return (
     <Paper
