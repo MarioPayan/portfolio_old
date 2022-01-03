@@ -10,7 +10,7 @@ const LandingBackground = () => {
         sx={{
           position: "relative",
           width: "100%",
-          height: "100vh",
+          height: "50vh", // TODO: 100
         }}>
         <Image src={"/landing-image.png"} layout="fill" />
         <Particles

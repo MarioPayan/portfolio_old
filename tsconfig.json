@@ -6,6 +6,7 @@
     "noImplicitThis": true,
     "strictNullChecks": true,
     "allowJs": true,
+    "downlevelIteration": true,
     "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,

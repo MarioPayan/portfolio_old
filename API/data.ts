@@ -1,4 +1,4 @@
-import {Experience, LandingCardData, Skill} from "./types"
+import {TimeLineItem, LandingCardData, Skill} from "./types"
 
 const landingCardData: LandingCardData = {
   name: "Mario Payan",
@@ -8,12 +8,12 @@ const landingCardData: LandingCardData = {
     "Fullstack developer with focus on software development, algorithms design, software as a service and clean code. Challenge driven, always willing to learn, passionate about new technologies, teamwork and code writing.",
 }
 
-const sections = [{key: "about-me", label: "About Me"},
+const sections = [{label: "About Me"},
   {label: "Skills"},
   {label: "Experience"},
   {label: "Education"}]
 
-const skills: Skill[] = [{label: "Javascript", type: "code"},
+const codeSkills: Skill[] = [{label: "Javascript", type: "code"},
   {label: "Typescript", type: "code"},
   {label: "Python", type: "code"},
   {label: "ReactJS", type: "code"},
@@ -37,8 +37,16 @@ const skills: Skill[] = [{label: "Javascript", type: "code"},
   {label: "Linux", type: "os"},
   {label: "OSx", type: "os"}]
 
-const experiences: Experience[] = [{
-  company: "Alert Logic",
+const softSkills: Skill[] = [{label: "Willingness to Learn", type: "nose"},
+  {label: "Problem solving", type: "nose"},
+  {label: "Proactivity", type: "nose"},
+  {label: "Communication", type: "nose"},
+  {label: "Teamwork", type: "nose"},
+  {label: "Adaptability", type: "nose"},
+  {label: "Clean Code", type: "nose"}]
+
+const experiences: TimeLineItem[] = [{
+  where: "Alert Logic",
   from: "Jan2017",
   to: "July2017",
   position: "WebDeveloper,Internship",
@@ -48,7 +56,7 @@ const experiences: Experience[] = [{
     "Software development using scrum agile methodology"],
 },
 {
-  company: "Alert Logic",
+  where: "Alert Logic",
   from: "Oct 2017",
   to: "Nov 2018",
   position: "",
@@ -57,7 +65,7 @@ const experiences: Experience[] = [{
     "Support and maintain Linux nodes with chef"],
 },
 {
-  company: "Alert Logic",
+  where: "Alert Logic",
   from: "Nov 2018",
   to: "Nov 2019",
   position: "",
@@ -67,7 +75,7 @@ const experiences: Experience[] = [{
     "Build new UI experience for one of the most used products"],
 },
 {
-  company: "Alert Logic",
+  where: "Alert Logic",
   from: "Nov 2019",
   to: "Current",
   position: "",
@@ -75,4 +83,20 @@ const experiences: Experience[] = [{
     "Build from scratch an android mobile application"],
 }]
 
-export {landingCardData, sections, skills, experiences}
+const education: TimeLineItem[] = [{
+  where: "Universidad del Valle",
+  from: "2012",
+  to: "2017",
+  position: "B.S. Systems Engineering and Computer Science",
+  achievements: ["National Awarded Academic Scholarship: Bachilleres por Colombia Mario Galán Gómez",
+    "Awarded Academic Scholarships for being at the top of the class"],
+}]
+
+export {
+  landingCardData,
+  sections,
+  codeSkills,
+  softSkills,
+  experiences,
+  education
+}

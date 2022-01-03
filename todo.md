@@ -3,6 +3,7 @@
 - Expand timeline
 - flexbox skill
 - scroll app bar
+- Fix zoom on index
 
 # References
 - https://preview.themeforest.net/item/matresume-material-cv-resume-vcard-portfolio-html-template/full_screen_preview/19309564

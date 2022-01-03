@@ -12,14 +12,13 @@ import {Typography} from "@mui/material"
 import {TimeLine as TimeLineType} from "../API/types"
 import {getKeyFromLabel} from "../API/utils"
 
-const TimeLine: TimeLineType = ({id = "", experiences = []}) => {
+const TimeLine: TimeLineType = ({id = "", items = []}) => {
   return (
     <Timeline id={id}>
-      {experiences.map(experience => (
-        <TimelineItem
-          key={getKeyFromLabel(`${experience.from}-${experience.to}`)}>
+      {items.map(item => (
+        <TimelineItem key={getKeyFromLabel(`${item.from}-${item.to}`)}>
           <TimelineOppositeContent color="text.secondary">
-            {experience.from} - {experience.to}
+            {item.from} - {item.to}
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineDot />
@@ -27,9 +26,9 @@ const TimeLine: TimeLineType = ({id = "", experiences = []}) => {
           </TimelineSeparator>
           <TimelineContent sx={{py: "12px", px: 2}}>
             <Typography variant="h6" component="span">
-              {experience.position}
+              {item.position}
             </Typography>
-            {experience.achievements.map((achievement, i) => (
+            {item.achievements.map((achievement, i) => (
               <Typography key={i}>{achievement}</Typography>
             ))}
           </TimelineContent>

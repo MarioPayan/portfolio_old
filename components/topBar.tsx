@@ -8,10 +8,10 @@ const TopBar: TopBarType = ({sections = []}) => {
     sections.length > 0 ? getKeyFromLabel(sections[0].label) : ""
   )
 
-  const handleChange = (event: React.SyntheticEvent, section: string) => {
+  const changeSection = (event: React.SyntheticEvent, section: string) => {
+    event.preventDefault()
     setSection(section)
     const htmlSection = document.getElementById(section)
-    event.preventDefault()
     htmlSection &&
       htmlSection.scrollIntoView({behavior: "smooth", block: "start"})
   }
@@ -21,7 +21,7 @@ const TopBar: TopBarType = ({sections = []}) => {
       <Container>
         <Tabs
           value={section}
-          onChange={handleChange}
+          onChange={changeSection}
           textColor="secondary"
           indicatorColor="secondary">
           {sections.map(section => (

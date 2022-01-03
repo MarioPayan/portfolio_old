@@ -1,14 +1,5 @@
-export type SkillType =
-  | "code"
-  | "framework"
-  | "html"
-  | "css"
-  | "database"
-  | "git"
-  | "test"
-  | "os";
-export type Skill = { label: string; type: SkillType };
-export type SkillCard = ({
+export type Skill = { label: string; type: string };
+export type SkillChips = ({
   id,
   skills,
 }: {
@@ -30,8 +21,8 @@ export type LandingCard = ({
   data: LandingCardData;
 }) => JSX.Element;
 
-export type Experience = {
-  company: string;
+export type TimeLineItem = {
+  where: string;
   from: string;
   to: string;
   position: string;
@@ -40,10 +31,10 @@ export type Experience = {
 
 export type TimeLine = ({
   id,
-  experiences,
+  items,
 }: {
   id: string;
-  experiences: Experience[];
+  items: TimeLineItem[];
 }) => JSX.Element;
 
 export type Section = { label: string };
