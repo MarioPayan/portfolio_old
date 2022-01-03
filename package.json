@@ -5,9 +5,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "npm run prettier && npm run eslint-fix 2>/dev/null && next lint",
+    "eslint": "node ./node_modules/eslint/bin/eslint.js . --ext .js,.jsx,.ts,.tsx --color",
+    "eslint-fix": "node ./node_modules/eslint/bin/eslint.js --ext .js,.jsx,.ts,.tsx . --fix",
+    "prettier": "prettier --write **/*.{ts,tsx,scss,css,json}"
   },
   "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mui/icons-material": "^5.2.5",
+    "@mui/lab": "^5.0.0-alpha.62",
+    "@mui/material": "^5.2.6",
     "next": "12.0.7",
     "react": "17.0.2",
     "react-dom": "17.0.2"
@@ -15,8 +23,12 @@
   "devDependencies": {
     "@types/node": "17.0.6",
     "@types/react": "17.0.38",
-    "eslint": "8.6.0",
+    "@typescript-eslint/eslint-plugin": "^5.8.1",
+    "@typescript-eslint/parser": "^5.8.1",
+    "eslint": "^8.6.0",
     "eslint-config-next": "12.0.7",
+    "eslint-plugin-react": "^7.28.0",
+    "prettier": "^2.5.1",
     "typescript": "4.5.4"
   }
 }
