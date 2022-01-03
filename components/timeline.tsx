@@ -9,35 +9,15 @@ import {
   TimelineOppositeContent
 } from "@mui/lab"
 import {Typography} from "@mui/material"
+import {TimeLine as TimeLineType} from "../API/types"
+import {getKeyFromLabel} from "../API/utils"
 
-type Experience = {
-  key: string;
-  company: string;
-  from: string;
-  to: string;
-  position: string;
-  achievements: string[];
-};
-
-type TimeLine = ({
-  id,
-  experiences,
-}: {
-  id: string;
-  experiences: Experience[];
-}) => JSX.Element;
-
-const TimeLine: TimeLine = ({
-  id = "",
-  experiences = [],
-}: {
-  id: string;
-  experiences: Experience[];
-}) => {
+const TimeLine: TimeLineType = ({id = "", experiences = []}) => {
   return (
     <Timeline id={id}>
       {experiences.map(experience => (
-        <TimelineItem key={experience.key}>
+        <TimelineItem
+          key={getKeyFromLabel(`${experience.from}-${experience.to}`)}>
           <TimelineOppositeContent color="text.secondary">
             {experience.from} - {experience.to}
           </TimelineOppositeContent>

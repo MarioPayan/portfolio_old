@@ -71,7 +71,8 @@
       }
     ],
     "eol-last": ["error", "always"],
-    "object-curly-spacing": ["error", "never"]
+    "object-curly-spacing": ["error", "never"],
+    "react/prop-types": "off"
   },
   "settings": {
     "react": {

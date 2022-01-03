@@ -1,12 +1,11 @@
 import React, {useState} from "react"
 import {AppBar, Container, Tab, Tabs} from "@mui/material"
+import {TopBar as TopBarType} from "../API/types"
+import {getKeyFromLabel} from "../API/utils"
 
-type Section = { key: string; label: string };
-type TopBar = ({sections}: { sections: Section[] }) => JSX.Element;
-
-const TopBar: TopBar = ({sections = []}: { sections: Section[] }) => {
+const TopBar: TopBarType = ({sections = []}) => {
   const [section, setSection] = useState(
-    sections.length > 0 ? sections[0].key : ""
+    sections.length > 0 ? getKeyFromLabel(sections[0].label) : ""
   )
 
   const handleChange = (event: React.SyntheticEvent, section: string) => {
@@ -27,10 +26,10 @@ const TopBar: TopBar = ({sections = []}: { sections: Section[] }) => {
           indicatorColor="secondary">
           {sections.map(section => (
             <Tab
-              key={section.key}
-              value={section.key}
+              key={getKeyFromLabel(section.label)}
+              value={getKeyFromLabel(section.label)}
               label={section.label}
-              href={section.key}/>
+              sx={{fontWeight: "bold"}}/>
           ))}
         </Tabs>
       </Container>

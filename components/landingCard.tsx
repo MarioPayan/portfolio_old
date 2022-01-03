@@ -1,31 +1,23 @@
 import React from "react"
 import Image from "next/image"
 import Grid from "@mui/material/Grid"
-import {Button, Paper, Stack, Typography} from "@mui/material"
-import FacebookIcon from "@mui/icons-material/Facebook"
-import InstagramIcon from "@mui/icons-material/Instagram"
-import GitHubIcon from "@mui/icons-material/GitHub"
+import {Box, Button, Paper, Stack, Typography} from "@mui/material"
+import {Facebook, Instagram, GitHub} from "@mui/icons-material"
+import {LandingCard as LandingCardType} from "../API/types"
 
-type data = { name: string; title: string; subtitle: string; summary: string };
-type LandingCard = ({id, data}: { id: string; data: data }) => JSX.Element;
-
-const LandingCard: LandingCard = ({
-  id = "",
-  data,
-}: {
-  id: string;
-  data: data;
-}) => {
+const LandingCard: LandingCardType = ({id = "", data}) => {
   return (
     <Paper
       id={id}
       elevation={3}
       sx={{width: "75%", justifyContent: "center"}}>
       <Grid container spacing={2} sx={{padding: "40px"}}>
-        <Grid item xs={4}>
-          <Image src={"/profile.jpg"} width={300} height={300} />
+        <Grid item xs={12} lg={4}>
+          <Box display="flex" sx={{justifyContent: "center"}}>
+            <Image src={"/profile.jpg"} width={300} height={300} />
+          </Box>
         </Grid>
-        <Grid container item xs={8} spacing={2}>
+        <Grid container item xs={12} lg={8} spacing={2}>
           <Grid item xs={12}>
             <Typography noWrap variant="h1" component="h1">
               {data.name}
@@ -52,7 +44,6 @@ const LandingCard: LandingCard = ({
               spacing={1}
               flexWrap="wrap"
               display="flex"
-              alignItems="center"
               justifyContent="center">
               <Button color="primary" variant="contained">
                 Contact me
@@ -68,11 +59,10 @@ const LandingCard: LandingCard = ({
               spacing={1}
               flexWrap="wrap"
               display="flex"
-              alignItems="right"
               justifyContent="right">
-              <FacebookIcon></FacebookIcon>
-              <InstagramIcon></InstagramIcon>
-              <GitHubIcon></GitHubIcon>
+              <Facebook />
+              <Instagram />
+              <GitHub />
             </Stack>
           </Grid>
         </Grid>
