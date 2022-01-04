@@ -11,10 +11,11 @@ import {
 import {Typography} from "@mui/material"
 import {TimeLine as TimeLineType} from "../API/types"
 import {getKeyFromLabel} from "../API/utils"
+import {topBarTargetStyles} from "../styles/theme"
 
 const TimeLine: TimeLineType = ({id = "", items = []}) => {
   return (
-    <Timeline id={id}>
+    <Timeline id={id} sx={topBarTargetStyles}>
       {items.map(item => (
         <TimelineItem key={getKeyFromLabel(`${item.from}-${item.to}`)}>
           <TimelineOppositeContent color="text.secondary">

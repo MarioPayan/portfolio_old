@@ -8,7 +8,7 @@ const landingCardData: LandingCardData = {
     "Fullstack developer with focus on software development, algorithms design, software as a service and clean code. Challenge driven, always willing to learn, passionate about new technologies, teamwork and code writing.",
 }
 
-const sections = [{label: "About Me"},
+const sections = [{label: "About"},
   {label: "Skills"},
   {label: "Experience"},
   {label: "Education"}]

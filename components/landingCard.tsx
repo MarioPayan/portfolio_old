@@ -4,10 +4,11 @@ import Grid from "@mui/material/Grid"
 import {Box, Button, Paper, Stack, Typography} from "@mui/material"
 import {Facebook, Instagram, GitHub} from "@mui/icons-material"
 import {LandingCard as LandingCardType} from "../API/types"
+import {topBarTargetStyles} from "../styles/theme"
 
 const LandingCard: LandingCardType = ({id = "", data}) => {
   return (
-    <Grid item id={id} xs={12} md={9}>
+    <Grid item id={id} xs={12} md={9} sx={topBarTargetStyles}>
       <Paper elevation={3} sx={{justifyContent: "center"}}>
         <Grid container spacing={2} sx={{padding: "40px"}}>
           <Grid item xs={12} lg={4}>
