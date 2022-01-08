@@ -17,8 +17,10 @@ import {topBarTargetStyles} from "../styles/theme"
 
 const SkillChips: SkillChipsType = ({id = "", skills = []}) => {
   const defaultFilter = "all"
-  const filters: string[] = [defaultFilter,
-    ...new Set(skills.map(skill => skill.type))]
+  const filters: string[] = [
+    defaultFilter,
+    ...new Set(skills.map(skill => skill.type)),
+  ]
   const [filter, setFilter] = useState(defaultFilter)
   const [filteredSkills, setFilteredSkills] = useState<Skill[]>(skills)
 

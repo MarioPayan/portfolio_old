@@ -8,30 +8,77 @@ import {
   TimelineDot,
   TimelineOppositeContent
 } from "@mui/lab"
-import {Typography} from "@mui/material"
-import {TimeLine as TimeLineType} from "../API/types"
+import {
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  Typography
+} from "@mui/material"
+import {TimeLine as TimeLineType, TimeLineItem} from "../API/types"
 import {getKeyFromLabel} from "../API/utils"
 import {topBarTargetStyles} from "../styles/theme"
+import PlayArrowIcon from "@mui/icons-material/PlayArrow"
+
+const toDate = (date: string): string => {
+  if (!date) return "Current"
+  return new Date(date).toLocaleString("default", {
+    month: "short",
+    year: "numeric",
+    timeZone: "UTC",
+  })
+}
+
+const dateDiff = (dateA: string, dateB: string): string => {
+  const getTime = (date: string): number => (date ? new Date(date).getTime() : new Date().getTime())
+  const daysDiff = Math.floor(
+    (getTime(dateB) - getTime(dateA)) / (1000 * 60 * 60 * 24)
+  )
+  let timeDiff = "Just started"
+  const years = Math.floor(daysDiff / 365)
+  const yearsDiff = years >= 1 ? `${years} Year${years > 1 ? "s" : ""}` : ""
+  const months = Math.ceil(daysDiff / 30) % 12
+  const monthsDiff =
+    months >= 1 ? `${months} Month${months > 1 ? "s" : ""}` : ""
+  if (yearsDiff && monthsDiff) timeDiff = `${yearsDiff}, ${monthsDiff}`
+  else if (yearsDiff || monthsDiff) timeDiff = `${yearsDiff}${monthsDiff}`
+  return `(${timeDiff})`
+}
+
+const sortFrom = (a: TimeLineItem, b: TimeLineItem): number => {
+  return new Date(b.from).getTime() - new Date(a.from).getTime()
+}
 
 const TimeLine: TimeLineType = ({id = "", items = []}) => {
   return (
     <Timeline id={id} sx={topBarTargetStyles}>
-      {items.map(item => (
+      {items.sort(sortFrom).map(item => (
         <TimelineItem key={getKeyFromLabel(`${item.from}-${item.to}`)}>
           <TimelineOppositeContent color="text.secondary">
-            {item.from} - {item.to}
+            {toDate(item.from)} - {toDate(item.to)}
+            <Typography variant="subtitle2" component="p">
+              {dateDiff(item.from, item.to)}
+            </Typography>
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineDot />
             <TimelineConnector />
           </TimelineSeparator>
-          <TimelineContent sx={{py: "12px", px: 2}}>
-            <Typography variant="h6" component="span">
+          <TimelineContent sx={{mb: 2}}>
+            <Typography variant="h5" component="h5" sx={{mt: -0.5, pb: 1}}>
               {item.position}
             </Typography>
-            {item.achievements.map((achievement, i) => (
-              <Typography key={i}>{achievement}</Typography>
-            ))}
+            <List>
+              {item.achievements.map((achievement, i) => (
+                <ListItem key={i} disablePadding>
+                  <ListItemIcon
+                    sx={{height: "24px", width: "24px", minWidth: "30px"}}>
+                    <PlayArrowIcon />
+                  </ListItemIcon>
+                  <ListItemText primary={achievement} />
+                </ListItem>
+              ))}
+            </List>
           </TimelineContent>
         </TimelineItem>
       ))}

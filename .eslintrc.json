@@ -24,7 +24,7 @@
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "double"],
     "semi": ["error", "never"],
-    "array-bracket-newline": ["error", "never"],
+    "array-bracket-newline": ["error", "consistent"],
     "array-bracket-spacing": ["error", "never"],
     "array-element-newline": ["error", "consistent"],
     "max-len": [
@@ -38,7 +38,7 @@
       "error",
       { "multiline": true, "consistent": true }
     ],
-    "no-confusing-arrow": ["warn", { "allowParens": false }],
+    "no-confusing-arrow": ["warn", { "allowParens": true }],
     "implicit-arrow-linebreak": ["error", "beside"],
     "react/jsx-filename-extension": [
       2,
