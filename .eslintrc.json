@@ -40,6 +40,8 @@
     ],
     "no-confusing-arrow": ["warn", { "allowParens": true }],
     "implicit-arrow-linebreak": ["error", "beside"],
+    "operator-linebreak": ["error", "none"],
+    "no-multi-spaces": ["error"],
     "react/jsx-filename-extension": [
       2,
       { "extensions": [".js", ".jsx", ".ts", ".tsx"] }

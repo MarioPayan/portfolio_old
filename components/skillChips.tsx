@@ -53,6 +53,7 @@ const SkillChips: SkillChipsType = ({id = "", skills = []}) => {
   return (
     <Grid
       container
+      item
       id={id}
       spacing={1}
       xs={12}

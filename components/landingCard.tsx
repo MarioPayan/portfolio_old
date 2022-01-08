@@ -1,10 +1,19 @@
 import React from "react"
 import Image from "next/image"
 import Grid from "@mui/material/Grid"
-import {Box, Button, Paper, Stack, Typography} from "@mui/material"
+import {
+  Box,
+  Button,
+  IconButton,
+  Paper,
+  Stack,
+  Typography
+} from "@mui/material"
 import {Facebook, Instagram, GitHub} from "@mui/icons-material"
 import {LandingCard as LandingCardType} from "../API/types"
 import {topBarTargetStyles} from "../styles/theme"
+import {openInNewTab} from "../API/utils"
+import {social} from "../API/data"
 
 const LandingCard: LandingCardType = ({id = "", data}) => {
   return (
@@ -13,7 +22,19 @@ const LandingCard: LandingCardType = ({id = "", data}) => {
         <Grid container spacing={2} sx={{padding: "40px"}}>
           <Grid item xs={12} lg={4}>
             <Box display="flex" sx={{justifyContent: "center"}}>
-              <Image src={"/profile.jpg"} width={300} height={300} />
+              <Image
+                src={"/profile2.jpg"}
+                className="profile-picture"
+                width={300}
+                height={300}/>
+              <style jsx global>{`
+                .profile-picture {
+                  border-radius: 50%;
+                  border-style: solid !important;
+                  border-color: grey !important;
+                  border-width: 10px !important;
+                }
+              `}</style>
             </Box>
           </Grid>
           <Grid container item xs={12} lg={8} spacing={2}>
@@ -59,9 +80,21 @@ const LandingCard: LandingCardType = ({id = "", data}) => {
                 flexWrap="wrap"
                 display="flex"
                 justifyContent="right">
-                <Facebook />
-                <Instagram />
-                <GitHub />
+                <IconButton
+                  aria-label="Facebook"
+                  onClick={() => openInNewTab(social.facebook)}>
+                  <Facebook />
+                </IconButton>
+                <IconButton
+                  aria-label="Facebook"
+                  onClick={() => openInNewTab(social.instagram)}>
+                  <Instagram />
+                </IconButton>
+                <IconButton
+                  aria-label="Facebook"
+                  onClick={() => openInNewTab(social.github)}>
+                  <GitHub />
+                </IconButton>
               </Stack>
             </Grid>
           </Grid>

@@ -12,8 +12,7 @@ const TopBar: TopBarType = ({sections = []}) => {
     event.preventDefault()
     setSection(section)
     const htmlSection = document.getElementById(section)
-    htmlSection &&
-      htmlSection.scrollIntoView({behavior: "smooth", block: "start"})
+    htmlSection && htmlSection.scrollIntoView({behavior: "smooth", block: "start"})
   }
 
   return (

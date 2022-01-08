@@ -1,6 +1,6 @@
 import {TimeLineItem, LandingCardData, Skill} from "./types"
 
-const landingCardData: LandingCardData = {
+export const landingCardData: LandingCardData = {
   name: "Mario Payan",
   title: "Software Developer",
   subtitle: "Full Stack Engineer | Javascript & Python | Django & React",
@@ -8,14 +8,72 @@ const landingCardData: LandingCardData = {
     "Fullstack developer with focus on software development, algorithms design, software as a service and clean code. Challenge driven, always willing to learn, passionate about new technologies, teamwork and code writing.",
 }
 
-const sections = [
+export const social = {
+  facebook: "https://www.facebook.com/Mario.A.Payan.V",
+  instagram: "https://www.instagram.com/mario.a.payan/",
+  github: "https://github.com/marioPayan",
+}
+
+export const projects = [
+  {
+    label:
+      "Aplicación de Realidad Aumentada para la Comunicación de Información relativa al proceso de autoevaluación del Programa Académico de Ingeniería de Sistemas",
+    description: "Thesis project",
+    link: "",
+  },
+  {
+    label: "Deft website",
+    description: "Landing page for Deft Soluciones company",
+    link: "https://deftsoluciones.com/",
+  },
+  {
+    label: "Placa y Cédula (Android)",
+    description:
+      "Android app to know when you can go outside during the pandemic situation in Colombia (Unmaintained)",
+    link: "https://play.google.com/store/apps/details?id=com.herokuapp.placa_y_cedula.twa",
+  },
+  {
+    label: "Placa y Cédula (Web)",
+    description:
+      "Web app to know when you can go outside during the pandemic situation in Colombia (Unmaintained)",
+    link: "https://placa-y-cedula.herokuapp.com/",
+  },
+  {
+    label: "SVG Learning Tool",
+    description:
+      "A simple tool to understand how SVG works that I made in my free time to help some mates",
+    link: "https://mariopayan.github.io/SvgLearningTool/",
+  },
+  {
+    label: "Esta página TODO",
+    description: "TODO",
+    link: "https://www.mariopayan.com/",
+  },
+  {label: "", description: "", link: ""},
+  {label: "", description: "", link: ""},
+  {label: "", description: "", link: ""},
+  {label: "", description: "", link: ""},
+  {label: "", description: ""},
+  {label: "", description: ""},
+  {label: "", description: ""},
+  {label: "", description: ""},
+  {label: "", description: ""},
+  {label: "", description: ""},
+]
+
+export const languages = [
+  {label: "Español", level: "Native"},
+  {label: "English", level: "Professional working proficiency"},
+]
+
+export const sections = [
   {label: "About"},
   {label: "Skills"},
   {label: "Experience"},
   {label: "Education"},
 ]
 
-const codeSkills: Skill[] = [
+export const codeSkills: Skill[] = [
   {label: "Javascript", type: "code"},
   {label: "Typescript", type: "code"},
   {label: "Python", type: "code"},
@@ -41,7 +99,7 @@ const codeSkills: Skill[] = [
   {label: "OSx", type: "os"},
 ]
 
-const softSkills: Skill[] = [
+export const softSkills: Skill[] = [
   {label: "Willingness to Learn", type: "nose"},
   {label: "Problem solving", type: "nose"},
   {label: "Proactivity", type: "nose"},
@@ -51,7 +109,7 @@ const softSkills: Skill[] = [
   {label: "Clean Code", type: "nose"},
 ]
 
-const experiences: TimeLineItem[] = [
+export const experiences: TimeLineItem[] = [
   {
     where: "Alert Logic",
     from: "2017-01",
@@ -116,7 +174,7 @@ const experiences: TimeLineItem[] = [
   },
 ]
 
-const education: TimeLineItem[] = [
+export const education: TimeLineItem[] = [
   {
     where: "Universidad del Valle",
     from: "2012-01",
@@ -128,12 +186,3 @@ const education: TimeLineItem[] = [
     ],
   },
 ]
-
-export {
-  landingCardData,
-  sections,
-  codeSkills,
-  softSkills,
-  experiences,
-  education
-}

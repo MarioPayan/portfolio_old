@@ -38,8 +38,7 @@ const dateDiff = (dateA: string, dateB: string): string => {
   const years = Math.floor(daysDiff / 365)
   const yearsDiff = years >= 1 ? `${years} Year${years > 1 ? "s" : ""}` : ""
   const months = Math.ceil(daysDiff / 30) % 12
-  const monthsDiff =
-    months >= 1 ? `${months} Month${months > 1 ? "s" : ""}` : ""
+  const monthsDiff = months >= 1 ? `${months} Month${months > 1 ? "s" : ""}` : ""
   if (yearsDiff && monthsDiff) timeDiff = `${yearsDiff}, ${monthsDiff}`
   else if (yearsDiff || monthsDiff) timeDiff = `${yearsDiff}${monthsDiff}`
   return `(${timeDiff})`
@@ -54,8 +53,13 @@ const TimeLine: TimeLineType = ({id = "", items = []}) => {
     <Timeline id={id} sx={topBarTargetStyles}>
       {items.sort(sortFrom).map(item => (
         <TimelineItem key={getKeyFromLabel(`${item.from}-${item.to}`)}>
-          <TimelineOppositeContent color="text.secondary">
-            {toDate(item.from)} - {toDate(item.to)}
+          <TimelineOppositeContent color="text.secondary" sx={{mt: -0.5}}>
+            <Typography variant="h6" component="p">
+              {item.where}
+            </Typography>
+            <Typography variant="subtitle1" component="p">
+              {toDate(item.from)} - {toDate(item.to)}
+            </Typography>
             <Typography variant="subtitle2" component="p">
               {dateDiff(item.from, item.to)}
             </Typography>
