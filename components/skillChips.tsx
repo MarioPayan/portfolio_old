@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import {Chip, Grid, Tab, Tabs, Zoom} from "@mui/material"
+import {Chip, Grid, Tab, Tabs, Grow} from "@mui/material"
 import {
   Code,
   IntegrationInstructions,
@@ -15,7 +15,7 @@ import {Skill, SkillChips as SkillChipsType} from "../API/types"
 import {getKeyFromLabel} from "../API/utils"
 import {topBarTargetStyles} from "../styles/theme"
 
-const SkillChips: SkillChipsType = ({id = "", skills = []}) => {
+const SkillChips: SkillChipsType = ({skills = []}) => {
   const defaultFilter = "all"
   const filters: string[] = [
     defaultFilter,
@@ -54,7 +54,6 @@ const SkillChips: SkillChipsType = ({id = "", skills = []}) => {
     <Grid
       container
       item
-      id={id}
       spacing={1}
       xs={12}
       md={8}
@@ -80,7 +79,7 @@ const SkillChips: SkillChipsType = ({id = "", skills = []}) => {
 
       {filteredSkills.map(skill => (
         <Grid item key={getKeyFromLabel(skill.label)}>
-          <Zoom in={[defaultFilter, skill.type].includes(filter)}>
+          <Grow in={[defaultFilter, skill.type].includes(filter)}>
             <Chip
               label={skill.label}
               component="a"
@@ -88,7 +87,7 @@ const SkillChips: SkillChipsType = ({id = "", skills = []}) => {
               variant="outlined"
               // sx={{color: "red", borderWidth: 2, borderColor: "red"}}
               clickable/>
-          </Zoom>
+          </Grow>
         </Grid>
       ))}
     </Grid>

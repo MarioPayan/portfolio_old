@@ -1,4 +1,4 @@
-import {TimeLineItem, LandingCardData, Skill} from "./types"
+import {TimeLineItem, LandingCardData, Skill, Section} from "./types"
 
 export const landingCardData: LandingCardData = {
   name: "Mario Payan",
@@ -29,13 +29,13 @@ export const projects = [
   {
     label: "Placa y Cédula (Android)",
     description:
-      "Android app to know when you can go outside during the pandemic situation in Colombia (Unmaintained)",
+      "Android app to know when you can go outside during the pandemic situation in Colombia",
     link: "https://play.google.com/store/apps/details?id=com.herokuapp.placa_y_cedula.twa",
   },
   {
     label: "Placa y Cédula (Web)",
     description:
-      "Web app to know when you can go outside during the pandemic situation in Colombia (Unmaintained)",
+      "Web app to know when you can go outside during the pandemic situation in Colombia",
     link: "https://placa-y-cedula.herokuapp.com/",
   },
   {
@@ -45,20 +45,15 @@ export const projects = [
     link: "https://mariopayan.github.io/SvgLearningTool/",
   },
   {
-    label: "Esta página TODO",
-    description: "TODO",
+    label: "This website",
+    description: "Website I built for fun",
     link: "https://www.mariopayan.com/",
   },
-  {label: "", description: "", link: ""},
-  {label: "", description: "", link: ""},
-  {label: "", description: "", link: ""},
-  {label: "", description: "", link: ""},
-  {label: "", description: ""},
-  {label: "", description: ""},
-  {label: "", description: ""},
-  {label: "", description: ""},
-  {label: "", description: ""},
-  {label: "", description: ""},
+  {
+    label: "TODO",
+    description: "TODO",
+    link: "https://app.wellplayedresearch.com/",
+  },
 ]
 
 export const languages = [
@@ -66,11 +61,12 @@ export const languages = [
   {label: "English", level: "Professional working proficiency"},
 ]
 
-export const sections = [
-  {label: "About"},
-  {label: "Skills"},
-  {label: "Experience"},
-  {label: "Education"},
+export const sections: Section[] = [
+  {label: "About", id: "about"},
+  {label: "Code Skills", id: "codeSkills"},
+  {label: "Soft Skills", id: "softSkills"},
+  {label: "Experience", id: "experience"},
+  {label: "Education", id: "education"},
 ]
 
 export const codeSkills: Skill[] = [

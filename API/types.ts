@@ -1,11 +1,5 @@
 export type Skill = { label: string; type: string };
-export type SkillChips = ({
-  id,
-  skills,
-}: {
-  id: string;
-  skills: Skill[];
-}) => JSX.Element;
+export type SkillChips = (props: { skills: Skill[] }) => JSX.Element;
 
 export type LandingCardData = {
   name: string;
@@ -13,13 +7,7 @@ export type LandingCardData = {
   subtitle: string;
   summary: string;
 };
-export type LandingCard = ({
-  id,
-  data,
-}: {
-  id: string;
-  data: LandingCardData;
-}) => JSX.Element;
+export type LandingCard = (props: { data: LandingCardData }) => JSX.Element;
 
 export type TimeLineItem = {
   where: string;
@@ -29,13 +17,10 @@ export type TimeLineItem = {
   achievements: string[];
 };
 
-export type TimeLine = ({
-  id,
-  items,
-}: {
-  id: string;
-  items: TimeLineItem[];
-}) => JSX.Element;
+export type TimeLine = (props: { items: TimeLineItem[] }) => JSX.Element;
 
-export type Section = { label: string };
-export type TopBar = ({sections}: { sections: Section[] }) => JSX.Element;
+export type Section = { label: string; id: string };
+export type TopBar = (props: {
+  sections: Section[];
+  lastSectionActive: string;
+}) => JSX.Element;

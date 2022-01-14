@@ -15,9 +15,9 @@ import {topBarTargetStyles} from "../styles/theme"
 import {openInNewTab} from "../API/utils"
 import {social} from "../API/data"
 
-const LandingCard: LandingCardType = ({id = "", data}) => {
+const LandingCard: LandingCardType = ({data}) => {
   return (
-    <Grid item id={id} xs={12} md={9} sx={topBarTargetStyles}>
+    <Grid item xs={12} md={9} sx={topBarTargetStyles}>
       <Paper elevation={3} sx={{justifyContent: "center"}}>
         <Grid container spacing={2} sx={{padding: "40px"}}>
           <Grid item xs={12} lg={4}>
@@ -32,7 +32,7 @@ const LandingCard: LandingCardType = ({id = "", data}) => {
                   border-radius: 50%;
                   border-style: solid !important;
                   border-color: grey !important;
-                  border-width: 10px !important;
+                  border-width: 4px !important;
                 }
               `}</style>
             </Box>

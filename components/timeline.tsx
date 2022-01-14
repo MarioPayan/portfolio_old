@@ -48,9 +48,9 @@ const sortFrom = (a: TimeLineItem, b: TimeLineItem): number => {
   return new Date(b.from).getTime() - new Date(a.from).getTime()
 }
 
-const TimeLine: TimeLineType = ({id = "", items = []}) => {
+const TimeLine: TimeLineType = ({items = []}) => {
   return (
-    <Timeline id={id} sx={topBarTargetStyles}>
+    <Timeline sx={topBarTargetStyles}>
       {items.sort(sortFrom).map(item => (
         <TimelineItem key={getKeyFromLabel(`${item.from}-${item.to}`)}>
           <TimelineOppositeContent color="text.secondary" sx={{mt: -0.5}}>
