@@ -14,7 +14,7 @@ import LandingCard from "../components/landingCard"
 import TopBar from "../components/topBar"
 import SkillChips from "../components/skillChips"
 import TimeLine from "../components/timeline"
-// import LandingBackground from "../components/landingBackground"
+import LandingBackground from "../components/landingBackground"
 
 import {useInView} from "react-intersection-observer"
 
@@ -50,7 +50,7 @@ const Home: NextPage = () => {
 
   const growComponent = (
     Component: any,
-    props: { [key: string]: unknown },
+    props: { [key: string]: any },
     id: string,
     ref: any,
     inView: boolean
@@ -59,7 +59,7 @@ const Home: NextPage = () => {
       width: "0px",
       height: "0px",
       margin: "0px",
-      padding: "0px",
+      padding: "24px 0px 24px 0px",
     }
     const inheritStyle = {
       display: "inherit",
@@ -67,7 +67,7 @@ const Home: NextPage = () => {
       justifyContent: "inherit",
     }
     return (
-      <div style={inheritStyle}>
+      <div style={{...inheritStyle, flexDirection: "column", margin: 0}}>
         <div id={id} ref={ref} style={invisibleStyle}></div>
         <Grow style={inheritStyle} in={inView}>
           <div>
@@ -79,11 +79,11 @@ const Home: NextPage = () => {
   }
 
   const lastSectionVisible = (): string => {
-    if (educationInView) return "education"
-    if (experienceInView) return "experience"
-    if (softSkillsInView) return "softSkills"
-    if (codeSkillsInView) return "codeSkills"
     if (aboutInView) return "about"
+    if (codeSkillsInView) return "codeSkills"
+    if (softSkillsInView) return "softSkills"
+    if (experienceInView) return "experience"
+    if (educationInView) return "education"
     return ""
   }
 
@@ -93,7 +93,7 @@ const Home: NextPage = () => {
         <title>{landingCardData.name}</title>
       </Head>
       <TopBar sections={sections} lastSectionActive={lastSectionVisible()} />
-      {/* <LandingBackground /> */}
+      <LandingBackground />
       <Stack
         direction="column"
         spacing={20}

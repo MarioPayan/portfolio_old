@@ -22,6 +22,9 @@ const TopBar: TopBarType = ({sections = [], lastSectionActive = ""}) => {
     <AppBar position="sticky">
       <Container>
         <Tabs
+          variant="scrollable"
+          allowScrollButtonsMobile
+          scrollButtons="auto"
           value={section}
           onChange={changeSection}
           textColor="secondary"
