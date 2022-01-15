@@ -9,7 +9,11 @@ import {
   GitHub,
   Computer,
   BugReport,
-  QuestionMark
+  QuestionMark,
+  Translate,
+  SelfImprovement,
+  Engineering,
+  Group
 } from "@mui/icons-material/"
 import {Skill, SkillChips as SkillChipsType} from "../API/types"
 import {getKeyFromLabel} from "../API/utils"
@@ -45,6 +49,10 @@ const SkillChips: SkillChipsType = ({skills = []}) => {
       git: <GitHub />,
       test: <BugReport />,
       os: <Computer />,
+      languages: <Translate />,
+      personal: <SelfImprovement />,
+      social: <Group />,
+      methodical: <Engineering />,
     }
     if (type in icons) icon = icons[type]
     return icon
@@ -84,7 +92,7 @@ const SkillChips: SkillChipsType = ({skills = []}) => {
               component="a"
               icon={getIcon(skill.type)}
               variant="outlined"
-              // sx={{color: "red", borderWidth: 2, borderColor: "red"}}
+              sx={{color: "black", borderWidth: 2, borderColor: "gray"}}
               clickable/>
           </Grow>
         </Grid>

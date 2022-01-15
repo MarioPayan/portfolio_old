@@ -3,19 +3,23 @@ import {createTheme, ThemeOptions} from "@mui/material/styles"
 export const themeOptions: ThemeOptions = {
   palette: {
     primary: {
-      main: "#7c4dff",
+      main: "#4527a0",
+      light: "#7953d2",
+      dark: "#000070",
     },
     secondary: {
       main: "#26c6da",
+      light: "#6ff9ff",
+      dark: "#0095a8",
     },
     error: {
       main: "#f44336",
     },
   },
+  spacing: 8,
   shape: {
     borderRadius: 4,
   },
-  spacing: 8,
 }
 
 const theme = createTheme(themeOptions)

@@ -34,7 +34,7 @@ const TopBar: TopBarType = ({sections = [], lastSectionActive = ""}) => {
               key={section.id}
               value={section.id}
               label={section.label}
-              sx={{fontWeight: "bold"}}/>
+              sx={{fontWeight: "bold", color: "white"}}/>
           ))}
         </Tabs>
       </Container>

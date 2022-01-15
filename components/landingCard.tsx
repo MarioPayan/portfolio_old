@@ -9,7 +9,14 @@ import {
   Stack,
   Typography
 } from "@mui/material"
-import {Facebook, Instagram, GitHub} from "@mui/icons-material"
+import {
+  Facebook,
+  Instagram,
+  GitHub,
+  WhatsApp,
+  Email,
+  LinkedIn
+} from "@mui/icons-material"
 import {LandingCard as LandingCardType} from "../API/types"
 import {openInNewTab} from "../API/utils"
 import {cvPdf, social} from "../API/data"
@@ -22,7 +29,7 @@ const LandingCard: LandingCardType = ({data}) => {
           <Grid item xs={12} lg={4}>
             <Box display="flex" sx={{justifyContent: "center"}}>
               <Image
-                src={"/profile2.jpg"}
+                src={"/profile.jpg"}
                 className="profile-picture"
                 width={300}
                 height={300}/>
@@ -65,7 +72,10 @@ const LandingCard: LandingCardType = ({data}) => {
                 justifyContent="center"
                 spacing={1}>
                 <Grid item>
-                  <Button color="primary" variant="contained">
+                  <Button
+                    color="primary"
+                    variant="contained"
+                    sx={{fontWeight: "bold"}}>
                     Contact me
                   </Button>
                 </Grid>
@@ -73,7 +83,8 @@ const LandingCard: LandingCardType = ({data}) => {
                   <Button
                     color="secondary"
                     variant="contained"
-                    onClick={() => openInNewTab(`/${cvPdf}`)}>
+                    sx={{fontWeight: "bold"}}
+                    onClick={() => openInNewTab(cvPdf)}>
                     Download CV
                   </Button>
                 </Grid>
@@ -87,19 +98,34 @@ const LandingCard: LandingCardType = ({data}) => {
                 display="flex"
                 justifyContent="right">
                 <IconButton
-                  aria-label="Facebook"
-                  onClick={() => openInNewTab(social.facebook)}>
-                  <Facebook />
+                  aria-label="Linked In"
+                  onClick={() => openInNewTab(social.linkedin)}>
+                  <LinkedIn />
                 </IconButton>
                 <IconButton
-                  aria-label="Facebook"
+                  aria-label="Whatsapp"
+                  onClick={() => openInNewTab(social.whatsapp)}>
+                  <WhatsApp />
+                </IconButton>
+                <IconButton
+                  aria-label="Git Hub"
+                  onClick={() => openInNewTab(social.github)}>
+                  <GitHub />
+                </IconButton>
+                <IconButton
+                  aria-label="Email"
+                  onClick={() => openInNewTab(social.email)}>
+                  <Email />
+                </IconButton>
+                <IconButton
+                  aria-label="Instagram"
                   onClick={() => openInNewTab(social.instagram)}>
                   <Instagram />
                 </IconButton>
                 <IconButton
                   aria-label="Facebook"
-                  onClick={() => openInNewTab(social.github)}>
-                  <GitHub />
+                  onClick={() => openInNewTab(social.facebook)}>
+                  <Facebook />
                 </IconButton>
               </Stack>
             </Grid>

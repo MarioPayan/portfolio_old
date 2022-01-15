@@ -5,7 +5,7 @@ import {Grid, Grow, Stack} from "@mui/material"
 import {
   landingCardData,
   sections,
-  codeSkills,
+  hardSkills,
   softSkills,
   experiences,
   projects,
@@ -22,14 +22,14 @@ import ProjectCards from "../components/projectCards"
 const Home: NextPage = () => {
   const inViewOptions = {threshold: 0}
   const [aboutRef, aboutInView] = useInView(inViewOptions)
-  const [codeSkillsRef, codeSkillsInView] = useInView(inViewOptions)
+  const [hardSkillsRef, hardSkillsInView] = useInView(inViewOptions)
   const [softSkillsRef, softSkillsInView] = useInView(inViewOptions)
   const [experienceRef, experienceInView] = useInView(inViewOptions)
   const [projectsRef, projectsInView] = useInView(inViewOptions)
   const [educationRef, educationInView] = useInView(inViewOptions)
 
   const [aboutShowed, setAboutShowed] = useState(aboutInView)
-  const [codeSkillShowed, setCodeSkillShowed] = useState(codeSkillsInView)
+  const [hardSkillShowed, setCodeSkillShowed] = useState(hardSkillsInView)
   const [softSkillShowed, setSoftSkillShowed] = useState(softSkillsInView)
   const [experienceShowed, setExperienceShowed] = useState(experienceInView)
   const [projectsShowed, setProjectsShowed] = useState(projectsInView)
@@ -39,8 +39,8 @@ const Home: NextPage = () => {
     aboutInView && setAboutShowed(true)
   }, [aboutInView])
   useEffect(() => {
-    codeSkillsInView && setCodeSkillShowed(true)
-  }, [codeSkillsInView])
+    hardSkillsInView && setCodeSkillShowed(true)
+  }, [hardSkillsInView])
   useEffect(() => {
     softSkillsInView && setSoftSkillShowed(true)
   }, [softSkillsInView])
@@ -87,7 +87,7 @@ const Home: NextPage = () => {
 
   const lastSectionVisible = (): string => {
     if (aboutInView) return "about"
-    if (codeSkillsInView) return "codeSkills"
+    if (hardSkillsInView) return "hardSkills"
     if (softSkillsInView) return "softSkills"
     if (experienceInView) return "experience"
     if (projectsInView) return "projects"
@@ -119,10 +119,10 @@ const Home: NextPage = () => {
         )}
         {growComponent(
           SkillChips,
-          {skills: codeSkills},
-          "codeSkills",
-          codeSkillsRef,
-          codeSkillShowed
+          {skills: hardSkills},
+          "hardSkills",
+          hardSkillsRef,
+          hardSkillShowed
         )}
         {growComponent(
           SkillChips,

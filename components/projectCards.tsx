@@ -26,9 +26,7 @@ const ProjectCards: ProjectCardsType = ({projects = []}) => {
             <CardMedia
               component="img"
               height="140"
-              image={
-                project.image ? `/projects/${project.image}` : `/${image404}`
-              }
+              image={project.image ? project.image : image404}
               alt={`${project.label}`}/>
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">

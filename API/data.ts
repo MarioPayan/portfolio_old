@@ -12,6 +12,9 @@ export const social = {
   facebook: "https://www.facebook.com/Mario.A.Payan.V",
   instagram: "https://www.instagram.com/mario.a.payan/",
   github: "https://github.com/marioPayan",
+  linkedin: "https://www.linkedin.com/in/mario-payan/",
+  whatsapp: "https://wa.me/573186151646?text=Hey!",
+  email: "mailto:elcorreoquequieres@correo.com",
 }
 
 export const projects = [
@@ -19,7 +22,7 @@ export const projects = [
     label: "Under degree project",
     description:
       "Application of Augmented Reality for the Communication of Information related to the self-assessment process of the System Engineering Academic Program",
-    image: "uv.png",
+    image: "/projects/uv.png",
     link: "",
     public: true,
   },
@@ -33,7 +36,7 @@ export const projects = [
     label: "Placa y Cédula (Android)",
     description:
       "Android app to know when you can go outside during the pandemic situation in Colombia",
-    image: "pyc_android.webp",
+    image: "/projects/pyc_android.webp",
     link: "https://play.google.com/store/apps/details?id=com.herokuapp.placa_y_cedula.twa",
     public: true,
   },
@@ -41,7 +44,7 @@ export const projects = [
     label: "Placa y Cédula (Web)",
     description:
       "Web app to know when you can go outside during the pandemic situation in Colombia",
-    image: "pyc_web.png",
+    image: "/projects/pyc_web.png",
     link: "https://placa-y-cedula.herokuapp.com/",
     public: true,
   },
@@ -49,7 +52,7 @@ export const projects = [
     label: "SVG Learning Tool",
     description:
       "A simple tool to understand how SVG works that I made in my free time to help some mates",
-    image: "svg.png",
+    image: "/projects/svg.png",
     link: "https://mariopayan.github.io/SvgLearningTool/",
     public: true,
   },
@@ -62,31 +65,28 @@ export const projects = [
   {
     label: "Survey Tool",
     description: "Survey tool that TODO",
-    image: "wp.png",
+    image: "/projects/wp.png",
     link: "https://app.wellplayedresearch.com/",
     public: false,
   },
 ]
 
-export const languages = [
-  {label: "Español", level: "Native"},
-  {label: "English", level: "Professional working proficiency"},
-]
-
 export const sections: Section[] = [
   {label: "About", id: "about"},
-  {label: "Code Skills", id: "codeSkills"},
+  {label: "Hard Skills", id: "hardSkills"},
   {label: "Soft Skills", id: "softSkills"},
   {label: "Experience", id: "experience"},
   {label: "Projects", id: "projects"},
   {label: "Education", id: "education"},
 ]
 
-export const codeSkills: Skill[] = [
+export const hardSkills: Skill[] = [
   {label: "Javascript", type: "code"},
   {label: "Typescript", type: "code"},
   {label: "Python", type: "code"},
   {label: "ReactJS", type: "code"},
+  {label: "Español", type: "languages"},
+  {label: "English", type: "languages"},
   {label: "Django", type: "framework"},
   {label: "Django REST", type: "framework"},
   {label: "Angular", type: "framework"},
@@ -109,13 +109,13 @@ export const codeSkills: Skill[] = [
 ]
 
 export const softSkills: Skill[] = [
-  {label: "Willingness to Learn", type: "nose"},
-  {label: "Problem solving", type: "nose"},
-  {label: "Proactivity", type: "nose"},
-  {label: "Communication", type: "nose"},
-  {label: "Teamwork", type: "nose"},
-  {label: "Adaptability", type: "nose"},
-  {label: "Clean Code", type: "nose"},
+  {label: "Willingness to Learn", type: "personal"},
+  {label: "Problem solving", type: "methodical"},
+  {label: "Proactivity", type: "personal"},
+  {label: "Communication", type: "social"},
+  {label: "Teamwork", type: "social"},
+  {label: "Adaptability", type: "social"},
+  {label: "Clean Code", type: "methodical"},
 ]
 
 export const experiences: TimeLineItem[] = [
@@ -196,4 +196,4 @@ export const education: TimeLineItem[] = [
   },
 ]
 
-export const cvPdf = "Mario Payan CV.pdf"
+export const cvPdf = "/files/Mario Payan CV.pdf"
