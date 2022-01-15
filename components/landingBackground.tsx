@@ -14,7 +14,7 @@ const LandingBackground = () => {
           backgroundColor: "black",
           boxShadow: "0 10vh 5vh 5vh black",
         }}>
-        <Particles id="tsparticles" options={tsParticlesOptions} />
+        <Particles id="tsparticles" options={tsParticlesOptions as any} />
       </Box>
     </Box>
   )
