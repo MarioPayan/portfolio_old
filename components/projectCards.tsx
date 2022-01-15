@@ -9,7 +9,7 @@ import {
   Button
 } from "@mui/material"
 import {ProjectCards as ProjectCardsType} from "../API/types"
-import {getKeyFromLabel, openInNewTab} from "../API/utils"
+import {getKeyFromLabel, image404, openInNewTab} from "../API/utils"
 
 const ProjectCards: ProjectCardsType = ({projects = []}) => {
   return (
@@ -26,7 +26,9 @@ const ProjectCards: ProjectCardsType = ({projects = []}) => {
             <CardMedia
               component="img"
               height="140"
-              image={`/projects/${project.image}`}
+              image={
+                project.image ? `/projects/${project.image}` : `/${image404}`
+              }
               alt={`${project.label}`}/>
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">

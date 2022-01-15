@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react"
 import type {NextPage} from "next"
 import Head from "next/head"
-import {Grow, Stack} from "@mui/material"
+import {Grid, Grow, Stack} from "@mui/material"
 import {
   landingCardData,
   sections,
@@ -61,6 +61,11 @@ const Home: NextPage = () => {
     ref: any,
     inView: boolean
   ) => {
+    const styleInherit = {
+      display: "inherit",
+      alignItems: "inherit",
+      justifyContent: "inherit",
+    }
     const invisibleStyle = {
       width: "0px",
       height: "0px",
@@ -72,9 +77,9 @@ const Home: NextPage = () => {
       <>
         <div id={id} ref={ref} style={invisibleStyle}></div>
         <Grow in={inView}>
-          <div style={{display: "contents"}}>
+          <Grid container style={{...styleInherit, marginTop: "80px"}}>
             <Component {...props} />
-          </div>
+          </Grid>
         </Grow>
       </>
     )

@@ -38,17 +38,17 @@ const LandingCard: LandingCardType = ({data}) => {
           </Grid>
           <Grid container item xs={12} lg={8} spacing={2}>
             <Grid item xs={12}>
-              <Typography noWrap variant="h1" component="h1">
+              <Typography variant="h1" component="h1">
                 {data.name}
               </Typography>
             </Grid>
             <Grid item xs={12}>
-              <Typography noWrap variant="h3" component="h2">
+              <Typography variant="h3" component="h2">
                 {data.title}
               </Typography>
             </Grid>
             <Grid item xs={12}>
-              <Typography noWrap variant="h5" component="h5">
+              <Typography variant="h5" component="h5">
                 {data.subtitle}
               </Typography>
             </Grid>
@@ -58,22 +58,26 @@ const LandingCard: LandingCardType = ({data}) => {
               </Typography>
             </Grid>
             <Grid item xs={12}>
-              <Stack
-                direction="row"
-                spacing={1}
-                flexWrap="wrap"
+              <Grid
+                container
                 display="flex"
-                justifyContent="center">
-                <Button color="primary" variant="contained">
-                  Contact me
-                </Button>
-                <Button
-                  color="secondary"
-                  variant="contained"
-                  onClick={() => openInNewTab(`/${cvPdf}`)}>
-                  Download CV
-                </Button>
-              </Stack>
+                alignItems="center"
+                justifyContent="center"
+                spacing={1}>
+                <Grid item>
+                  <Button color="primary" variant="contained">
+                    Contact me
+                  </Button>
+                </Grid>
+                <Grid item>
+                  <Button
+                    color="secondary"
+                    variant="contained"
+                    onClick={() => openInNewTab(`/${cvPdf}`)}>
+                    Download CV
+                  </Button>
+                </Grid>
+              </Grid>
             </Grid>
             <Grid item xs={12}>
               <Stack
