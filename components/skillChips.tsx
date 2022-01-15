@@ -13,7 +13,6 @@ import {
 } from "@mui/icons-material/"
 import {Skill, SkillChips as SkillChipsType} from "../API/types"
 import {getKeyFromLabel} from "../API/utils"
-import {topBarTargetStyles} from "../styles/theme"
 
 const SkillChips: SkillChipsType = ({skills = []}) => {
   const defaultFilter = "all"
@@ -57,7 +56,7 @@ const SkillChips: SkillChipsType = ({skills = []}) => {
       spacing={1}
       xs={12}
       md={8}
-      sx={{justifyContent: "center", ...topBarTargetStyles}}>
+      sx={{justifyContent: "center"}}>
       <Grid item display="flex" justifyContent="center" xs={12}>
         <Tabs
           variant="scrollable"

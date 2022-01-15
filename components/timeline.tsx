@@ -17,7 +17,6 @@ import {
 } from "@mui/material"
 import {TimeLine as TimeLineType, TimeLineItem} from "../API/types"
 import {getKeyFromLabel} from "../API/utils"
-import {topBarTargetStyles} from "../styles/theme"
 import PlayArrowIcon from "@mui/icons-material/PlayArrow"
 
 const toDate = (date: string): string => {
@@ -50,7 +49,7 @@ const sortFrom = (a: TimeLineItem, b: TimeLineItem): number => {
 
 const TimeLine: TimeLineType = ({items = []}) => {
   return (
-    <Timeline sx={topBarTargetStyles}>
+    <Timeline>
       {items.sort(sortFrom).map(item => (
         <TimelineItem key={getKeyFromLabel(`${item.from}-${item.to}`)}>
           <TimelineOppositeContent color="text.secondary" sx={{mt: -0.5}}>

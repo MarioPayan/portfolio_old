@@ -15,7 +15,6 @@ import TopBar from "../components/topBar"
 import SkillChips from "../components/skillChips"
 import TimeLine from "../components/timeline"
 import LandingBackground from "../components/landingBackground"
-
 import {useInView} from "react-intersection-observer"
 
 const Home: NextPage = () => {
@@ -59,22 +58,18 @@ const Home: NextPage = () => {
       width: "0px",
       height: "0px",
       margin: "0px",
-      padding: "24px 0px 24px 0px",
-    }
-    const inheritStyle = {
-      display: "inherit",
-      alignItems: "inherit",
-      justifyContent: "inherit",
+      scrollMarginTop: "3rem",
+      padding: "0px",
     }
     return (
-      <div style={{...inheritStyle, flexDirection: "column", margin: 0}}>
+      <>
         <div id={id} ref={ref} style={invisibleStyle}></div>
-        <Grow style={inheritStyle} in={inView}>
-          <div>
+        <Grow in={inView}>
+          <div style={{display: "contents"}}>
             <Component {...props} />
           </div>
         </Grow>
-      </div>
+      </>
     )
   }
 

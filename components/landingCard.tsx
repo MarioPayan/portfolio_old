@@ -11,13 +11,12 @@ import {
 } from "@mui/material"
 import {Facebook, Instagram, GitHub} from "@mui/icons-material"
 import {LandingCard as LandingCardType} from "../API/types"
-import {topBarTargetStyles} from "../styles/theme"
 import {openInNewTab} from "../API/utils"
 import {social} from "../API/data"
 
 const LandingCard: LandingCardType = ({data}) => {
   return (
-    <Grid item xs={12} md={9} sx={topBarTargetStyles}>
+    <Grid item xs={12} md={9}>
       <Paper elevation={3} sx={{justifyContent: "center"}}>
         <Grid container spacing={2} sx={{padding: "40px"}}>
           <Grid item xs={12} lg={4}>

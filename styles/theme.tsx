@@ -20,6 +20,4 @@ export const themeOptions: ThemeOptions = {
 
 const theme = createTheme(themeOptions)
 
-export const topBarTargetStyles = {scrollMarginTop: "5rem"}
-
 export default theme
