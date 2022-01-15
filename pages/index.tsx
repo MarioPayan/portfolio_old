@@ -8,14 +8,16 @@ import {
   codeSkills,
   softSkills,
   experiences,
+  projects,
   education
 } from "../API/data"
+import {useInView} from "react-intersection-observer"
 import LandingCard from "../components/landingCard"
 import TopBar from "../components/topBar"
 import SkillChips from "../components/skillChips"
 import TimeLine from "../components/timeline"
 import LandingBackground from "../components/landingBackground"
-import {useInView} from "react-intersection-observer"
+import ProjectCards from "../components/projectCards"
 
 const Home: NextPage = () => {
   const inViewOptions = {threshold: 0}
@@ -23,12 +25,14 @@ const Home: NextPage = () => {
   const [codeSkillsRef, codeSkillsInView] = useInView(inViewOptions)
   const [softSkillsRef, softSkillsInView] = useInView(inViewOptions)
   const [experienceRef, experienceInView] = useInView(inViewOptions)
+  const [projectsRef, projectsInView] = useInView(inViewOptions)
   const [educationRef, educationInView] = useInView(inViewOptions)
 
   const [aboutShowed, setAboutShowed] = useState(aboutInView)
   const [codeSkillShowed, setCodeSkillShowed] = useState(codeSkillsInView)
   const [softSkillShowed, setSoftSkillShowed] = useState(softSkillsInView)
   const [experienceShowed, setExperienceShowed] = useState(experienceInView)
+  const [projectsShowed, setProjectsShowed] = useState(projectsInView)
   const [educationShowed, setEducationShowed] = useState(educationInView)
 
   useEffect(() => {
@@ -43,6 +47,9 @@ const Home: NextPage = () => {
   useEffect(() => {
     experienceInView && setExperienceShowed(true)
   }, [experienceInView])
+  useEffect(() => {
+    projectsInView && setProjectsShowed(true)
+  }, [projectsInView])
   useEffect(() => {
     educationInView && setEducationShowed(true)
   }, [educationInView])
@@ -78,6 +85,7 @@ const Home: NextPage = () => {
     if (codeSkillsInView) return "codeSkills"
     if (softSkillsInView) return "softSkills"
     if (experienceInView) return "experience"
+    if (projectsInView) return "projects"
     if (educationInView) return "education"
     return ""
   }
@@ -124,6 +132,13 @@ const Home: NextPage = () => {
           "experience",
           experienceRef,
           experienceShowed
+        )}
+        {growComponent(
+          ProjectCards,
+          {projects: projects},
+          "projects",
+          projectsRef,
+          projectsShowed
         )}
         {growComponent(
           TimeLine,

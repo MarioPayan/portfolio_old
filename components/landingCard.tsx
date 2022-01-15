@@ -12,7 +12,7 @@ import {
 import {Facebook, Instagram, GitHub} from "@mui/icons-material"
 import {LandingCard as LandingCardType} from "../API/types"
 import {openInNewTab} from "../API/utils"
-import {social} from "../API/data"
+import {cvPdf, social} from "../API/data"
 
 const LandingCard: LandingCardType = ({data}) => {
   return (
@@ -67,7 +67,10 @@ const LandingCard: LandingCardType = ({data}) => {
                 <Button color="primary" variant="contained">
                   Contact me
                 </Button>
-                <Button color="secondary" variant="contained">
+                <Button
+                  color="secondary"
+                  variant="contained"
+                  onClick={() => openInNewTab(`/${cvPdf}`)}>
                   Download CV
                 </Button>
               </Stack>

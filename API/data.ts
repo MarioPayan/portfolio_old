@@ -16,43 +16,55 @@ export const social = {
 
 export const projects = [
   {
-    label:
-      "Aplicación de Realidad Aumentada para la Comunicación de Información relativa al proceso de autoevaluación del Programa Académico de Ingeniería de Sistemas",
-    description: "Thesis project",
+    label: "Under degree project",
+    description:
+      "Application of Augmented Reality for the Communication of Information related to the self-assessment process of the System Engineering Academic Program",
+    image: "uv.png",
     link: "",
+    public: true,
   },
   {
     label: "Deft website",
     description: "Landing page for Deft Soluciones company",
     link: "https://deftsoluciones.com/",
+    public: true,
   },
   {
     label: "Placa y Cédula (Android)",
     description:
       "Android app to know when you can go outside during the pandemic situation in Colombia",
+    image: "pyc_android.webp",
     link: "https://play.google.com/store/apps/details?id=com.herokuapp.placa_y_cedula.twa",
+    public: true,
   },
   {
     label: "Placa y Cédula (Web)",
     description:
       "Web app to know when you can go outside during the pandemic situation in Colombia",
+    image: "pyc_web.png",
     link: "https://placa-y-cedula.herokuapp.com/",
+    public: true,
   },
   {
     label: "SVG Learning Tool",
     description:
       "A simple tool to understand how SVG works that I made in my free time to help some mates",
+    image: "svg.png",
     link: "https://mariopayan.github.io/SvgLearningTool/",
+    public: true,
   },
   {
     label: "This website",
     description: "Website I built for fun",
     link: "https://www.mariopayan.com/",
+    public: true,
   },
   {
-    label: "TODO",
-    description: "TODO",
+    label: "Survey Tool",
+    description: "Survey tool that TODO",
+    image: "wp.png",
     link: "https://app.wellplayedresearch.com/",
+    public: false,
   },
 ]
 
@@ -66,6 +78,7 @@ export const sections: Section[] = [
   {label: "Code Skills", id: "codeSkills"},
   {label: "Soft Skills", id: "softSkills"},
   {label: "Experience", id: "experience"},
+  {label: "Projects", id: "projects"},
   {label: "Education", id: "education"},
 ]
 
@@ -182,3 +195,5 @@ export const education: TimeLineItem[] = [
     ],
   },
 ]
+
+export const cvPdf = "Mario Payan CV.pdf"
