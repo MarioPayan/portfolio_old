@@ -33,7 +33,7 @@ const LandingCard: LandingCardType = ({data}) => {
                 className="profile-picture"
                 width={300}
                 height={300}/>
-              <style jsx global>{`
+              <style jsx>{`
                 .profile-picture {
                   border-radius: 50%;
                   border-style: solid !important;

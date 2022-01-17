@@ -17,9 +17,9 @@ import SkillChips from "../components/skillChips"
 import TimeLine from "../components/timeline"
 import LandingBackground from "../components/landingBackground"
 import ProjectCards from "../components/projectCards"
-import {Home as HomeType} from "../API/types"
+import {NextPage} from "next"
 
-const Home: HomeType = ({setLightTheme, setDarkTheme}) => {
+const Home: NextPage = () => {
   const inViewOptions = {threshold: 0}
   const [aboutRef, aboutInView] = useInView(inViewOptions)
   const [hardSkillsRef, hardSkillsInView] = useInView(inViewOptions)
@@ -100,11 +100,7 @@ const Home: HomeType = ({setLightTheme, setDarkTheme}) => {
       <Head>
         <title>{landingCardData.name}</title>
       </Head>
-      <TopBar
-        sections={sections}
-        lastSectionActive={lastSectionVisible()}
-        setLightTheme={setLightTheme}
-        setDarkTheme={setDarkTheme}/>
+      <TopBar sections={sections} lastSectionActive={lastSectionVisible()} />
       <LandingBackground />
       <Stack
         direction="column"

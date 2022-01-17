@@ -1,6 +1,7 @@
 import React, {useState} from "react"
 import "../styles/globals.css"
 import type {AppProps} from "next/app"
+import Context from "../components/context"
 import {ThemeProvider} from "@mui/material/styles"
 import CssBaseline from "@mui/material/CssBaseline"
 
@@ -12,13 +13,12 @@ const App = ({Component, pageProps}: AppProps) => {
   const setDarkTheme = () => setTheme(darkTheme)
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Component
-        {...pageProps}
-        setLightTheme={setLightTheme}
-        setDarkTheme={setDarkTheme}/>
-    </ThemeProvider>
+    <Context.Provider value={{theme, setLightTheme, setDarkTheme}}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </Context.Provider>
   )
 }
 
