@@ -1,3 +1,5 @@
+import {IOptions, RecursivePartial} from "react-tsparticles"
+
 export const getKeyFromLabel = (label: string) => label.toLocaleLowerCase().replace(" ", "-")
 export const openInNewTab = (url: string) => {
   const newWindow = window.open(url, "_blank", "noopener,noreferrer")
@@ -5,7 +7,7 @@ export const openInNewTab = (url: string) => {
 }
 export const image404 = "/404.jpg"
 
-export const tsParticlesOptions = {
+export const tsParticlesOptions: RecursivePartial<IOptions> = {
   background: {
     color: {
       value: "#0d47a1",
@@ -21,7 +23,7 @@ export const tsParticlesOptions = {
       },
       onHover: {
         enable: true,
-        mode: "repulse",
+        mode: "attract",
       },
       resize: true,
     },
@@ -49,7 +51,7 @@ export const tsParticlesOptions = {
       color: "#ffffff",
       distance: 150,
       enable: true,
-      opacity: 0.5,
+      opacity: 0.1,
       width: 1,
     },
     collisions: {
@@ -69,6 +71,7 @@ export const tsParticlesOptions = {
         area: 800,
       },
       value: 80,
+      limit: 200,
     },
     opacity: {
       value: 0.5,

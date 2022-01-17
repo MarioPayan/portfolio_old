@@ -92,7 +92,7 @@ const SkillChips: SkillChipsType = ({skills = []}) => {
               component="a"
               icon={getIcon(skill.type)}
               variant="outlined"
-              sx={{color: "black", borderWidth: 2, borderColor: "gray"}}
+              sx={{fontSize: 16, borderWidth: 2, borderColor: "gray"}}
               clickable/>
           </Grow>
         </Grid>

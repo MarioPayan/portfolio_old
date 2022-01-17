@@ -24,11 +24,12 @@ export const projects = [
       "Application of Augmented Reality for the Communication of Information related to the self-assessment process of the System Engineering Academic Program",
     image: "/projects/uv.png",
     link: "",
-    public: true,
+    public: false,
   },
   {
     label: "Deft website",
     description: "Landing page for Deft Soluciones company",
+    image: "/projects/deft.png",
     link: "https://deftsoluciones.com/",
     public: true,
   },

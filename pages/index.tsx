@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from "react"
-import type {NextPage} from "next"
 import Head from "next/head"
 import {Grid, Grow, Stack} from "@mui/material"
 import {
@@ -18,8 +17,9 @@ import SkillChips from "../components/skillChips"
 import TimeLine from "../components/timeline"
 import LandingBackground from "../components/landingBackground"
 import ProjectCards from "../components/projectCards"
+import {Home as HomeType} from "../API/types"
 
-const Home: NextPage = () => {
+const Home: HomeType = ({setLightTheme, setDarkTheme}) => {
   const inViewOptions = {threshold: 0}
   const [aboutRef, aboutInView] = useInView(inViewOptions)
   const [hardSkillsRef, hardSkillsInView] = useInView(inViewOptions)
@@ -100,7 +100,11 @@ const Home: NextPage = () => {
       <Head>
         <title>{landingCardData.name}</title>
       </Head>
-      <TopBar sections={sections} lastSectionActive={lastSectionVisible()} />
+      <TopBar
+        sections={sections}
+        lastSectionActive={lastSectionVisible()}
+        setLightTheme={setLightTheme}
+        setDarkTheme={setDarkTheme}/>
       <LandingBackground />
       <Stack
         direction="column"

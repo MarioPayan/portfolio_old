@@ -27,9 +27,15 @@ export type TimeLineItem = {
 
 export type TimeLine = (props: { items: TimeLineItem[] }) => JSX.Element;
 export type ProjectCards = (props: { projects: Projects[] }) => JSX.Element;
+export type Home = (props: {
+  setLightTheme: any;
+  setDarkTheme: any;
+}) => JSX.Element;
 
 export type Section = { label: string; id: string };
 export type TopBar = (props: {
   sections: Section[];
   lastSectionActive: string;
+  setLightTheme: any;
+  setDarkTheme: any;
 }) => JSX.Element;

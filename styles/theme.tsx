@@ -1,7 +1,8 @@
 import {createTheme, ThemeOptions} from "@mui/material/styles"
 
-export const themeOptions: ThemeOptions = {
+export const themeOptions = (theme: "light" | "dark"): ThemeOptions => ({
   palette: {
+    mode: theme,
     primary: {
       main: "#4527a0",
       light: "#7953d2",
@@ -20,8 +21,7 @@ export const themeOptions: ThemeOptions = {
   shape: {
     borderRadius: 4,
   },
-}
+})
 
-const theme = createTheme(themeOptions)
-
-export default theme
+export const lightTheme = createTheme(themeOptions("light"))
+export const darkTheme = createTheme(themeOptions("dark"))
