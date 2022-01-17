@@ -1,5 +1,5 @@
-import React, {useState} from "react"
-import {Configurations as ConfigurationsType} from "../API/types"
+import React, {useState} from 'react'
+import {Configurations as ConfigurationsType, Theme} from '../types/types'
 import {
   Divider,
   Grid,
@@ -10,25 +10,25 @@ import {
   ToggleButton,
   ToggleButtonGroup,
   Typography
-} from "@mui/material"
-import {DarkMode, LightMode, Settings} from "@mui/icons-material"
+} from '@mui/material'
+import {DarkMode, LightMode, Settings} from '@mui/icons-material'
 
-import Context from "./context"
+import Context from './context'
 
 const Configurations: ConfigurationsType = () => {
-  const [open, setOpen] = useState(false)
-  const [mode, setMode] = useState("light")
+  const [open, setOpen] = useState<boolean>(false)
+  const [mode, setMode] = useState<Theme>('light')
 
   const toggleDrawer = (open = true) => setOpen(open)
 
   const changeTheme = (
-    newMode: string,
+    newMode: Theme,
     setLightTheme: any,
     setDarkTheme: any
   ) => {
     setMode(newMode)
-    if (newMode === "light") setLightTheme()
-    if (newMode === "dark") setDarkTheme()
+    if (newMode === 'light') setLightTheme()
+    if (newMode === 'dark') setDarkTheme()
   }
   return (
     <Context.Consumer>
@@ -38,7 +38,7 @@ const Configurations: ConfigurationsType = () => {
             <Settings />
           </IconButton>
           <SwipeableDrawer
-            anchor={"right"}
+            anchor={'right'}
             open={open}
             onClose={() => toggleDrawer(false)}
             onOpen={() => toggleDrawer()}>
@@ -54,7 +54,7 @@ const Configurations: ConfigurationsType = () => {
                 <Grid
                   item
                   xs={6}
-                  sx={{height: "inherit"}}
+                  sx={{height: 'inherit'}}
                   display="flex"
                   alignItems="center">
                   <Typography variant="h5">Theme</Typography>
@@ -64,7 +64,7 @@ const Configurations: ConfigurationsType = () => {
                   xs={6}
                   display="flex"
                   justifyContent="center"
-                  sx={{height: "inherit"}}>
+                  sx={{height: 'inherit'}}>
                   <ToggleButtonGroup
                     value={mode}
                     onChange={(_, value) => changeTheme(value, setLightTheme, setDarkTheme)
@@ -72,11 +72,11 @@ const Configurations: ConfigurationsType = () => {
                     exclusive={true}>
                     <ToggleButton value="light" key="light">
                       <LightMode
-                        color={mode === "light" ? "secondary" : "warning"}/>
+                        color={mode === 'light' ? 'secondary' : 'warning'}/>
                     </ToggleButton>
                     <ToggleButton value="dark" key="dark">
                       <DarkMode
-                        color={mode === "dark" ? "secondary" : "warning"}/>
+                        color={mode === 'dark' ? 'secondary' : 'warning'}/>
                     </ToggleButton>
                   </ToggleButtonGroup>
                 </Grid>

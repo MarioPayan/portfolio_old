@@ -1,6 +1,9 @@
-import React from "react"
-import Image from "next/image"
-import Grid from "@mui/material/Grid"
+import React from 'react'
+import Image from 'next/image'
+import {LandingCard as LandingCardType} from '../types/types'
+import {cvPdf, social} from '../API/data'
+import {openInNewTab} from '../utils/utils'
+import Grid from '@mui/material/Grid'
 import {
   Box,
   Button,
@@ -8,7 +11,7 @@ import {
   Paper,
   Stack,
   Typography
-} from "@mui/material"
+} from '@mui/material'
 import {
   Facebook,
   Instagram,
@@ -16,20 +19,17 @@ import {
   WhatsApp,
   Email,
   LinkedIn
-} from "@mui/icons-material"
-import {LandingCard as LandingCardType} from "../API/types"
-import {openInNewTab} from "../API/utils"
-import {cvPdf, social} from "../API/data"
+} from '@mui/icons-material'
 
 const LandingCard: LandingCardType = ({data}) => {
   return (
     <Grid item xs={12} md={9}>
-      <Paper elevation={3} sx={{justifyContent: "center"}}>
-        <Grid container spacing={2} sx={{padding: "40px"}}>
+      <Paper elevation={3} sx={{justifyContent: 'center'}}>
+        <Grid container spacing={2} sx={{padding: '40px'}}>
           <Grid item xs={12} lg={4}>
-            <Box display="flex" sx={{justifyContent: "center"}}>
+            <Box display="flex" sx={{justifyContent: 'center'}}>
               <Image
-                src={"/profile.jpg"}
+                src={'/profile.jpg'}
                 className="profile-picture"
                 width={300}
                 height={300}/>
@@ -75,7 +75,7 @@ const LandingCard: LandingCardType = ({data}) => {
                   <Button
                     color="primary"
                     variant="contained"
-                    sx={{fontWeight: "bold"}}>
+                    sx={{fontWeight: 'bold'}}>
                     Contact me
                   </Button>
                 </Grid>
@@ -83,7 +83,7 @@ const LandingCard: LandingCardType = ({data}) => {
                   <Button
                     color="secondary"
                     variant="contained"
-                    sx={{fontWeight: "bold"}}
+                    sx={{fontWeight: 'bold'}}
                     onClick={() => openInNewTab(cvPdf)}>
                     Download CV
                   </Button>

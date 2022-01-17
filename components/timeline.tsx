@@ -1,4 +1,7 @@
-import React from "react"
+import React from 'react'
+
+import {TimeLine as TimeLineType, TimeLineItem} from '../types/types'
+import {getKeyFromLabel} from '../utils/utils'
 import {
   Timeline,
   TimelineItem,
@@ -7,24 +10,22 @@ import {
   TimelineContent,
   TimelineDot,
   TimelineOppositeContent
-} from "@mui/lab"
+} from '@mui/lab'
 import {
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
   Typography
-} from "@mui/material"
-import {TimeLine as TimeLineType, TimeLineItem} from "../API/types"
-import {getKeyFromLabel} from "../API/utils"
-import PlayArrowIcon from "@mui/icons-material/PlayArrow"
+} from '@mui/material'
+import PlayArrowIcon from '@mui/icons-material/PlayArrow'
 
 const toDate = (date: string): string => {
-  if (!date) return "Current"
-  return new Date(date).toLocaleString("default", {
-    month: "short",
-    year: "numeric",
-    timeZone: "UTC",
+  if (!date) return 'Current'
+  return new Date(date).toLocaleString('default', {
+    month: 'short',
+    year: 'numeric',
+    timeZone: 'UTC',
   })
 }
 
@@ -33,11 +34,11 @@ const dateDiff = (dateA: string, dateB: string): string => {
   const daysDiff = Math.floor(
     (getTime(dateB) - getTime(dateA)) / (1000 * 60 * 60 * 24)
   )
-  let timeDiff = "Just started"
+  let timeDiff = 'Just started'
   const years = Math.floor(daysDiff / 365)
-  const yearsDiff = years >= 1 ? `${years} Year${years > 1 ? "s" : ""}` : ""
+  const yearsDiff = years >= 1 ? `${years} Year${years > 1 ? 's' : ''}` : ''
   const months = Math.ceil(daysDiff / 30) % 12
-  const monthsDiff = months >= 1 ? `${months} Month${months > 1 ? "s" : ""}` : ""
+  const monthsDiff = months >= 1 ? `${months} Month${months > 1 ? 's' : ''}` : ''
   if (yearsDiff && monthsDiff) timeDiff = `${yearsDiff}, ${monthsDiff}`
   else if (yearsDiff || monthsDiff) timeDiff = `${yearsDiff}${monthsDiff}`
   return `(${timeDiff})`
@@ -75,7 +76,7 @@ const TimeLine: TimeLineType = ({items = []}) => {
               {item.achievements.map((achievement, i) => (
                 <ListItem key={i} disablePadding>
                   <ListItemIcon
-                    sx={{height: "24px", width: "24px", minWidth: "30px"}}>
+                    sx={{height: '24px', width: '24px', minWidth: '30px'}}>
                     <PlayArrowIcon />
                   </ListItemIcon>
                   <ListItemText primary={achievement} />

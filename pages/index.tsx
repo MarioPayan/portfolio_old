@@ -1,6 +1,13 @@
-import React, {useEffect, useState} from "react"
-import Head from "next/head"
-import {Grid, Grow, Stack} from "@mui/material"
+import React, {useEffect, useState} from 'react'
+import {NextPage} from 'next'
+import Head from 'next/head'
+import {useInView} from 'react-intersection-observer'
+import LandingCard from '../components/landingCard'
+import TopBar from '../components/topBar'
+import SkillChips from '../components/skillChips'
+import TimeLine from '../components/timeline'
+import LandingBackground from '../components/landingBackground'
+import ProjectCards from '../components/projectCards'
 import {
   landingCardData,
   sections,
@@ -9,15 +16,8 @@ import {
   experiences,
   projects,
   education
-} from "../API/data"
-import {useInView} from "react-intersection-observer"
-import LandingCard from "../components/landingCard"
-import TopBar from "../components/topBar"
-import SkillChips from "../components/skillChips"
-import TimeLine from "../components/timeline"
-import LandingBackground from "../components/landingBackground"
-import ProjectCards from "../components/projectCards"
-import {NextPage} from "next"
+} from '../API/data'
+import {Grid, Grow, Stack} from '@mui/material'
 
 const Home: NextPage = () => {
   const inViewOptions = {threshold: 0}
@@ -62,22 +62,22 @@ const Home: NextPage = () => {
     inView: boolean
   ) => {
     const styleInherit = {
-      display: "inherit",
-      alignItems: "inherit",
-      justifyContent: "inherit",
+      display: 'inherit',
+      alignItems: 'inherit',
+      justifyContent: 'inherit',
     }
     const invisibleStyle = {
-      width: "0px",
-      height: "0px",
-      margin: "0px",
-      scrollMarginTop: "3rem",
-      padding: "0px",
+      width: '0px',
+      height: '0px',
+      margin: '0px',
+      scrollMarginTop: '3rem',
+      padding: '0px',
     }
     return (
       <>
         <div id={id} ref={ref} style={invisibleStyle}></div>
         <Grow in={inView}>
-          <Grid container style={{...styleInherit, marginTop: "80px"}}>
+          <Grid container style={{...styleInherit, marginTop: '80px'}}>
             <Component {...props} />
           </Grid>
         </Grow>
@@ -86,13 +86,13 @@ const Home: NextPage = () => {
   }
 
   const lastSectionVisible = (): string => {
-    if (aboutInView) return "about"
-    if (hardSkillsInView) return "hardSkills"
-    if (softSkillsInView) return "softSkills"
-    if (experienceInView) return "experience"
-    if (projectsInView) return "projects"
-    if (educationInView) return "education"
-    return ""
+    if (aboutInView) return 'about'
+    if (hardSkillsInView) return 'hardSkills'
+    if (softSkillsInView) return 'softSkills'
+    if (experienceInView) return 'experience'
+    if (projectsInView) return 'projects'
+    if (educationInView) return 'education'
+    return ''
   }
 
   return (
@@ -113,42 +113,42 @@ const Home: NextPage = () => {
         {growComponent(
           LandingCard,
           {data: landingCardData},
-          "about",
+          'about',
           aboutRef,
           aboutShowed
         )}
         {growComponent(
           SkillChips,
           {skills: hardSkills},
-          "hardSkills",
+          'hardSkills',
           hardSkillsRef,
           hardSkillShowed
         )}
         {growComponent(
           SkillChips,
           {skills: softSkills},
-          "softSkills",
+          'softSkills',
           softSkillsRef,
           softSkillShowed
         )}
         {growComponent(
           TimeLine,
           {items: experiences},
-          "experience",
+          'experience',
           experienceRef,
           experienceShowed
         )}
         {growComponent(
           ProjectCards,
           {projects: projects},
-          "projects",
+          'projects',
           projectsRef,
           projectsShowed
         )}
         {growComponent(
           TimeLine,
           {items: education},
-          "education",
+          'education',
           educationRef,
           educationShowed
         )}

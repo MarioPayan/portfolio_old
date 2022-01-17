@@ -1,4 +1,6 @@
-import React from "react"
+import React from 'react'
+import {ProjectCards as ProjectCardsType} from '../types/types'
+import {getKeyFromLabel, image404, openInNewTab} from '../utils/utils'
 import {
   Grid,
   Card,
@@ -7,10 +9,8 @@ import {
   Typography,
   CardActions,
   Button
-} from "@mui/material"
-import {ProjectCards as ProjectCardsType} from "../API/types"
-import {getKeyFromLabel, image404, openInNewTab} from "../API/utils"
-import Lock from "@mui/icons-material/Lock"
+} from '@mui/material'
+import Lock from '@mui/icons-material/Lock'
 
 const ProjectCards: ProjectCardsType = ({projects = []}) => {
   return (
@@ -20,7 +20,7 @@ const ProjectCards: ProjectCardsType = ({projects = []}) => {
       spacing={1}
       xs={12}
       md={8}
-      sx={{justifyContent: "center"}}>
+      sx={{justifyContent: 'center'}}>
       {projects.map(project => (
         <Grid item key={getKeyFromLabel(project.label)}>
           <Card sx={{width: 345, height: 300}}>
@@ -37,10 +37,10 @@ const ProjectCards: ProjectCardsType = ({projects = []}) => {
                 variant="body2"
                 color="text.secondary"
                 sx={{
-                  display: "-webkit-box",
-                  WebkitBoxOrient: "vertical",
+                  display: '-webkit-box',
+                  WebkitBoxOrient: 'vertical',
                   WebkitLineClamp: 2,
-                  overflow: "hidden",
+                  overflow: 'hidden',
                   height: 35,
                 }}>
                 {project.description}
@@ -50,7 +50,7 @@ const ProjectCards: ProjectCardsType = ({projects = []}) => {
               <Button
                 disabled={!project.public}
                 variant="contained"
-                sx={{fontWeight: "bold"}}
+                sx={{fontWeight: 'bold'}}
                 onClick={() => openInNewTab(project.link)}>
                 Visit {!project.public && <Lock />}
               </Button>

@@ -1,12 +1,12 @@
-import React, {useEffect, useState} from "react"
-import {AppBar, Box, Tab, Tabs, Toolbar} from "@mui/material"
-import {TopBar as TopBarType} from "../API/types"
-import Configurations from "./configurations"
+import React, {useEffect, useState} from 'react'
+import Configurations from './configurations'
+import {TopBar as TopBarType} from '../types/types'
+import {AppBar, Box, Tab, Tabs, Toolbar} from '@mui/material'
 
-const TopBar: TopBarType = ({sections = [], lastSectionActive = ""}) => {
-  const [section, setSection] = useState(
-    sections.length > 0 ? sections[0].id : ""
-  )
+const TopBar: TopBarType = ({sections = [], lastSectionActive = ''}) => {
+  const [section, setSection] = useState<string>(
+    sections.length > 0 ? sections[0].id : ''
+  ) // TODO: update type
 
   useEffect(() => {
     lastSectionActive && setSection(lastSectionActive)
@@ -16,29 +16,29 @@ const TopBar: TopBarType = ({sections = [], lastSectionActive = ""}) => {
     event.preventDefault()
     setSection(section)
     const htmlSection = document.getElementById(section)
-    htmlSection && htmlSection.scrollIntoView({behavior: "smooth", block: "start"})
+    htmlSection && htmlSection.scrollIntoView({behavior: 'smooth', block: 'start'})
   }
 
   return (
     <AppBar position="sticky">
       <Toolbar variant="dense">
         <Box display="flex" justifyContent="center" sx={{flexGrow: 1}}>
-        <Tabs
-          variant="scrollable"
-          allowScrollButtonsMobile
-          scrollButtons="auto"
-          value={section}
-          onChange={changeSection}
-          textColor="secondary"
-          indicatorColor="secondary">
-          {sections.map(section => (
-            <Tab
-              key={section.id}
-              value={section.id}
-              label={section.label}
-              sx={{fontWeight: "bold", color: "white"}}/>
-          ))}
-        </Tabs>
+          <Tabs
+            variant="scrollable"
+            allowScrollButtonsMobile
+            scrollButtons="auto"
+            value={section}
+            onChange={changeSection}
+            textColor="secondary"
+            indicatorColor="secondary">
+            {sections.map(section => (
+              <Tab
+                key={section.id}
+                value={section.id}
+                label={section.label}
+                sx={{fontWeight: 'bold', color: 'white'}}/>
+            ))}
+          </Tabs>
         </Box>
         <Configurations />
       </Toolbar>

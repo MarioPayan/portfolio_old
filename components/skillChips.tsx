@@ -1,5 +1,7 @@
-import React, {useState} from "react"
-import {Chip, Grid, Tab, Tabs, Grow} from "@mui/material"
+import React, {useState} from 'react'
+import {Skill, SkillChips as SkillChipsType} from '../types/types'
+import {getKeyFromLabel} from '../utils/utils'
+import {Chip, Grid, Tab, Tabs, Grow} from '@mui/material'
 import {
   Code,
   IntegrationInstructions,
@@ -14,17 +16,15 @@ import {
   SelfImprovement,
   Engineering,
   Group
-} from "@mui/icons-material/"
-import {Skill, SkillChips as SkillChipsType} from "../API/types"
-import {getKeyFromLabel} from "../API/utils"
+} from '@mui/icons-material/'
 
 const SkillChips: SkillChipsType = ({skills = []}) => {
-  const defaultFilter = "all"
+  const defaultFilter = 'all'
   const filters: string[] = [
     defaultFilter,
     ...new Set(skills.map(skill => skill.type)),
   ]
-  const [filter, setFilter] = useState(defaultFilter)
+  const [filter, setFilter] = useState<string>(defaultFilter) // TODO: update type
   const [filteredSkills, setFilteredSkills] = useState<Skill[]>(skills)
 
   const changeFilter = (event: React.SyntheticEvent, filter: string) => {
@@ -64,7 +64,7 @@ const SkillChips: SkillChipsType = ({skills = []}) => {
       spacing={1}
       xs={12}
       md={8}
-      sx={{justifyContent: "center"}}>
+      sx={{justifyContent: 'center'}}>
       <Grid item display="flex" justifyContent="center" xs={12}>
         <Tabs
           variant="scrollable"
@@ -79,7 +79,7 @@ const SkillChips: SkillChipsType = ({skills = []}) => {
               key={getKeyFromLabel(filter)}
               value={getKeyFromLabel(filter)}
               label={filter}
-              sx={{fontWeight: "bold"}}/>
+              sx={{fontWeight: 'bold'}}/>
           ))}
         </Tabs>
       </Grid>
@@ -92,7 +92,7 @@ const SkillChips: SkillChipsType = ({skills = []}) => {
               component="a"
               icon={getIcon(skill.type)}
               variant="outlined"
-              sx={{fontSize: 16, borderWidth: 2, borderColor: "gray"}}
+              sx={{fontSize: 16, borderWidth: 2, borderColor: 'gray'}}
               clickable/>
           </Grow>
         </Grid>

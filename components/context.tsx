@@ -1,5 +1,5 @@
-import {createContext} from "react"
-import {lightTheme} from "../styles/theme"
+import {createContext} from 'react'
+import {lightTheme} from '../styles/theme'
 
 const Context = createContext({
   theme: lightTheme,
