@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import Configurations from './configurations'
 import {TopBar as TopBarType} from '../types/types'
-import {AppBar, Box, Tab, Tabs, Toolbar} from '@mui/material'
+import {AppBar, Box, Tab, Tabs} from '@mui/material'
 
 const TopBar: TopBarType = ({sections = [], lastSectionActive = ''}) => {
   const [section, setSection] = useState<string>(
@@ -21,27 +21,26 @@ const TopBar: TopBarType = ({sections = [], lastSectionActive = ''}) => {
 
   return (
     <AppBar position="sticky">
-      <Toolbar variant="dense">
-        <Box display="flex" justifyContent="center" sx={{flexGrow: 1}}>
-          <Tabs
-            variant="scrollable"
-            allowScrollButtonsMobile
-            scrollButtons="auto"
-            value={section}
-            onChange={changeSection}
-            textColor="secondary"
-            indicatorColor="secondary">
-            {sections.map(section => (
-              <Tab
-                key={section.id}
-                value={section.id}
-                label={section.label}
-                sx={{fontWeight: 'bold', color: 'white'}}/>
-            ))}
-          </Tabs>
-        </Box>
+      <Box display="flex" justifyContent="space-between">
+        <Box />
+        <Tabs
+          variant="scrollable"
+          allowScrollButtonsMobile
+          scrollButtons="auto"
+          value={section}
+          onChange={changeSection}
+          textColor="secondary"
+          indicatorColor="secondary">
+          {sections.map(section => (
+            <Tab
+              key={section.id}
+              value={section.id}
+              label={section.label}
+              sx={{fontWeight: 'bold', color: 'white'}}/>
+          ))}
+        </Tabs>
         <Configurations />
-      </Toolbar>
+      </Box>
     </AppBar>
   )
 }

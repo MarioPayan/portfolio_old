@@ -59,7 +59,7 @@ export const tsParticlesOptions: any = {
       enable: true,
       outMode: 'bounce',
       random: false,
-      speed: 1,
+      speed: 0.9,
       straight: false,
     },
     number: {
@@ -67,8 +67,8 @@ export const tsParticlesOptions: any = {
         enable: true,
         area: 800,
       },
-      value: 80,
-      limit: 200,
+      value: 70,
+      limit: 100,
     },
     opacity: {
       value: 0.5,

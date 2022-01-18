@@ -19,7 +19,7 @@ export type TimeLineItem = {
   position: string;
   achievements: string[];
 };
-export type Theme = 'light' | 'dark'
+export type Theme = 'light' | 'dark';
 export type Section = { label: string; id: string };
 
 export type SkillChips = (props: { skills: Skill[] }) => JSX.Element;
