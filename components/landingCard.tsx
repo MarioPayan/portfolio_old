@@ -76,7 +76,7 @@ const LandingCard: LandingCardType = ({data}) => {
                     color="primary"
                     variant="contained"
                     sx={{fontWeight: 'bold'}}>
-                    Contact me
+                    Do nothing
                   </Button>
                 </Grid>
                 <Grid item>

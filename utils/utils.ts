@@ -67,8 +67,8 @@ export const tsParticlesOptions: any = {
         enable: true,
         area: 800,
       },
-      value: 70,
-      limit: 100,
+      value: 80,
+      limit: 200,
     },
     opacity: {
       value: 0.5,
