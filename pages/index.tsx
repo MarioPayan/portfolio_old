@@ -8,7 +8,7 @@ import SkillChips from '../components/skillChips'
 import TimeLine from '../components/timeline'
 import LandingBackground from '../components/landingBackground'
 import ProjectCards from '../components/projectCards'
-import {personal, sections} from '../API/en-data.json'
+import {default as data} from '../API/en-data.json'
 import {Grid, Grow, Stack} from '@mui/material'
 
 const Home: NextPage = () => {
@@ -107,9 +107,11 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>{personal.name}</title>
+        <title>{data.personal.name}</title>
       </Head>
-      <TopBar sections={sections} lastSectionActive={lastSectionVisible()} />
+      <TopBar
+        sections={data.sections}
+        lastSectionActive={lastSectionVisible()}/>
       <LandingBackground />
       <Stack
         direction="column"

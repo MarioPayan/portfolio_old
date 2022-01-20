@@ -8,7 +8,7 @@ import i18n from 'i18next'
 import {useTranslation, initReactI18next} from 'react-i18next'
 import enData from '../API/en-data.json'
 import esData from '../API/es-data.json'
-import {initTheme, initLanguage} from '../utils/cookies'
+import {initLanguage} from '../utils/cookies'
 
 i18n.use(initReactI18next).init({
   resources: {
@@ -29,7 +29,8 @@ i18n.use(initReactI18next).init({
 
 const App = ({Component, pageProps}: AppProps) => {
   const [theme, setTheme] = useState(
-    initTheme('dark') === 'dark' ? darkTheme : lightTheme
+    // initTheme('dark') === 'dark' ? darkTheme : lightTheme // TODO: Fix
+    darkTheme
   )
   const setLightTheme = () => setTheme(lightTheme)
   const setDarkTheme = () => setTheme(darkTheme)

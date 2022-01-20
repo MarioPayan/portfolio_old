@@ -20,14 +20,13 @@ import {DarkMode, LightMode, Settings} from '@mui/icons-material'
 import Context from './context'
 import {
   getLanguage,
-  getTheme,
   setTheme as setStorageTheme,
   setLanguage as setStorageLanguage
 } from '../utils/cookies'
 
 const Configurations: ConfigurationsType = () => {
   const [open, setOpen] = useState<boolean>(false)
-  const [theme, setTheme] = useState<Theme>(getTheme() as Theme)
+  const [theme, setTheme] = useState<Theme>('dark') // TODO: fix getTheme() as Theme
   const [language, setLanguage] = useState<Language>(getLanguage() as Language)
 
   const toggleDrawer = (open = true) => setOpen(open)

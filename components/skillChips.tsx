@@ -87,11 +87,11 @@ const SkillChips: SkillChipsType = ({typeSkills}) => {
                     t(typeSkills, {returnObjects: true}) as unknown as Skill[]
                   ).map(skill => skill.type)
                 ),
-              ].map((filter, i) => (
+              ].map((filter: string, i) => (
                 <Tab
                   key={i !== 0 ? getKeyFromLabel(filter) : 'all'}
                   value={i !== 0 ? getKeyFromLabel(filter) : 'all'}
-                  label={filter.replaceAll('_', ' ')}
+                  label={filter} // TODO: .replaceAll('_', ' ')
                   sx={{fontWeight: 'bold'}}/>
               ))}
             </Tabs>
