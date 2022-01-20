@@ -1,0 +1,310 @@
+{
+  "sections": [
+    {
+      "label": "Sobre mí",
+      "id": "about"
+    },
+    {
+      "label": "Habilidades técnicas",
+      "id": "hardSkills"
+    },
+    {
+      "label": "Habilidades blandas",
+      "id": "softSkills"
+    },
+    {
+      "label": "Experiencia",
+      "id": "experience"
+    },
+    {
+      "label": "Proyectos",
+      "id": "projects"
+    },
+    {
+      "label": "Educación",
+      "id": "education"
+    }
+  ],
+  "misc": {
+    "label": {
+      "configurations": "Configuración",
+      "underConstruction": "En Construcción",
+      "all": "Todo"
+    },
+    "button": {
+      "main": "No hago nada",
+      "download_cv": "Descargar HV",
+      "visit": "Visitar"
+    },
+    "text": {
+      "underConstruction": "Hola! Gracias por visitar mi web, aún está en construcción pero puedes ver lo que estoy haciendo y sientete libre de hacerme sugerencias"
+    }
+  },
+  "personal": {
+    "title": "Desarrollador de Software",
+    "subtitle": "Desarrollador Full Stack | Javascript & Python | Django & React",
+    "summary": "Desarrollador full stack con enfoque en desarrollo de software, diseño de algoritmos, software como servicio, y código limpio. Impulsado por los desafíos, siempre dispuesto a aprender, apasionado por las nuevas tecnologías, el trabajo en equipo y escribir código de calidad."
+  },
+  "hardSkills": [
+    {
+      "label": "Javascript",
+      "type": "código"
+    },
+    {
+      "label": "Typescript",
+      "type": "código"
+    },
+    {
+      "label": "Python",
+      "type": "código"
+    },
+    {
+      "label": "ReactJS",
+      "type": "código"
+    },
+    {
+      "label": "Español",
+      "type": "idiomas"
+    },
+    {
+      "label": "Inglés",
+      "type": "idiomas"
+    },
+    {
+      "label": "Django",
+      "type": "frameworks"
+    },
+    {
+      "label": "Django REST",
+      "type": "frameworks"
+    },
+    {
+      "label": "Angular",
+      "type": "frameworks"
+    },
+    {
+      "label": "HTML5",
+      "type": "html"
+    },
+    {
+      "label": "CSS3",
+      "type": "css"
+    },
+    {
+      "label": "Bootstrap",
+      "type": "css"
+    },
+    {
+      "label": "Material UI",
+      "type": "css"
+    },
+    {
+      "label": "PostgreSQL",
+      "type": "base_de_datos"
+    },
+    {
+      "label": "SQLite",
+      "type": "base_de_datos"
+    },
+    {
+      "label": "Git",
+      "type": "git"
+    },
+    {
+      "label": "GitHub",
+      "type": "git"
+    },
+    {
+      "label": "GitLab",
+      "type": "git"
+    },
+    {
+      "label": "BitBucket",
+      "type": "git"
+    },
+    {
+      "label": "Shell",
+      "type": "código"
+    },
+    {
+      "label": "Jasmine",
+      "type": "pruebas"
+    },
+    {
+      "label": "Puppeteer",
+      "type": "pruebas"
+    },
+    {
+      "label": "Appium",
+      "type": "pruebas"
+    },
+    {
+      "label": "Linux",
+      "type": "os"
+    },
+    {
+      "label": "OSx",
+      "type": "os"
+    },
+    {
+      "label": "Flexbox",
+      "type": "css"
+    }
+  ],
+  "projects": [
+    {
+      "label": "Proyecto de grado",
+      "description": "Aplicación de Realidad Aumentada para la Comunicación de Información relativa al proceso de autoevaluación del Programa Académico de Ingeniería de Sistemas",
+      "image": "/projects/uv.png",
+      "link": "",
+      "public": false
+    },
+    {
+      "label": "Página web de Deft",
+      "description": "Página de aterrizaje para la empresa Deft Soluciones",
+      "image": "/projects/deft.png",
+      "link": "https://deftsoluciones.com/",
+      "public": true
+    },
+    {
+      "label": "Placa y Cédula (Android)",
+      "description": "Aplicación de android que permitió determinar cuándo era buen momento para salir durante la pandemia en Colombia",
+      "image": "/projects/pyc_android.webp",
+      "link": "https://play.google.com/store/apps/details?id=com.herokuapp.placa_y_cedula.twa",
+      "public": true
+    },
+    {
+      "label": "Placa y Cédula (Web)",
+      "description": "Página web que permitió determinar cuándo era buen momento para salir durante la pandemia en Colombia",
+      "image": "/projects/pyc_web.png",
+      "link": "https://placa-y-cedula.herokuapp.com/",
+      "public": true
+    },
+    {
+      "label": "SVG Learning Tool",
+      "description": "Una herramienta muy básica para entender de manera sencilla cómo funcionan los SVG",
+      "image": "/projects/svg.png",
+      "link": "https://mariopayan.github.io/SvgLearningTool/",
+      "public": true
+    },
+    {
+      "label": "Esta página web",
+      "description": "Página que hice por diversión",
+      "link": "https://www.mariopayan.com/",
+      "public": true
+    },
+    {
+      "label": "Aplicación de encuestas",
+      "description": "Herramienta de encuestas que TODO",
+      "image": "/projects/wp.png",
+      "link": "https://app.wellplayedresearch.com/",
+      "public": false
+    }
+  ],
+  "softSkills": [
+    {
+      "label": "Voluntad de aprender",
+      "type": "personal"
+    },
+    {
+      "label": "Resolución de problemas",
+      "type": "metódico"
+    },
+    {
+      "label": "Proactividad",
+      "type": "personal"
+    },
+    {
+      "label": "Comunicación",
+      "type": "social"
+    },
+    {
+      "label": "Trabajo en equipo",
+      "type": "social"
+    },
+    {
+      "label": "Adaptabilidad",
+      "type": "social"
+    },
+    {
+      "label": "Código limpio",
+      "type": "metódico"
+    }
+  ],
+  "experiences": [
+    {
+      "where": "Alert Logic",
+      "from": "2017-01",
+      "to": "2017-07",
+      "position": "Desarrollador web (Pasantía)",
+      "achievements": [
+        "Incremento en la cobertura de aplicaciones en PHP",
+        "Soporte para características/defectos de aplicaciones JavaScript, Jquery y PHP",
+        "Mejoras en la interfaz de usuario y rendimiento de aplicaciones web",
+        "Desarrollo de software usando la metodología ágil SCRUM"
+      ]
+    },
+    {
+      "where": "Alert Logic",
+      "from": "2017-10",
+      "to": "2018-11",
+      "position": "Desarrollador Back-End",
+      "achievements": [
+        "Automatización de servicios internos",
+        "Creación y soporte de herramientas internas para analistas",
+        "Soporte y mantenimiento de nodos con Chef"
+      ]
+    },
+    {
+      "where": "Alert Logic",
+      "from": "2018-11",
+      "to": "2019-11",
+      "position": "Desarrollador Full-Stack",
+      "achievements": [
+        "Desarrollador SCRUM master",
+        "Ayudar a implementar integracion continua y despliegue continuo para pipelines",
+        "Implementar metodología y arquitectura de prueba de software de extremo a extremo",
+        "Crear una nueva experiencia de interfaz de usuario para uno de los productos más utilizados"
+      ]
+    },
+    {
+      "where": "Alert Logic",
+      "from": "2019-11",
+      "to": "2021-07",
+      "position": "Mobile Developer",
+      "achievements": [
+        "Trabajar en la implementación de una aplicación móvil iOS",
+        "Crear desde cero una aplicación móvil para Android"
+      ]
+    },
+    {
+      "where": "Network Redux",
+      "from": "2021-07",
+      "to": "",
+      "position": "Desarrollador Tech-Lead",
+      "achievements": []
+    },
+    {
+      "where": "CIER-Sur",
+      "from": "2016-01",
+      "to": "2016-06",
+      "position": "Web Content Developer",
+      "achievements": [
+        "Cree objetos de aprendizaje basados en código Javascript con CSS",
+        "Ayuda a construir un framework para reutilizar el código existente en nuevos objetos de aprendizaje"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "where": "Universidad del Valle",
+      "from": "2012-01",
+      "to": "2017-01",
+      "position": "B.S. Systems Engineering and Computer Science",
+      "achievements": [
+        "Beca Académica Nacional: Bachilleres por Colombia Mario Galán Gómez, premio otorgado a los 70 mejores alumnos del país",
+        "Becas académicas otorgadas por estar entre los mejores del semestre"
+      ]
+    }
+  ]
+}

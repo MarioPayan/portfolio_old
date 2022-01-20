@@ -1,5 +1,9 @@
 import React, {useState} from 'react'
-import {Configurations as ConfigurationsType, Theme} from '../types/types'
+import {
+  Configurations as ConfigurationsType,
+  Language,
+  Theme
+} from '../types/types'
 import {
   Divider,
   Grid,
@@ -12,56 +16,65 @@ import {
   ToggleButtonGroup,
   Typography
 } from '@mui/material'
-import {
-  DarkMode,
-  GTranslateSharp,
-  LanguageSharp,
-  LightMode,
-  Settings
-} from '@mui/icons-material'
-
+import {DarkMode, LightMode, Settings} from '@mui/icons-material'
 import Context from './context'
+import {
+  getLanguage,
+  getTheme,
+  setTheme as setStorageTheme,
+  setLanguage as setStorageLanguage
+} from '../utils/cookies'
 
 const Configurations: ConfigurationsType = () => {
   const [open, setOpen] = useState<boolean>(false)
-  const [mode, setMode] = useState<Theme>('light')
+  const [theme, setTheme] = useState<Theme>(getTheme() as Theme)
+  const [language, setLanguage] = useState<Language>(getLanguage() as Language)
 
   const toggleDrawer = (open = true) => setOpen(open)
 
-  const changeTheme = (
-    newMode: Theme,
-    setLightTheme: any,
-    setDarkTheme: any
+  const changeTheme = (theme: Theme, setLightTheme: any, setDarkTheme: any) => {
+    setTheme(theme)
+    setStorageTheme(theme)
+    if (theme === 'light') setLightTheme()
+    if (theme === 'dark') setDarkTheme()
+  }
+
+  const changeLanguage = (
+    language: Language,
+    setEnglish: any,
+    setSpanish: any
   ) => {
-    setMode(newMode)
-    if (newMode === 'light') setLightTheme()
-    if (newMode === 'dark') setDarkTheme()
+    setLanguage(language)
+    setStorageLanguage(language)
+    if (language === 'en') setEnglish()
+    if (language === 'es') setSpanish()
   }
 
   const ThemeButtons = ({setLightTheme, setDarkTheme}: any) => (
     <ToggleButtonGroup
-      value={mode}
+      value={theme}
       onChange={(_, value) => changeTheme(value, setLightTheme, setDarkTheme)}
       exclusive={true}>
       <ToggleButton value="light" key="light">
-        <LightMode color={mode === 'light' ? 'secondary' : 'warning'} />
+        <LightMode color={theme === 'light' ? 'secondary' : 'warning'} />
       </ToggleButton>
       <ToggleButton value="dark" key="dark">
-        <DarkMode color={mode === 'dark' ? 'secondary' : 'warning'} />
+        <DarkMode color={theme === 'dark' ? 'secondary' : 'warning'} />
       </ToggleButton>
     </ToggleButtonGroup>
   )
 
-  const LanguageButtons = ({setSpanish, setEnglish}: any) => (
+  const LanguageButtons = ({setEnglishLanguage, setSpanishLanguage}: any) => (
     <ToggleButtonGroup
-      value="english"
-      onChange={() => alert('This is not implemented yet, sorry :c')}
+      value={language}
+      onChange={(_, value) => changeLanguage(value, setEnglishLanguage, setSpanishLanguage)
+      }
       exclusive={true}>
-      <ToggleButton value="english" key="english">
-        <LanguageSharp color="warning" />
+      <ToggleButton value="en" key="en">
+        <Typography sx={{fontWeight: 'bold'}}>EN</Typography>
       </ToggleButton>
-      <ToggleButton value="spanish" key="spanish">
-        <GTranslateSharp color="secondary" />
+      <ToggleButton value="es" key="es">
+        <Typography sx={{fontWeight: 'bold'}}>ES</Typography>
       </ToggleButton>
     </ToggleButtonGroup>
   )
@@ -89,7 +102,13 @@ const Configurations: ConfigurationsType = () => {
 
   return (
     <Context.Consumer>
-      {({setLightTheme, setDarkTheme}) => (
+      {({
+        setLightTheme,
+        setDarkTheme,
+        setEnglishLanguage,
+        setSpanishLanguage,
+        t,
+      }) => (
         <>
           <IconButton aria-label="Linked In" onClick={() => toggleDrawer()}>
             <Settings color="secondary" />
@@ -109,7 +128,7 @@ const Configurations: ConfigurationsType = () => {
                     display="flex"
                     justifyContent="center"
                     variant="h4">
-                    Configurations
+                    {t('misc.label.configurations')}
                   </Typography>
                 }></ListItemText>
               <Divider />
@@ -124,23 +143,23 @@ const Configurations: ConfigurationsType = () => {
                 label="Language"
                 component={
                   <LanguageButtons
-                    setLightTheme={setLightTheme}
-                    setDarkTheme={setDarkTheme}/>
+                    setEnglishLanguage={setEnglishLanguage}
+                    setSpanishLanguage={setSpanishLanguage}/>
                 }></ListConfigItem>
               <Divider />
               <ListItem sx={{position: 'fixed', bottom: 0}}>
                 <ListItemText
                   primary={
-                    <Typography variant="h5">Under Construction</Typography>
+                    <Typography variant="h5">
+                      {t('misc.label.underConstruction')}
+                    </Typography>
                   }
                   secondary={
                     <Typography
                       display="flex"
                       sx={{width: 200}}
                       variant="subtitle1">
-                      Hey, thanks for visiting my website, this site is under
-                      construction yet but feel free to visit it and check it
-                      whenever you want
+                      {t('misc.text.underConstruction')}
                     </Typography>
                   }></ListItemText>
               </ListItem>

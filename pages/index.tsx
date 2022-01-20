@@ -8,57 +8,65 @@ import SkillChips from '../components/skillChips'
 import TimeLine from '../components/timeline'
 import LandingBackground from '../components/landingBackground'
 import ProjectCards from '../components/projectCards'
-import {
-  landingCardData,
-  sections,
-  hardSkills,
-  softSkills,
-  experiences,
-  projects,
-  education
-} from '../API/data'
+import {personal, sections} from '../API/en-data.json'
 import {Grid, Grow, Stack} from '@mui/material'
 
 const Home: NextPage = () => {
   const inViewOptions = {threshold: 0}
-  const [aboutRef, aboutInView] = useInView(inViewOptions)
-  const [hardSkillsRef, hardSkillsInView] = useInView(inViewOptions)
-  const [softSkillsRef, softSkillsInView] = useInView(inViewOptions)
-  const [experienceRef, experienceInView] = useInView(inViewOptions)
-  const [projectsRef, projectsInView] = useInView(inViewOptions)
-  const [educationRef, educationInView] = useInView(inViewOptions)
+  const [aboutRef1, aboutInView1] = useInView(inViewOptions)
+  const [aboutRef2, aboutInView2] = useInView(inViewOptions)
+  const [hardSkillsRef1, hardSkillsInView1] = useInView(inViewOptions)
+  const [hardSkillsRef2, hardSkillsInView2] = useInView(inViewOptions)
+  const [softSkillsRef1, softSkillsInView1] = useInView(inViewOptions)
+  const [softSkillsRef2, softSkillsInView2] = useInView(inViewOptions)
+  const [experienceRef1, experienceInView1] = useInView(inViewOptions)
+  const [experienceRef2, experienceInView2] = useInView(inViewOptions)
+  const [projectsRef1, projectsInView1] = useInView(inViewOptions)
+  const [projectsRef2, projectsInView2] = useInView(inViewOptions)
+  const [educationRef1, educationInView1] = useInView(inViewOptions)
+  const [educationRef2, educationInView2] = useInView(inViewOptions)
 
-  const [aboutShowed, setAboutShowed] = useState(aboutInView)
-  const [hardSkillShowed, setCodeSkillShowed] = useState(hardSkillsInView)
-  const [softSkillShowed, setSoftSkillShowed] = useState(softSkillsInView)
-  const [experienceShowed, setExperienceShowed] = useState(experienceInView)
-  const [projectsShowed, setProjectsShowed] = useState(projectsInView)
-  const [educationShowed, setEducationShowed] = useState(educationInView)
+  const [aboutShowed, setAboutShowed] = useState(aboutInView1 || aboutInView2)
+  const [hardSkillShowed, setCodeSkillShowed] = useState(
+    hardSkillsInView1 || hardSkillsInView2
+  )
+  const [softSkillShowed, setSoftSkillShowed] = useState(
+    softSkillsInView1 || softSkillsInView2
+  )
+  const [experienceShowed, setExperienceShowed] = useState(
+    experienceInView1 || experienceInView2
+  )
+  const [projectsShowed, setProjectsShowed] = useState(
+    projectsInView1 || projectsInView2
+  )
+  const [educationShowed, setEducationShowed] = useState(
+    educationInView1 || educationInView2
+  )
 
   useEffect(() => {
-    aboutInView && setAboutShowed(true)
-  }, [aboutInView])
+    if (aboutInView1 || aboutInView2) setAboutShowed(true)
+  }, [aboutInView1, aboutInView2])
   useEffect(() => {
-    hardSkillsInView && setCodeSkillShowed(true)
-  }, [hardSkillsInView])
+    if (hardSkillsInView1 || hardSkillsInView2) setCodeSkillShowed(true)
+  }, [hardSkillsInView1, hardSkillsInView2])
   useEffect(() => {
-    softSkillsInView && setSoftSkillShowed(true)
-  }, [softSkillsInView])
+    if (softSkillsInView1 || softSkillsInView2) setSoftSkillShowed(true)
+  }, [softSkillsInView1, softSkillsInView2])
   useEffect(() => {
-    experienceInView && setExperienceShowed(true)
-  }, [experienceInView])
+    if (experienceInView1 || experienceInView2) setExperienceShowed(true)
+  }, [experienceInView1, experienceInView2])
   useEffect(() => {
-    projectsInView && setProjectsShowed(true)
-  }, [projectsInView])
+    if (projectsInView1 || projectsInView2) setProjectsShowed(true)
+  }, [projectsInView1, projectsInView2])
   useEffect(() => {
-    educationInView && setEducationShowed(true)
-  }, [educationInView])
+    if (educationInView1 || educationInView2) setEducationShowed(true)
+  }, [educationInView1, educationInView2])
 
   const growComponent = (
     Component: any,
     props: { [key: string]: any },
     id: string,
-    ref: any,
+    refs: any[],
     inView: boolean
   ) => {
     const styleInherit = {
@@ -75,30 +83,31 @@ const Home: NextPage = () => {
     }
     return (
       <>
-        <div id={id} ref={ref} style={invisibleStyle}></div>
+        <div id={id} ref={refs[0]} style={invisibleStyle}></div>
         <Grow in={inView}>
           <Grid container style={{...styleInherit, marginTop: '80px'}}>
             <Component {...props} />
           </Grid>
         </Grow>
+        <div id={id} ref={refs[1]} style={invisibleStyle}></div>
       </>
     )
   }
 
   const lastSectionVisible = (): string => {
-    if (aboutInView) return 'about'
-    if (hardSkillsInView) return 'hardSkills'
-    if (softSkillsInView) return 'softSkills'
-    if (experienceInView) return 'experience'
-    if (projectsInView) return 'projects'
-    if (educationInView) return 'education'
+    if (aboutInView1 && aboutInView2) return 'about'
+    if (hardSkillsInView1 && hardSkillsInView2) return 'hardSkills'
+    if (softSkillsInView1 && softSkillsInView2) return 'softSkills'
+    if (experienceInView1 && experienceInView2) return 'experience'
+    if (projectsInView1 && projectsInView2) return 'projects'
+    if (educationInView1 && educationInView2) return 'education'
     return ''
   }
 
   return (
     <>
       <Head>
-        <title>{landingCardData.name}</title>
+        <title>{personal.name}</title>
       </Head>
       <TopBar sections={sections} lastSectionActive={lastSectionVisible()} />
       <LandingBackground />
@@ -112,44 +121,44 @@ const Home: NextPage = () => {
         justifyContent="center">
         {growComponent(
           LandingCard,
-          {data: landingCardData},
+          {},
           'about',
-          aboutRef,
+          [aboutRef1, aboutRef2],
           aboutShowed
         )}
         {growComponent(
           SkillChips,
-          {skills: hardSkills},
+          {typeSkills: 'hardSkills'},
           'hardSkills',
-          hardSkillsRef,
+          [hardSkillsRef1, hardSkillsRef2],
           hardSkillShowed
         )}
         {growComponent(
           SkillChips,
-          {skills: softSkills},
+          {typeSkills: 'softSkills'},
           'softSkills',
-          softSkillsRef,
+          [softSkillsRef1, softSkillsRef2],
           softSkillShowed
         )}
         {growComponent(
           TimeLine,
-          {items: experiences},
+          {typeItems: 'experiences'},
           'experience',
-          experienceRef,
+          [experienceRef1, experienceRef2],
           experienceShowed
         )}
         {growComponent(
           ProjectCards,
-          {projects: projects},
+          {},
           'projects',
-          projectsRef,
+          [projectsRef1, projectsRef2],
           projectsShowed
         )}
         {growComponent(
           TimeLine,
-          {items: education},
+          {typeItems: 'education'},
           'education',
-          educationRef,
+          [educationRef1, educationRef2],
           educationShowed
         )}
       </Stack>

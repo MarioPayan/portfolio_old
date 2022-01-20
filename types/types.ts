@@ -5,7 +5,7 @@ export type LandingCardData = {
   subtitle: string;
   summary: string;
 };
-export type Projects = {
+export type Project = {
   label: string;
   description: string;
   image: string;
@@ -20,13 +20,14 @@ export type TimeLineItem = {
   achievements: string[];
 };
 export type Theme = 'light' | 'dark';
+export type Language = 'en' | 'es';
 export type Section = { label: string; id: string };
 
-export type SkillChips = (props: { skills: Skill[] }) => JSX.Element;
-export type TimeLine = (props: { items: TimeLineItem[] }) => JSX.Element;
-export type ProjectCards = (props: { projects: Projects[] }) => JSX.Element;
+export type SkillChips = (props: { typeSkills: string }) => JSX.Element;
+export type TimeLine = (props: { typeItems: string }) => JSX.Element;
+export type ProjectCards = (props: any) => JSX.Element;
 export type Configurations = () => JSX.Element;
-export type LandingCard = (props: { data: LandingCardData }) => JSX.Element;
+export type LandingCard = (props: any) => JSX.Element;
 export type TopBar = (props: {
   sections: Section[];
   lastSectionActive: string;

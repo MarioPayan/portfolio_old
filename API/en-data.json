@@ -1,0 +1,319 @@
+{
+  "sections": [
+    {
+      "label": "About",
+      "id": "about"
+    },
+    {
+      "label": "Hard Skills",
+      "id": "hardSkills"
+    },
+    {
+      "label": "Soft Skills",
+      "id": "softSkills"
+    },
+    {
+      "label": "Experience",
+      "id": "experience"
+    },
+    {
+      "label": "Projects",
+      "id": "projects"
+    },
+    {
+      "label": "Education",
+      "id": "education"
+    }
+  ],
+  "misc": {
+    "label": {
+      "configurations": "Configurations",
+      "underConstruction": "Under construction",
+      "all": "All"
+    },
+    "button": {
+      "main": "Do nothing",
+      "download_cv": "Download CV",
+      "visit": "Visit"
+    },
+    "text": {
+      "underConstruction": "Hey, thanks for visiting my website, this site is under construction yet but feel free to visit it and check it whenever you want"
+    }
+  },
+  "personal": {
+    "name": "Mario Payan",
+    "title": "Software Developer",
+    "subtitle": "Full Stack Engineer | Javascript & Python | Django & React",
+    "summary": "Fullstack developer with focus on software development, algorithms design, software as a service and clean code. Challenge driven, always willing to learn, passionate about new technologies, teamwork and code writing.",
+    "social": {
+      "facebook": "https://www.facebook.com/Mario.A.Payan.V",
+      "instagram": "https://www.instagram.com/mario.a.payan/",
+      "github": "https://github.com/marioPayan",
+      "linkedin": "https://www.linkedin.com/in/mario-payan/",
+      "whatsapp": "https://wa.me/573186151646?text=Hey!",
+      "email": "mailto:mpayan.av@gmail.com"
+    }
+  },
+  "hardSkills": [
+    {
+      "label": "Javascript",
+      "type": "code"
+    },
+    {
+      "label": "Typescript",
+      "type": "code"
+    },
+    {
+      "label": "Python",
+      "type": "code"
+    },
+    {
+      "label": "ReactJS",
+      "type": "code"
+    },
+    {
+      "label": "Spanish",
+      "type": "languages"
+    },
+    {
+      "label": "English",
+      "type": "languages"
+    },
+    {
+      "label": "Django",
+      "type": "frameworks"
+    },
+    {
+      "label": "Django REST",
+      "type": "frameworks"
+    },
+    {
+      "label": "Angular",
+      "type": "frameworks"
+    },
+    {
+      "label": "HTML5",
+      "type": "html"
+    },
+    {
+      "label": "CSS3",
+      "type": "css"
+    },
+    {
+      "label": "Bootstrap",
+      "type": "css"
+    },
+    {
+      "label": "Material UI",
+      "type": "css"
+    },
+    {
+      "label": "PostgreSQL",
+      "type": "database"
+    },
+    {
+      "label": "SQLite",
+      "type": "database"
+    },
+    {
+      "label": "Git",
+      "type": "git"
+    },
+    {
+      "label": "GitHub",
+      "type": "git"
+    },
+    {
+      "label": "GitLab",
+      "type": "git"
+    },
+    {
+      "label": "BitBucket",
+      "type": "git"
+    },
+    {
+      "label": "Shell",
+      "type": "code"
+    },
+    {
+      "label": "Jasmine",
+      "type": "test"
+    },
+    {
+      "label": "Puppeteer",
+      "type": "test"
+    },
+    {
+      "label": "Appium",
+      "type": "test"
+    },
+    {
+      "label": "Linux",
+      "type": "os"
+    },
+    {
+      "label": "OSx",
+      "type": "os"
+    },
+    {
+      "label": "Flexbox",
+      "type": "css"
+    }
+  ],
+  "projects": [
+    {
+      "label": "Under degree project",
+      "description": "Application of Augmented Reality for the Communication of Information related to the self-assessment process of the System Engineering Academic Program",
+      "image": "/projects/uv.png",
+      "link": "",
+      "public": false
+    },
+    {
+      "label": "Deft website",
+      "description": "Landing page for Deft Soluciones company",
+      "image": "/projects/deft.png",
+      "link": "https://deftsoluciones.com/",
+      "public": true
+    },
+    {
+      "label": "Placa y Cédula (Android)",
+      "description": "Android app to know when you can go outside during the pandemic situation in Colombia",
+      "image": "/projects/pyc_android.webp",
+      "link": "https://play.google.com/store/apps/details?id=com.herokuapp.placa_y_cedula.twa",
+      "public": true
+    },
+    {
+      "label": "Placa y Cédula (Web)",
+      "description": "Web app to know when you can go outside during the pandemic situation in Colombia",
+      "image": "/projects/pyc_web.png",
+      "link": "https://placa-y-cedula.herokuapp.com/",
+      "public": true
+    },
+    {
+      "label": "SVG Learning Tool",
+      "description": "A simple tool to understand how SVG works that I made in my free time to help some mates",
+      "image": "/projects/svg.png",
+      "link": "https://mariopayan.github.io/SvgLearningTool/",
+      "public": true
+    },
+    {
+      "label": "This website",
+      "description": "Website I built for fun",
+      "link": "https://www.mariopayan.com/",
+      "public": true
+    },
+    {
+      "label": "Survey Tool",
+      "description": "Survey tool that TODO",
+      "image": "/projects/wp.png",
+      "link": "https://app.wellplayedresearch.com/",
+      "public": false
+    }
+  ],
+  "softSkills": [
+    {
+      "label": "Willingness to Learn",
+      "type": "personal"
+    },
+    {
+      "label": "Problem solving",
+      "type": "methodical"
+    },
+    {
+      "label": "Proactivity",
+      "type": "personal"
+    },
+    {
+      "label": "Communication",
+      "type": "social"
+    },
+    {
+      "label": "Teamwork",
+      "type": "social"
+    },
+    {
+      "label": "Adaptability",
+      "type": "social"
+    },
+    {
+      "label": "Clean Code",
+      "type": "methodical"
+    }
+  ],
+  "experiences": [
+    {
+      "where": "Alert Logic",
+      "from": "2017-01",
+      "to": "2017-07",
+      "position": "Web Developer (Internship)",
+      "achievements": [
+        "Increase the test coverage of a PHP application",
+        "Support application defects/feature request of JavaScript, jQuery and PHP code",
+        "Improvement of UI and performance of web applications",
+        "Software development using SCRUM agile methodology"
+      ]
+    },
+    {
+      "where": "Alert Logic",
+      "from": "2017-10",
+      "to": "2018-11",
+      "position": "Back-End Developer",
+      "achievements": [
+        "Internal services automation",
+        "Provide and support internal tools for analysts",
+        "Support and maintain Linux nodes with chef"
+      ]
+    },
+    {
+      "where": "Alert Logic",
+      "from": "2018-11",
+      "to": "2019-11",
+      "position": "Full-Stack Developer",
+      "achievements": [
+        "SCRUM master developer",
+        "Help to implement continuous integration and continuous delivery pipelines",
+        "Implement End-to-end software testing methodology and architecture",
+        "Build new UI experience for one of the most used products"
+      ]
+    },
+    {
+      "where": "Alert Logic",
+      "from": "2019-11",
+      "to": "2021-07",
+      "position": "Mobile Developer",
+      "achievements": [
+        "Worked on the implementation of a iOS mobile application",
+        "Build from scratch an android mobile application"
+      ]
+    },
+    {
+      "where": "Network Redux",
+      "from": "2021-07",
+      "to": "",
+      "position": "Tech-Lead Developer",
+      "achievements": []
+    },
+    {
+      "where": "CIER-Sur",
+      "from": "2016-01",
+      "to": "2016-06",
+      "position": "Web Content Developer",
+      "achievements": [
+        "Build learning objects based on Javascript code with CSS",
+        "Help to build a framework to reuse existing code on new learning objects"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "where": "Universidad del Valle",
+      "from": "2012-01",
+      "to": "2017-01",
+      "position": "B.S. Systems Engineering and Computer Science",
+      "achievements": [
+        "National Awarded Academic Scholarship: Bachilleres por Colombia Mario Galán Gómez, an award given to the 70 best students in the country",
+        "Awarded Academic Scholarships for being at the top of the class"
+      ]
+    }
+  ]
+}

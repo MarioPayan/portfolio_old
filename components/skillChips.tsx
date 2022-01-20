@@ -17,24 +17,22 @@ import {
   Engineering,
   Group
 } from '@mui/icons-material/'
+import Context from './context'
 
-const SkillChips: SkillChipsType = ({skills = []}) => {
-  const defaultFilter = 'all'
-  const filters: string[] = [
-    defaultFilter,
-    ...new Set(skills.map(skill => skill.type)),
-  ]
-  const [filter, setFilter] = useState<string>(defaultFilter) // TODO: update type
-  const [filteredSkills, setFilteredSkills] = useState<Skill[]>(skills)
+const SkillChips: SkillChipsType = ({typeSkills}) => {
+  const defaultFilterKey = 'all'
+  const [filter, setFilter] = useState<string>(defaultFilterKey) // TODO: update type
 
   const changeFilter = (event: React.SyntheticEvent, filter: string) => {
     event.preventDefault()
     setFilter(filter)
-    setFilteredSkills([])
-    if (filter === defaultFilter) {
-      setFilteredSkills(skills)
+  }
+
+  const filterSkills = (skills: Skill[]) => {
+    if (filter === defaultFilterKey) {
+      return skills
     } else {
-      setFilteredSkills(skills.filter(skill => skill.type === filter))
+      return skills.filter(skill => skill.type === filter)
     }
   }
 
@@ -42,62 +40,81 @@ const SkillChips: SkillChipsType = ({skills = []}) => {
     let icon = <QuestionMark />
     const icons: { [type: string]: JSX.Element } = {
       code: <Code />,
-      framework: <IntegrationInstructions />,
+      código: <Code />,
+      frameworks: <IntegrationInstructions />,
       html: <Html />,
       css: <Css />,
       database: <Storage />,
+      base_de_datos: <Storage />,
       git: <GitHub />,
       test: <BugReport />,
+      pruebas: <BugReport />,
       os: <Computer />,
       languages: <Translate />,
+      idiomas: <Translate />,
       personal: <SelfImprovement />,
       social: <Group />,
       methodical: <Engineering />,
+      metódico: <Engineering />,
     }
     if (type in icons) icon = icons[type]
     return icon
   }
-  return (
-    <Grid
-      container
-      item
-      spacing={1}
-      xs={12}
-      md={8}
-      sx={{justifyContent: 'center'}}>
-      <Grid item display="flex" justifyContent="center" xs={12}>
-        <Tabs
-          variant="scrollable"
-          allowScrollButtonsMobile
-          value={filter}
-          onChange={changeFilter}
-          scrollButtons="auto"
-          textColor="secondary"
-          indicatorColor="secondary">
-          {filters.map(filter => (
-            <Tab
-              key={getKeyFromLabel(filter)}
-              value={getKeyFromLabel(filter)}
-              label={filter}
-              sx={{fontWeight: 'bold'}}/>
-          ))}
-        </Tabs>
-      </Grid>
 
-      {filteredSkills.map(skill => (
-        <Grid item key={getKeyFromLabel(skill.label)}>
-          <Grow in={[defaultFilter, skill.type].includes(filter)}>
-            <Chip
-              label={skill.label}
-              component="a"
-              icon={getIcon(skill.type)}
-              variant="outlined"
-              sx={{fontSize: 16, borderWidth: 2, borderColor: 'gray'}}
-              clickable/>
-          </Grow>
+  return (
+    <Context.Consumer>
+      {({t}) => (
+        <Grid
+          container
+          item
+          spacing={1}
+          xs={12}
+          md={8}
+          sx={{justifyContent: 'center'}}>
+          <Grid item display="flex" justifyContent="center" xs={12}>
+            <Tabs
+              variant="scrollable"
+              allowScrollButtonsMobile
+              value={filter}
+              onChange={changeFilter}
+              scrollButtons="auto"
+              textColor="secondary"
+              indicatorColor="secondary">
+              {[
+                t('misc.label.all'),
+                ...new Set(
+                  (
+                    t(typeSkills, {returnObjects: true}) as unknown as Skill[]
+                  ).map(skill => skill.type)
+                ),
+              ].map((filter, i) => (
+                <Tab
+                  key={i !== 0 ? getKeyFromLabel(filter) : 'all'}
+                  value={i !== 0 ? getKeyFromLabel(filter) : 'all'}
+                  label={filter.replaceAll('_', ' ')}
+                  sx={{fontWeight: 'bold'}}/>
+              ))}
+            </Tabs>
+          </Grid>
+
+          {filterSkills(
+            t(typeSkills, {returnObjects: true}) as unknown as Skill[]
+          ).map(skill => (
+            <Grid item key={getKeyFromLabel(skill.label)}>
+              <Grow in={[defaultFilterKey, skill.type].includes(filter)}>
+                <Chip
+                  label={skill.label}
+                  component="a"
+                  icon={getIcon(skill.type)}
+                  variant="outlined"
+                  sx={{fontSize: 16, borderWidth: 2, borderColor: 'gray'}}
+                  clickable/>
+              </Grow>
+            </Grid>
+          ))}
         </Grid>
-      ))}
-    </Grid>
+      )}
+    </Context.Consumer>
   )
 }
 export default SkillChips

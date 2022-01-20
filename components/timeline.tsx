@@ -19,6 +19,7 @@ import {
   Typography
 } from '@mui/material'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow'
+import Context from './context'
 
 const toDate = (date: string): string => {
   if (!date) return 'Current'
@@ -48,45 +49,60 @@ const sortFrom = (a: TimeLineItem, b: TimeLineItem): number => {
   return new Date(b.from).getTime() - new Date(a.from).getTime()
 }
 
-const TimeLine: TimeLineType = ({items = []}) => {
+const TimeLine: TimeLineType = ({typeItems}) => {
   return (
-    <Timeline>
-      {items.sort(sortFrom).map(item => (
-        <TimelineItem key={getKeyFromLabel(`${item.from}-${item.to}`)}>
-          <TimelineOppositeContent color="text.secondary" sx={{mt: -0.5}}>
-            <Typography variant="h6" component="p">
-              {item.where}
-            </Typography>
-            <Typography variant="subtitle1" component="p">
-              {toDate(item.from)} - {toDate(item.to)}
-            </Typography>
-            <Typography variant="subtitle2" component="p">
-              {dateDiff(item.from, item.to)}
-            </Typography>
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineDot />
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent sx={{mb: 2}}>
-            <Typography variant="h5" component="h5" sx={{mt: -0.5, pb: 1}}>
-              {item.position}
-            </Typography>
-            <List>
-              {item.achievements.map((achievement, i) => (
-                <ListItem key={i} disablePadding>
-                  <ListItemIcon
-                    sx={{height: '24px', width: '24px', minWidth: '30px'}}>
-                    <PlayArrowIcon />
-                  </ListItemIcon>
-                  <ListItemText primary={achievement} />
-                </ListItem>
-              ))}
-            </List>
-          </TimelineContent>
-        </TimelineItem>
-      ))}
-    </Timeline>
+    <Context.Consumer>
+      {({t}) => (
+        <Timeline>
+          {(t(typeItems, {returnObjects: true}) as unknown as TimeLineItem[])
+            .sort(sortFrom)
+            .map(item => (
+              <TimelineItem key={getKeyFromLabel(`${item.from}-${item.to}`)}>
+                <TimelineOppositeContent
+                  color="text.secondary"
+                  sx={{mt: -0.5}}>
+                  <Typography variant="h6" component="p">
+                    {item.where}
+                  </Typography>
+                  <Typography variant="subtitle1" component="p">
+                    {toDate(item.from)} - {toDate(item.to)}
+                  </Typography>
+                  <Typography variant="subtitle2" component="p">
+                    {dateDiff(item.from, item.to)}
+                  </Typography>
+                </TimelineOppositeContent>
+                <TimelineSeparator>
+                  <TimelineDot />
+                  <TimelineConnector />
+                </TimelineSeparator>
+                <TimelineContent sx={{mb: 2}}>
+                  <Typography
+                    variant="h5"
+                    component="h5"
+                    sx={{mt: -0.5, pb: 1}}>
+                    {item.position}
+                  </Typography>
+                  <List>
+                    {item.achievements.map((achievement, i) => (
+                      <ListItem key={i} disablePadding>
+                        <ListItemIcon
+                          sx={{
+                            height: '24px',
+                            width: '24px',
+                            minWidth: '30px',
+                          }}>
+                          <PlayArrowIcon />
+                        </ListItemIcon>
+                        <ListItemText primary={achievement} />
+                      </ListItem>
+                    ))}
+                  </List>
+                </TimelineContent>
+              </TimelineItem>
+            ))}
+        </Timeline>
+      )}
+    </Context.Consumer>
   )
 }
 export default TimeLine
