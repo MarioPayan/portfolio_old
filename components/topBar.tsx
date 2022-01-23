@@ -3,7 +3,11 @@ import Configurations from './configurations'
 import {TopBar as TopBarType} from '../types/types'
 import {AppBar, Box, Tab, Tabs} from '@mui/material'
 
-const TopBar: TopBarType = ({sections = [], lastSectionActive = ''}) => {
+const TopBar: TopBarType = ({
+  sections = [],
+  lastSectionActive = '',
+  onChangeTab,
+}) => {
   const [section, setSection] = useState<string>(
     sections.length > 0 ? sections[0].id : ''
   )
@@ -14,6 +18,7 @@ const TopBar: TopBarType = ({sections = [], lastSectionActive = ''}) => {
 
   const changeSection = (event: React.SyntheticEvent, section: string) => {
     event.preventDefault()
+    onChangeTab()
     setSection(section)
     const htmlSection = document.getElementById(section)
     htmlSection && htmlSection.scrollIntoView({behavior: 'smooth', block: 'start'})

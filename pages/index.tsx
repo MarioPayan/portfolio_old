@@ -13,7 +13,13 @@ import Context from '../components/context'
 import {Section} from '../types/types'
 
 const Home: NextPage = () => {
-  const inViewOptions = {triggerOnce: true, fallbackInView: true}
+  const [activeSection, setActiveSection] = useState('')
+  const [watchScroll, setWatchScroll] = useState(true)
+  const inViewOptions = {
+    skip: !watchScroll,
+    threshold: 1,
+    fallbackInView: true,
+  }
   const [aboutRef, aboutInView] = useInView(inViewOptions)
   const [hardSkillsRef, hardSkillsInView] = useInView(inViewOptions)
   const [softSkillsRef, softSkillsInView] = useInView(inViewOptions)
@@ -29,24 +35,47 @@ const Home: NextPage = () => {
   const [educationShowed, setEducationShowed] = useState(educationInView)
 
   useEffect(() => {
-    // TODO: Fix
+    lastSectionVisible()
     if (aboutInView) setAboutShowed(true)
   }, [aboutInView])
   useEffect(() => {
+    lastSectionVisible()
     if (hardSkillsInView) setCodeSkillShowed(true)
   }, [hardSkillsInView])
   useEffect(() => {
+    lastSectionVisible()
     if (softSkillsInView) setSoftSkillShowed(true)
   }, [softSkillsInView])
   useEffect(() => {
+    lastSectionVisible()
     if (experienceInView) setExperienceShowed(true)
   }, [experienceInView])
   useEffect(() => {
+    lastSectionVisible()
     if (projectsInView) setProjectsShowed(true)
   }, [projectsInView])
   useEffect(() => {
+    lastSectionVisible()
     if (educationInView) setEducationShowed(true)
   }, [educationInView])
+
+  const onChangeTab = () => {
+    if (
+      [
+        aboutShowed,
+        hardSkillShowed,
+        softSkillShowed,
+        experienceShowed,
+        projectsShowed,
+        educationShowed,
+      ].every(e => e)
+    ) {
+      setWatchScroll(false)
+      setTimeout(() => {
+        setWatchScroll(true)
+      }, 750)
+    }
+  }
 
   const growComponent = (
     Component: (props: any) => JSX.Element,
@@ -55,23 +84,27 @@ const Home: NextPage = () => {
     ref: LegacyRef<HTMLDivElement>,
     inView: boolean
   ) => {
-    const styleInherit = {
-      display: 'inherit',
+    const styleInherit: React.CSSProperties = {
+      display: 'flex',
       alignItems: 'inherit',
       justifyContent: 'inherit',
+      marginTop: '80px',
+      position: 'relative',
     }
-    const invisibleStyle = {
-      width: '0px',
-      height: '0px',
-      margin: '0px',
-      scrollMarginTop: '3rem',
-      padding: '0px',
+    const invisibleStyle: React.CSSProperties = {
+      display: 'flex',
+      width: '1px',
+      height: '100%',
+      margin: '0',
+      padding: '0',
+      position: 'absolute',
+      scrollMarginTop: '4rem',
     }
     return (
       <>
-        <div id={id} ref={ref} style={invisibleStyle}></div>
         <Grow in={inView}>
-          <Grid container style={{...styleInherit, marginTop: '80px'}}>
+          <Grid container style={{...styleInherit}}>
+            <div id={id} ref={ref} style={invisibleStyle}></div>
             <Component {...props} />
           </Grid>
         </Grow>
@@ -79,14 +112,24 @@ const Home: NextPage = () => {
     )
   }
 
-  const lastSectionVisible = (): string => {
-    if (aboutInView) return 'about'
-    if (hardSkillsInView) return 'hardSkills'
-    if (softSkillsInView) return 'softSkills'
-    if (experienceInView) return 'experience'
-    if (projectsInView) return 'projects'
-    if (educationInView) return 'education'
-    return ''
+  const lastSectionVisible = (): void => {
+    const asd = {
+      about: aboutInView,
+      hardSkills: hardSkillsInView,
+      softSkills: softSkillsInView,
+      experience: experienceInView,
+      projects: projectsInView,
+      education: educationInView,
+    }
+    console.log(asd)
+
+    if (aboutInView) setActiveSection('about')
+    else if (hardSkillsInView) setActiveSection('hardSkills')
+    else if (softSkillsInView) setActiveSection('softSkills')
+    else if (experienceInView) setActiveSection('experience')
+    else if (projectsInView) setActiveSection('projects')
+    else if (educationInView) setActiveSection('education')
+    else setActiveSection('')
   }
 
   return (
@@ -100,7 +143,8 @@ const Home: NextPage = () => {
             sections={
               t('sections', {returnObjects: true}) as unknown as Section[]
             }
-            lastSectionActive={lastSectionVisible()}/>
+            lastSectionActive={activeSection}
+            onChangeTab={onChangeTab}/>
           <LandingBackground />
           <Stack
             direction="column"

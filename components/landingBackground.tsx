@@ -1,12 +1,11 @@
 import React from 'react'
-import Particles from 'react-tsparticles'
 import {Box} from '@mui/material'
-import {tsParticlesOptions} from '../utils/utils'
 
 const LandingBackground = () => {
   return (
+    //TODO: Do something
     <Box sx={{position: 'absolute', width: '100%', zIndex: -10}}>
-      <Box
+      {/* <Box
         sx={{
           position: 'relative',
           width: '100%',
@@ -14,8 +13,7 @@ const LandingBackground = () => {
           backgroundColor: 'black',
           boxShadow: '0 10vh 5vh 5vh black',
         }}>
-        <Particles id="tsparticles" options={tsParticlesOptions} />
-      </Box>
+      </Box> */}
     </Box>
   )
 }

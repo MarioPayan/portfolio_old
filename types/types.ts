@@ -32,6 +32,7 @@ export type LandingCard = (props: any) => JSX.Element;
 export type TopBar = (props: {
   sections: Section[];
   lastSectionActive: string;
+  onChangeTab: () => void;
 }) => JSX.Element;
 
 export type SetTheme = (theme: Theme) => void;
