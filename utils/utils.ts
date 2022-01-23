@@ -61,6 +61,7 @@ export const tsParticlesOptions: any = {
       random: false,
       speed: 0.9,
       straight: false,
+      bounce: false,
     },
     number: {
       density: {

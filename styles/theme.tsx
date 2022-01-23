@@ -1,4 +1,7 @@
-import {createTheme, ThemeOptions} from '@mui/material/styles'
+import {
+  createTheme as createThemeMUI,
+  ThemeOptions
+} from '@mui/material/styles'
 import {Theme} from '../types/types'
 
 export const themeOptions = (theme: Theme): ThemeOptions => ({
@@ -24,5 +27,4 @@ export const themeOptions = (theme: Theme): ThemeOptions => ({
   },
 })
 
-export const lightTheme = createTheme(themeOptions('light'))
-export const darkTheme = createTheme(themeOptions('dark'))
+export const createTheme = (theme: Theme) => createThemeMUI(themeOptions(theme))

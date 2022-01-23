@@ -25,7 +25,7 @@ import Context from './context'
 const LandingCard: LandingCardType = () => {
   return (
     <Context.Consumer>
-      {({t}) => (
+      {({t, mode}) => (
         <Grid item xs={12} md={9}>
           <Paper elevation={3} sx={{justifyContent: 'center'}}>
             <Grid container spacing={2} sx={{padding: '40px'}}>
@@ -105,11 +105,14 @@ const LandingCard: LandingCardType = () => {
                       onClick={() => openInNewTab(social.linkedin)}>
                       <LinkedIn />
                     </IconButton>
-                    <IconButton
-                      aria-label="Whatsapp"
-                      onClick={() => openInNewTab(social.whatsapp)}>
-                      <WhatsApp />
-                    </IconButton>
+                    {mode === 'fun' && (
+                      <IconButton
+                        aria-label="Whatsapp"
+                        onClick={() => openInNewTab(social.whatsapp)}>
+                        <WhatsApp />
+                      </IconButton>
+                    )}
+
                     <IconButton
                       aria-label="Git Hub"
                       onClick={() => openInNewTab(social.github)}>
@@ -120,16 +123,21 @@ const LandingCard: LandingCardType = () => {
                       onClick={() => openInNewTab(social.email)}>
                       <Email />
                     </IconButton>
-                    <IconButton
-                      aria-label="Instagram"
-                      onClick={() => openInNewTab(social.instagram)}>
-                      <Instagram />
-                    </IconButton>
-                    <IconButton
-                      aria-label="Facebook"
-                      onClick={() => openInNewTab(social.facebook)}>
-                      <Facebook />
-                    </IconButton>
+                    {mode === 'fun' && (
+                      <IconButton
+                        aria-label="Instagram"
+                        onClick={() => openInNewTab(social.instagram)}>
+                        <Instagram />
+                      </IconButton>
+                    )}
+
+                    {mode === 'fun' && (
+                      <IconButton
+                        aria-label="Facebook"
+                        onClick={() => openInNewTab(social.facebook)}>
+                        <Facebook />
+                      </IconButton>
+                    )}
                   </Stack>
                 </Grid>
               </Grid>

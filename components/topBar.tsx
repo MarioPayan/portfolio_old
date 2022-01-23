@@ -6,7 +6,7 @@ import {AppBar, Box, Tab, Tabs} from '@mui/material'
 const TopBar: TopBarType = ({sections = [], lastSectionActive = ''}) => {
   const [section, setSection] = useState<string>(
     sections.length > 0 ? sections[0].id : ''
-  ) // TODO: update type
+  )
 
   useEffect(() => {
     lastSectionActive && setSection(lastSectionActive)

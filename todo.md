@@ -3,5 +3,8 @@
 - https://bslthemes.site/html/mcard/theme_colors/purple/index-2-video.html
 - https://materialui-portfolio.netlify.app/
 
+# Util
+https://particles.js.org/docs/interfaces/Options_Interfaces_IOptions.IOptions.html
+
 # TODO
-- toggle buttons not selectable
+- Generate data from 1 file

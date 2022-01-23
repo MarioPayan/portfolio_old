@@ -2,6 +2,10 @@ import React, {useState} from 'react'
 import {
   Configurations as ConfigurationsType,
   Language,
+  Mode,
+  SetLanguage,
+  SetMode,
+  SetTheme,
   Theme
 } from '../types/types'
 import {
@@ -16,43 +20,56 @@ import {
   ToggleButtonGroup,
   Typography
 } from '@mui/material'
-import {DarkMode, LightMode, Settings} from '@mui/icons-material'
+import {
+  DarkMode,
+  LightMode,
+  Settings,
+  Business,
+  Coffee
+} from '@mui/icons-material'
 import Context from './context'
 import {
   getLanguage,
   setTheme as setStorageTheme,
-  setLanguage as setStorageLanguage
+  setLanguage as setStorageLanguage,
+  setMode as setStorageMode,
+  getTheme,
+  getMode
 } from '../utils/cookies'
 
 const Configurations: ConfigurationsType = () => {
   const [open, setOpen] = useState<boolean>(false)
-  const [theme, setTheme] = useState<Theme>('dark') // TODO: fix getTheme() as Theme
+  const [theme, setTheme] = useState<Theme>(getTheme() as Theme)
   const [language, setLanguage] = useState<Language>(getLanguage() as Language)
+  const [mode, setMode] = useState<Mode>(getMode() as Mode)
 
   const toggleDrawer = (open = true) => setOpen(open)
 
-  const changeTheme = (theme: Theme, setLightTheme: any, setDarkTheme: any) => {
-    setTheme(theme)
-    setStorageTheme(theme)
-    if (theme === 'light') setLightTheme()
-    if (theme === 'dark') setDarkTheme()
+  const changeTheme = (themeMode: Theme, setAppTheme: SetTheme) => {
+    if (!themeMode) return
+    setTheme(themeMode)
+    setStorageTheme(themeMode)
+    setAppTheme(themeMode)
   }
 
-  const changeLanguage = (
-    language: Language,
-    setEnglish: any,
-    setSpanish: any
-  ) => {
+  const changeLanguage = (language: Language, setAppLanguage: SetLanguage) => {
+    if (!language) return
     setLanguage(language)
     setStorageLanguage(language)
-    if (language === 'en') setEnglish()
-    if (language === 'es') setSpanish()
+    setAppLanguage(language)
   }
 
-  const ThemeButtons = ({setLightTheme, setDarkTheme}: any) => (
+  const changeMode = (mode: Mode, setAppMode: SetMode) => {
+    if (!mode) return
+    setMode(mode)
+    setStorageMode(mode)
+    setAppMode(mode)
+  }
+
+  const ThemeButtons = ({setAppTheme}: { setAppTheme: SetTheme }) => (
     <ToggleButtonGroup
       value={theme}
-      onChange={(_, value) => changeTheme(value, setLightTheme, setDarkTheme)}
+      onChange={(_, value) => changeTheme(value, setAppTheme)}
       exclusive={true}>
       <ToggleButton value="light" key="light">
         <LightMode color={theme === 'light' ? 'secondary' : 'warning'} />
@@ -63,11 +80,14 @@ const Configurations: ConfigurationsType = () => {
     </ToggleButtonGroup>
   )
 
-  const LanguageButtons = ({setEnglishLanguage, setSpanishLanguage}: any) => (
+  const LanguageButtons = ({
+    setAppLanguage,
+  }: {
+    setAppLanguage: SetLanguage;
+  }) => (
     <ToggleButtonGroup
       value={language}
-      onChange={(_, value) => changeLanguage(value, setEnglishLanguage, setSpanishLanguage)
-      }
+      onChange={(_, value) => changeLanguage(value, setAppLanguage)}
       exclusive={true}>
       <ToggleButton value="en" key="en">
         <Typography sx={{fontWeight: 'bold'}}>EN</Typography>
@@ -78,7 +98,27 @@ const Configurations: ConfigurationsType = () => {
     </ToggleButtonGroup>
   )
 
-  const ListConfigItem = ({label, component}: any) => (
+  const ModeButtons = ({setAppMode}: { setAppMode: SetMode }) => (
+    <ToggleButtonGroup
+      value={mode}
+      onChange={(_, value) => changeMode(value, setAppMode)}
+      exclusive={true}>
+      <ToggleButton value="business" key="business">
+        <Business color={mode === 'business' ? 'secondary' : 'warning'} />
+      </ToggleButton>
+      <ToggleButton value="fun" key="fun">
+        <Coffee color={mode === 'fun' ? 'secondary' : 'warning'} />
+      </ToggleButton>
+    </ToggleButtonGroup>
+  )
+
+  const ListConfigItem = ({
+    label,
+    component,
+  }: {
+    label: string;
+    component: JSX.Element;
+  }) => (
     <ListItem>
       <Grid
         item
@@ -101,13 +141,7 @@ const Configurations: ConfigurationsType = () => {
 
   return (
     <Context.Consumer>
-      {({
-        setLightTheme,
-        setDarkTheme,
-        setEnglishLanguage,
-        setSpanishLanguage,
-        t,
-      }) => (
+      {({setThemeMode, setLanguage, setMode, t}) => (
         <>
           <IconButton aria-label="Linked In" onClick={() => toggleDrawer()}>
             <Settings color="secondary" />
@@ -133,18 +167,13 @@ const Configurations: ConfigurationsType = () => {
               <Divider />
               <ListConfigItem
                 label="Theme"
-                component={
-                  <ThemeButtons
-                    setLightTheme={setLightTheme}
-                    setDarkTheme={setDarkTheme}/>
-                }></ListConfigItem>
+                component={<ThemeButtons setAppTheme={setThemeMode} />}></ListConfigItem>
               <ListConfigItem
                 label="Language"
-                component={
-                  <LanguageButtons
-                    setEnglishLanguage={setEnglishLanguage}
-                    setSpanishLanguage={setSpanishLanguage}/>
-                }></ListConfigItem>
+                component={<LanguageButtons setAppLanguage={setLanguage} />}></ListConfigItem>
+              <ListConfigItem
+                label="Mode"
+                component={<ModeButtons setAppMode={setMode} />}></ListConfigItem>
               <Divider />
               <ListItem sx={{position: 'fixed', bottom: 0}}>
                 <ListItemText

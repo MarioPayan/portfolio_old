@@ -1,8 +1,9 @@
 import {setCookies, removeCookies, getCookie} from 'cookies-next'
-import {Language, Theme} from '../types/types'
+import {Language, Mode, Theme} from '../types/types'
 
 const languageKey = 'language'
 const themeKey = 'theme'
+const modeKey = 'mode'
 
 export const setLanguage = (language: Language): void => setCookies(languageKey, language + '')
 export const getLanguage = (): Language | null => getCookie(languageKey) as Language
@@ -22,4 +23,14 @@ export const initTheme = (defaultTheme: Theme): Theme => {
   if (theme) return theme
   setTheme(defaultTheme)
   return defaultTheme
+}
+
+export const setMode = (mode: Mode): void => setCookies(modeKey, mode)
+export const getMode = (): Mode | null => getCookie(modeKey) as Mode
+export const clearMode = (): void => removeCookies(modeKey)
+export const initMode = (defaultMode: Mode): Mode => {
+  const mode = getMode()
+  if (mode) return mode
+  setMode(defaultMode)
+  return defaultMode
 }

@@ -21,6 +21,7 @@ export type TimeLineItem = {
 };
 export type Theme = 'light' | 'dark';
 export type Language = 'en' | 'es';
+export type Mode = 'business' | 'fun';
 export type Section = { label: string; id: string };
 
 export type SkillChips = (props: { typeSkills: string }) => JSX.Element;
@@ -32,3 +33,7 @@ export type TopBar = (props: {
   sections: Section[];
   lastSectionActive: string;
 }) => JSX.Element;
+
+export type SetTheme = (theme: Theme) => void;
+export type SetLanguage = (theme: Language) => void;
+export type SetMode = (theme: Mode) => void;

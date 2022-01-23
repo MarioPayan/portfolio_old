@@ -21,7 +21,7 @@ import Context from './context'
 
 const SkillChips: SkillChipsType = ({typeSkills}) => {
   const defaultFilterKey = 'all'
-  const [filter, setFilter] = useState<string>(defaultFilterKey) // TODO: update type
+  const [filter, setFilter] = useState<string>(defaultFilterKey)
 
   const changeFilter = (event: React.SyntheticEvent, filter: string) => {
     event.preventDefault()
