@@ -8,7 +8,7 @@ import i18n from 'i18next'
 import {useTranslation, initReactI18next} from 'react-i18next'
 import enData from '../API/en-data.json'
 import esData from '../API/es-data.json'
-import {initLanguage, initMode} from '../utils/cookies'
+import {initLanguage, initMode, initTheme} from '../utils/cookies'
 import {Language, Mode, Theme as ThemeMode} from '../types/types'
 
 i18n.use(initReactI18next).init({
@@ -30,6 +30,7 @@ i18n.use(initReactI18next).init({
 
 const App = ({Component, pageProps}: AppProps) => {
   const [theme, setTheme] = useState<Theme>(createTheme('dark')) // TODO: initTheme
+  initTheme('dark')
   const [themeMode, setThemeMode] = useState<ThemeMode>('dark')
   const [mode, setMode] = useState<Mode>(initMode('business'))
   const setLanguage = (language: Language) => i18n.changeLanguage(language)

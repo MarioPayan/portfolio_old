@@ -13,7 +13,7 @@ import Context from '../components/context'
 import {Section} from '../types/types'
 
 const Home: NextPage = () => {
-  const inViewOptions = {threshold: 0}
+  const inViewOptions = {triggerOnce: true, fallbackInView: true}
   const [aboutRef, aboutInView] = useInView(inViewOptions)
   const [hardSkillsRef, hardSkillsInView] = useInView(inViewOptions)
   const [softSkillsRef, softSkillsInView] = useInView(inViewOptions)
@@ -52,7 +52,7 @@ const Home: NextPage = () => {
     Component: (props: any) => JSX.Element,
     props: { [key: string]: unknown },
     id: string,
-    refs: LegacyRef<HTMLDivElement>,
+    ref: LegacyRef<HTMLDivElement>,
     inView: boolean
   ) => {
     const styleInherit = {
@@ -69,7 +69,7 @@ const Home: NextPage = () => {
     }
     return (
       <>
-        <div id={id} ref={refs} style={invisibleStyle}></div>
+        <div id={id} ref={ref} style={invisibleStyle}></div>
         <Grow in={inView}>
           <Grid container style={{...styleInherit, marginTop: '80px'}}>
             <Component {...props} />
