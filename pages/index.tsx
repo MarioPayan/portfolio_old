@@ -113,16 +113,6 @@ const Home: NextPage = () => {
   }
 
   const lastSectionVisible = (): void => {
-    const asd = {
-      about: aboutInView,
-      hardSkills: hardSkillsInView,
-      softSkills: softSkillsInView,
-      experience: experienceInView,
-      projects: projectsInView,
-      education: educationInView,
-    }
-    console.log(asd)
-
     if (aboutInView) setActiveSection('about')
     else if (hardSkillsInView) setActiveSection('hardSkills')
     else if (softSkillsInView) setActiveSection('softSkills')
@@ -145,7 +135,7 @@ const Home: NextPage = () => {
             }
             lastSectionActive={activeSection}
             onChangeTab={onChangeTab}/>
-          <LandingBackground />
+          <LandingBackground showParticles={watchScroll} />
           <Stack
             direction="column"
             spacing={20}

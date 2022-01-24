@@ -12,4 +12,4 @@ const Context = createContext({
   mode: "business",
 });
 
-export default Context
+export default Context;
