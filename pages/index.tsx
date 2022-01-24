@@ -17,7 +17,8 @@ const Home: NextPage = () => {
   const [watchScroll, setWatchScroll] = useState(true)
   const inViewOptions = {
     skip: !watchScroll,
-    threshold: 1,
+    threshold:
+      (typeof window !== 'undefined' && window.innerHeight) < 1000 ? 0 : 0.5,
     fallbackInView: true,
   }
   const [aboutRef, aboutInView] = useInView(inViewOptions)
@@ -88,7 +89,6 @@ const Home: NextPage = () => {
       display: 'flex',
       alignItems: 'inherit',
       justifyContent: 'inherit',
-      marginTop: '80px',
       position: 'relative',
     }
     const invisibleStyle: React.CSSProperties = {
@@ -138,7 +138,7 @@ const Home: NextPage = () => {
           <LandingBackground showParticles={watchScroll} />
           <Stack
             direction="column"
-            spacing={20}
+            spacing={10}
             padding={3}
             display="flex"
             alignItems="center"

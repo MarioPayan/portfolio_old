@@ -1,5 +1,6 @@
 import {
   createTheme as createThemeMUI,
+  responsiveFontSizes,
   ThemeOptions
 } from '@mui/material/styles'
 import {Theme} from '../types/types'
@@ -27,4 +28,4 @@ export const themeOptions = (theme: Theme): ThemeOptions => ({
   },
 })
 
-export const createTheme = (theme: Theme) => createThemeMUI(themeOptions(theme))
+export const createTheme = (theme: Theme) => responsiveFontSizes(createThemeMUI(themeOptions(theme)))

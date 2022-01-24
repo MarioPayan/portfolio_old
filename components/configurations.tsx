@@ -39,7 +39,7 @@ import {
 
 const Configurations: ConfigurationsType = () => {
   const [open, setOpen] = useState<boolean>(false)
-  const [theme, setTheme] = useState<Theme>(getTheme() as Theme)
+  const [theme, setTheme] = useState<Theme>('dark') // getTheme() as Theme
   const [language, setLanguage] = useState<Language>(getLanguage() as Language)
   const [mode, setMode] = useState<Mode>(getMode() as Mode)
 
