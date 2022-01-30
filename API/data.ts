@@ -14,7 +14,7 @@ export const social = {
   github: 'https://github.com/marioPayan',
   linkedin: 'https://www.linkedin.com/in/mario-payan/',
   whatsapp: 'https://wa.me/573186151646?text=Hey!',
-  email: 'mailto:elcorreoquequieres@correo.com',
+  email: 'mailto:mpayan.av@gmail.com.com',
 }
 
 export const projects = [

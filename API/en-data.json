@@ -1,29 +1,11 @@
 {
   "sections": [
-    {
-      "label": "About",
-      "id": "about"
-    },
-    {
-      "label": "Hard Skills",
-      "id": "hardSkills"
-    },
-    {
-      "label": "Soft Skills",
-      "id": "softSkills"
-    },
-    {
-      "label": "Experience",
-      "id": "experience"
-    },
-    {
-      "label": "Projects",
-      "id": "projects"
-    },
-    {
-      "label": "Education",
-      "id": "education"
-    }
+    { "id": "about", "label": "About" },
+    { "id": "hardSkills", "label": "Hard Skills" },
+    { "id": "softSkills", "label": "Soft Skills" },
+    { "id": "experience", "label": "Experience" },
+    { "id": "projects", "label": "Projects" },
+    { "id": "education", "label": "Education" }
   ],
   "misc": {
     "label": {
@@ -42,9 +24,6 @@
   },
   "personal": {
     "name": "Mario Payan",
-    "title": "Software Developer",
-    "subtitle": "Full Stack Engineer | Javascript & Python | Django & React",
-    "summary": "Fullstack developer with focus on software development, algorithms design, software as a service and clean code. Challenge driven, always willing to learn, passionate about new technologies, teamwork and code writing.",
     "social": {
       "facebook": "https://www.facebook.com/Mario.A.Payan.V",
       "instagram": "https://www.instagram.com/mario.a.payan/",
@@ -52,193 +31,97 @@
       "linkedin": "https://www.linkedin.com/in/mario-payan/",
       "whatsapp": "https://wa.me/573186151646?text=Hey!",
       "email": "mailto:mpayan.av@gmail.com"
-    }
+    },
+    "title": "Software Developer",
+    "subtitle": "Full Stack Engineer | Javascript & Python | Django & React",
+    "summary": "Fullstack developer with focus on software development, algorithms design, software as a service and clean code. Challenge driven, always willing to learn, passionate about new technologies, teamwork and code writing."
   },
   "hardSkills": [
-    {
-      "label": "Javascript",
-      "type": "code"
-    },
-    {
-      "label": "Typescript",
-      "type": "code"
-    },
-    {
-      "label": "Python",
-      "type": "code"
-    },
-    {
-      "label": "ReactJS",
-      "type": "code"
-    },
-    {
-      "label": "Spanish",
-      "type": "languages"
-    },
-    {
-      "label": "English",
-      "type": "languages"
-    },
-    {
-      "label": "Django",
-      "type": "frameworks"
-    },
-    {
-      "label": "Django REST",
-      "type": "frameworks"
-    },
-    {
-      "label": "Angular",
-      "type": "frameworks"
-    },
-    {
-      "label": "HTML5",
-      "type": "html"
-    },
-    {
-      "label": "CSS3",
-      "type": "css"
-    },
-    {
-      "label": "Bootstrap",
-      "type": "css"
-    },
-    {
-      "label": "Material UI",
-      "type": "css"
-    },
-    {
-      "label": "PostgreSQL",
-      "type": "database"
-    },
-    {
-      "label": "SQLite",
-      "type": "database"
-    },
-    {
-      "label": "Git",
-      "type": "git"
-    },
-    {
-      "label": "GitHub",
-      "type": "git"
-    },
-    {
-      "label": "GitLab",
-      "type": "git"
-    },
-    {
-      "label": "BitBucket",
-      "type": "git"
-    },
-    {
-      "label": "Shell",
-      "type": "code"
-    },
-    {
-      "label": "Jasmine",
-      "type": "test"
-    },
-    {
-      "label": "Puppeteer",
-      "type": "test"
-    },
-    {
-      "label": "Appium",
-      "type": "test"
-    },
-    {
-      "label": "Linux",
-      "type": "os"
-    },
-    {
-      "label": "OSx",
-      "type": "os"
-    },
-    {
-      "label": "Flexbox",
-      "type": "css"
-    }
+    { "label": "Javascript", "type": "code" },
+    { "label": "Typescript", "type": "code" },
+    { "label": "Python", "type": "code" },
+    { "label": "ReactJS", "type": "code" },
+    { "label": "Spanish", "type": "languages" },
+    { "label": "English", "type": "languages" },
+    { "label": "Django", "type": "frameworks" },
+    { "label": "Django REST", "type": "frameworks" },
+    { "label": "Angular", "type": "frameworks" },
+    { "label": "HTML5", "type": "html" },
+    { "label": "CSS3", "type": "css" },
+    { "label": "Bootstrap", "type": "css" },
+    { "label": "Material UI", "type": "css" },
+    { "label": "PostgreSQL", "type": "database" },
+    { "label": "SQLite", "type": "database" },
+    { "label": "Git", "type": "git" },
+    { "label": "GitHub", "type": "git" },
+    { "label": "GitLab", "type": "git" },
+    { "label": "BitBucket", "type": "git" },
+    { "label": "Shell", "type": "code" },
+    { "label": "Jasmine", "type": "test" },
+    { "label": "Puppeteer", "type": "test" },
+    { "label": "Appium", "type": "test" },
+    { "label": "Linux", "type": "os" },
+    { "label": "OSx", "type": "os" },
+    { "label": "Flexbox", "type": "css" }
   ],
   "projects": [
     {
-      "label": "Under degree project",
-      "description": "Application of Augmented Reality for the Communication of Information related to the self-assessment process of the System Engineering Academic Program",
       "image": "/projects/uv.png",
       "link": "",
-      "public": false
+      "public": false,
+      "label": "Under degree project",
+      "description": "Application of Augmented Reality for the Communication of Information related to the self-assessment process of the System Engineering Academic Program"
     },
     {
-      "label": "Deft website",
-      "description": "Landing page for Deft Soluciones company",
       "image": "/projects/deft.png",
       "link": "https://deftsoluciones.com/",
-      "public": true
+      "public": true,
+      "label": "Deft website",
+      "description": "Landing page for Deft Soluciones company"
     },
     {
       "label": "Placa y Cédula (Android)",
-      "description": "Android app to know when you can go outside during the pandemic situation in Colombia",
       "image": "/projects/pyc_android.webp",
       "link": "https://play.google.com/store/apps/details?id=com.herokuapp.placa_y_cedula.twa",
-      "public": true
+      "public": true,
+      "description": "Android app to know when you can go outside during the pandemic situation in Colombia"
     },
     {
       "label": "Placa y Cédula (Web)",
-      "description": "Web app to know when you can go outside during the pandemic situation in Colombia",
       "image": "/projects/pyc_web.png",
       "link": "https://placa-y-cedula.herokuapp.com/",
-      "public": true
+      "public": true,
+      "description": "Web app to know when you can go outside during the pandemic situation in Colombia"
     },
     {
-      "label": "SVG Learning Tool",
-      "description": "A simple tool to understand how SVG works that I made in my free time to help some mates",
       "image": "/projects/svg.png",
       "link": "https://mariopayan.github.io/SvgLearningTool/",
-      "public": true
+      "public": true,
+      "label": "SVG Learning Tool",
+      "description": "A simple tool to understand how SVG works that I made in my free time to help some mates"
     },
     {
-      "label": "This website",
-      "description": "Website I built for fun",
       "link": "https://www.mariopayan.com/",
-      "public": true
+      "public": true,
+      "label": "This website",
+      "description": "Website I built for fun"
     },
     {
-      "label": "Survey Tool",
-      "description": "Survey tool that TODO",
       "image": "/projects/wp.png",
       "link": "https://app.wellplayedresearch.com/",
-      "public": false
+      "public": false,
+      "label": "Survey Tool",
+      "description": "Survey tool that TODO"
     }
   ],
   "softSkills": [
-    {
-      "label": "Willingness to Learn",
-      "type": "personal"
-    },
-    {
-      "label": "Problem solving",
-      "type": "methodical"
-    },
-    {
-      "label": "Proactivity",
-      "type": "personal"
-    },
-    {
-      "label": "Communication",
-      "type": "social"
-    },
-    {
-      "label": "Teamwork",
-      "type": "social"
-    },
-    {
-      "label": "Adaptability",
-      "type": "social"
-    },
-    {
-      "label": "Clean Code",
-      "type": "methodical"
-    }
+    { "type": "personal", "label": "Willingness to Learn" },
+    { "label": "Problem solving", "type": "methodical" },
+    { "type": "personal", "label": "Proactivity" },
+    { "type": "social", "label": "Communication" },
+    { "type": "social", "label": "Teamwork" },
+    { "type": "social", "label": "Adaptability" },
+    { "label": "Clean Code", "type": "methodical" }
   ],
   "experiences": [
     {

@@ -18,7 +18,7 @@ const Home: NextPage = () => {
   const inViewOptions = {
     skip: !watchScroll,
     threshold:
-      (typeof window !== 'undefined' && window.innerHeight) < 1000 ? 0 : 0.5,
+      (typeof window !== 'undefined' && window.innerHeight) < 1000 ? 0.1 : 0.6,
     fallbackInView: true,
   }
   const [aboutRef, aboutInView] = useInView(inViewOptions)
@@ -117,8 +117,8 @@ const Home: NextPage = () => {
     else if (hardSkillsInView) setActiveSection('hardSkills')
     else if (softSkillsInView) setActiveSection('softSkills')
     else if (experienceInView) setActiveSection('experience')
-    else if (projectsInView) setActiveSection('projects')
     else if (educationInView) setActiveSection('education')
+    else if (projectsInView) setActiveSection('projects')
     else setActiveSection('')
   }
 

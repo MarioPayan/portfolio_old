@@ -5,9 +5,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "build-translations": "node utils/buildJsonData.mjs",
     "lint": "npm run prettier && npm run eslint-fix 2>/dev/null && next lint",
-    "eslint": "node ./node_modules/eslint/bin/eslint.js . --ext .js,.jsx,.ts,.tsx --color",
-    "eslint-fix": "node ./node_modules/eslint/bin/eslint.js --ext .js,.jsx,.ts,.tsx . --fix",
+    "eslint": "node ./node_modules/eslint/bin/eslint.js . --ext .js,.mjs,.jsx,.ts,.tsx --color",
+    "eslint-fix": "node ./node_modules/eslint/bin/eslint.js --ext .js,.mjs,.jsx,.ts,.tsx . --fix",
     "prettier": "prettier --write **/*.{ts,tsx,scss,css,json}"
   },
   "dependencies": {
