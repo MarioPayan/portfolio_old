@@ -40,6 +40,20 @@
       "en-all": "All",
       "es-all": "Todo"
     },
+    "time": {
+      "en-year": "Year",
+      "es-year": "Año",
+      "en-years": "Years",
+      "es-years": "Años",
+      "en-month": "Month",
+      "es-month": "Mes",
+      "en-months": "Months",
+      "es-months": "Meses",
+      "en-justStarted": "Just started",
+      "es-justStarted": "Recién empezado",
+      "en-current": "Current",
+      "es-current": "Actualmente"
+    },
     "button": {
       "en-main": "Do nothing",
       "es-main": "No hago nada",

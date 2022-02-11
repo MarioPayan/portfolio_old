@@ -58,6 +58,7 @@ const run = () => {
       const languageData = JSON.parse(JSON.stringify(data))
       translate(languageData, language)
       saveJson(languageData, language)
+      console.log(`${language}-data.json exported successfully`)
     })
   })
 }

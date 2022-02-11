@@ -13,6 +13,14 @@
       "underConstruction": "Under construction",
       "all": "All"
     },
+    "time": {
+      "year": "Year",
+      "years": "Years",
+      "month": "Month",
+      "months": "Months",
+      "justStarted": "Just started",
+      "current": "Current"
+    },
     "button": {
       "main": "Do nothing",
       "download_cv": "Download CV",

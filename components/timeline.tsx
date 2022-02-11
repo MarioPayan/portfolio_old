@@ -1,6 +1,10 @@
 import React from 'react'
 
-import {TimeLine as TimeLineType, TimeLineItem} from '../types/types'
+import {
+  Language,
+  TimeLine as TimeLineType,
+  TimeLineItem
+} from '../types/types'
 import {getKeyFromLabel} from '../utils/utils'
 import {
   Timeline,
@@ -20,26 +24,29 @@ import {
 } from '@mui/material'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow'
 import Context from './context'
+import {getLanguage} from '../utils/cookies'
 
-const toDate = (date: string): string => {
-  if (!date) return 'Current'
-  return new Date(date).toLocaleString('default', {
+const toDate = (date: string, t: any): string => {
+  if (!date) return t('misc.time.current')
+  return new Date(date).toLocaleString(getLanguage() as Language, {
     month: 'short',
     year: 'numeric',
     timeZone: 'UTC',
   })
 }
 
-const dateDiff = (dateA: string, dateB: string): string => {
+const dateDiff = (dateA: string, dateB: string, t: any): string => {
   const getTime = (date: string): number => (date ? new Date(date).getTime() : new Date().getTime())
   const daysDiff = Math.floor(
     (getTime(dateB) - getTime(dateA)) / (1000 * 60 * 60 * 24)
   )
-  let timeDiff = 'Just started'
+  let timeDiff = t('misc.time.justStarted')
   const years = Math.floor(daysDiff / 365)
-  const yearsDiff = years >= 1 ? `${years} Year${years > 1 ? 's' : ''}` : ''
+  const yearsDiff = years >= 1 ? `${years} ${years === 1 ? t('misc.time.year') : t('misc.time.years')}` : ''
   const months = Math.ceil(daysDiff / 30) % 12
-  const monthsDiff = months >= 1 ? `${months} Month${months > 1 ? 's' : ''}` : ''
+  const monthsDiff = months >= 1 ? `${months} ${
+    months === 1 ? t('misc.time.month') : t('misc.time.months')
+  }` : ''
   if (yearsDiff && monthsDiff) timeDiff = `${yearsDiff}, ${monthsDiff}`
   else if (yearsDiff || monthsDiff) timeDiff = `${yearsDiff}${monthsDiff}`
   return `(${timeDiff})`
@@ -65,10 +72,10 @@ const TimeLine: TimeLineType = ({typeItems}) => {
                     {item.where}
                   </Typography>
                   <Typography variant="subtitle1" component="p">
-                    {toDate(item.from)} - {toDate(item.to)}
+                    {toDate(item.from, t)} - {toDate(item.to, t)}
                   </Typography>
                   <Typography variant="subtitle2" component="p">
-                    {dateDiff(item.from, item.to)}
+                    {dateDiff(item.from, item.to, t)}
                   </Typography>
                 </TimelineOppositeContent>
                 <TimelineSeparator>

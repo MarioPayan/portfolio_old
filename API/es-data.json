@@ -13,6 +13,14 @@
       "underConstruction": "En Construcción",
       "all": "Todo"
     },
+    "time": {
+      "year": "Año",
+      "years": "Años",
+      "month": "Mes",
+      "months": "Meses",
+      "justStarted": "Recién empezado",
+      "current": "Actualmente"
+    },
     "button": {
       "main": "No hago nada",
       "download_cv": "Descargar HV",
