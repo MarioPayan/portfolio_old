@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import {LandingCard as LandingCardType, Mode} from '../types/types'
-import {cvPdf, social} from '../API/data'
+import {cvPdf} from '../utils/assets'
 import {openInNewTab} from '../utils/utils'
 import Grid from '@mui/material/Grid'
 import {
@@ -103,31 +103,34 @@ const LandingCard: LandingCardType = () => {
                     justifyContent="right">
                     <IconButton
                       aria-label="Linked In"
-                      onClick={() => openInNewTab(social.linkedin)}>
+                      onClick={() => openInNewTab(t('personal.social.linkedin'))
+                      }>
                       <LinkedIn />
                     </IconButton>
                     {mode === 'fun' && (
                       <IconButton
                         aria-label="Whatsapp"
-                        onClick={() => openInNewTab(social.whatsapp)}>
+                        onClick={() => openInNewTab(t('personal.social.whatsapp'))
+                        }>
                         <WhatsApp />
                       </IconButton>
                     )}
 
                     <IconButton
                       aria-label="Git Hub"
-                      onClick={() => openInNewTab(social.github)}>
+                      onClick={() => openInNewTab(t('personal.social.github'))}>
                       <GitHub />
                     </IconButton>
                     <IconButton
                       aria-label="Email"
-                      onClick={() => openInNewTab(social.email)}>
+                      onClick={() => openInNewTab(t('personal.social.email'))}>
                       <Email />
                     </IconButton>
                     {mode === 'fun' && (
                       <IconButton
                         aria-label="Instagram"
-                        onClick={() => openInNewTab(social.instagram)}>
+                        onClick={() => openInNewTab(t('personal.social.instagram'))
+                        }>
                         <Instagram />
                       </IconButton>
                     )}
@@ -135,7 +138,8 @@ const LandingCard: LandingCardType = () => {
                     {mode === 'fun' && (
                       <IconButton
                         aria-label="Facebook"
-                        onClick={() => openInNewTab(social.facebook)}>
+                        onClick={() => openInNewTab(t('personal.social.facebook'))
+                        }>
                         <Facebook />
                       </IconButton>
                     )}
