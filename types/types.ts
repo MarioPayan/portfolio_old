@@ -23,6 +23,7 @@ export type Theme = 'light' | 'dark';
 export type Language = 'en' | 'es';
 export type Mode = 'business' | 'fun';
 export type Section = { label: string; id: string };
+export type ConfigOptions = { theme: Theme; mode: Mode; language: Language };
 
 export type SkillChips = (props: { typeSkills: string }) => JSX.Element;
 export type TimeLine = (props: { typeItems: string }) => JSX.Element;

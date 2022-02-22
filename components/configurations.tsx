@@ -143,7 +143,7 @@ const Configurations: ConfigurationsType = () => {
     <Context.Consumer>
       {({setThemeMode, setLanguage, setMode, t}) => (
         <>
-          <IconButton aria-label="Linked In" onClick={() => toggleDrawer()}>
+          <IconButton onClick={() => toggleDrawer()} size='large' sx={{minWidth: 50}}>
             <Settings color="secondary" />
           </IconButton>
           <SwipeableDrawer

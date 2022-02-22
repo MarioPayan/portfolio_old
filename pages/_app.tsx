@@ -10,6 +10,7 @@ import enData from '../API/en-data.json'
 import esData from '../API/es-data.json'
 import {initLanguage, initMode, initTheme} from '../utils/cookies'
 import {Language, Mode, Theme as ThemeMode} from '../types/types'
+import {setConfigFromParams} from '../utils/queryParams'
 
 i18n.use(initReactI18next).init({
   resources: {
@@ -29,6 +30,11 @@ i18n.use(initReactI18next).init({
 })
 
 const App = ({Component, pageProps}: AppProps) => {
+  const params = setConfigFromParams({
+    theme: 'dark',
+    language: 'en',
+    mode: 'business',
+  })
   const [theme, setTheme] = useState<Theme>(createTheme('dark')) // TODO: initTheme
   const [themeMode, setThemeMode] = useState<ThemeMode>('dark')
   const [mode, setMode] = useState<Mode>(initMode('business'))
