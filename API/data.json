@@ -206,7 +206,7 @@
       "es-label": "Proyecto de grado",
       "en-description": "Application of Augmented Reality for the Communication of Information related to the self-assessment process of the System Engineering Academic Program",
       "es-description": "Aplicación de Realidad Aumentada para la Comunicación de Información relativa al proceso de autoevaluación del Programa Académico de Ingeniería de Sistemas",
-      "image": "/projects/uv.png",
+      "image": "/images/projects/uv.png",
       "link": "",
       "public": false
     },
@@ -215,7 +215,7 @@
       "es-label": "Página web de Deft",
       "en-description": "Landing page for Deft Soluciones company",
       "es-description": "Página de aterrizaje para la empresa Deft Soluciones",
-      "image": "/projects/deft.png",
+      "image": "/images/projects/deft.png",
       "link": "https://deftsoluciones.com/",
       "public": true
     },
@@ -223,7 +223,7 @@
       "label": "Placa y Cédula (Android)",
       "en-description": "Android app to know when you can go outside during the pandemic situation in Colombia",
       "es-description": "Aplicación de android que permitió determinar cuándo era buen momento para salir durante la pandemia en Colombia",
-      "image": "/projects/pyc_android.webp",
+      "image": "/images/projects/pyc_android.webp",
       "link": "https://play.google.com/store/apps/details?id=com.herokuapp.placa_y_cedula.twa",
       "public": true
     },
@@ -231,7 +231,7 @@
       "label": "Placa y Cédula (Web)",
       "en-description": "Web app to know when you can go outside during the pandemic situation in Colombia",
       "es-description": "Página web que permitió determinar cuándo era buen momento para salir durante la pandemia en Colombia",
-      "image": "/projects/pyc_web.png",
+      "image": "/images/projects/pyc_web.png",
       "link": "https://placa-y-cedula.herokuapp.com/",
       "public": true
     },
@@ -240,7 +240,7 @@
       "es-label": "Herramienta de aprendizaje de SVG",
       "en-description": "A simple tool to understand how SVG works that I made in my free time to help some mates",
       "es-description": "Una herramienta muy básica para entender de manera sencilla cómo funcionan los SVG",
-      "image": "/projects/svg.png",
+      "image": "/images/projects/svg.png",
       "link": "https://mariopayan.github.io/SvgLearningTool/",
       "public": true
     },
@@ -257,7 +257,7 @@
       "es-label": "Aplicación de encuestas",
       "en-description": "Survey tool that TODO",
       "es-description": "Herramienta de encuestas que TODO",
-      "image": "/projects/wp.png",
+      "image": "/images/projects/wp.png",
       "link": "https://app.wellplayedresearch.com/",
       "public": false
     }
@@ -386,7 +386,7 @@
       "from": "2016-01",
       "to": "2016-06",
       "en-position": "Web Content Developer",
-      "es-position": "Web Content Developer",
+      "es-position": "Desarrollador de contenido web",
       "en-achievements": [
         "Build learning objects based on Javascript code with CSS",
         "Help to build a framework to reuse existing code on new learning objects"

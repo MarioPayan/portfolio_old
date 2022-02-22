@@ -11,6 +11,7 @@ import ProjectCards from '../components/projectCards'
 import {Grid, Grow, Stack} from '@mui/material'
 import Context from '../components/context'
 import {Section} from '../types/types'
+import {favicon} from '../utils/assets'
 
 const Home: NextPage = () => {
   const [activeSection, setActiveSection] = useState('')
@@ -128,6 +129,7 @@ const Home: NextPage = () => {
         <>
           <Head>
             <title>{t('personal.name')}</title>
+            <link rel="shortcut icon" href={favicon} />
           </Head>
           <TopBar
             sections={

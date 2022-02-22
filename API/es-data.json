@@ -74,14 +74,14 @@
   ],
   "projects": [
     {
-      "image": "/projects/uv.png",
+      "image": "/images/projects/uv.png",
       "link": "",
       "public": false,
       "label": "Proyecto de grado",
       "description": "Aplicación de Realidad Aumentada para la Comunicación de Información relativa al proceso de autoevaluación del Programa Académico de Ingeniería de Sistemas"
     },
     {
-      "image": "/projects/deft.png",
+      "image": "/images/projects/deft.png",
       "link": "https://deftsoluciones.com/",
       "public": true,
       "label": "Página web de Deft",
@@ -89,20 +89,20 @@
     },
     {
       "label": "Placa y Cédula (Android)",
-      "image": "/projects/pyc_android.webp",
+      "image": "/images/projects/pyc_android.webp",
       "link": "https://play.google.com/store/apps/details?id=com.herokuapp.placa_y_cedula.twa",
       "public": true,
       "description": "Aplicación de android que permitió determinar cuándo era buen momento para salir durante la pandemia en Colombia"
     },
     {
       "label": "Placa y Cédula (Web)",
-      "image": "/projects/pyc_web.png",
+      "image": "/images/projects/pyc_web.png",
       "link": "https://placa-y-cedula.herokuapp.com/",
       "public": true,
       "description": "Página web que permitió determinar cuándo era buen momento para salir durante la pandemia en Colombia"
     },
     {
-      "image": "/projects/svg.png",
+      "image": "/images/projects/svg.png",
       "link": "https://mariopayan.github.io/SvgLearningTool/",
       "public": true,
       "label": "Herramienta de aprendizaje de SVG",
@@ -115,7 +115,7 @@
       "description": "Página que hice por diversión"
     },
     {
-      "image": "/projects/wp.png",
+      "image": "/images/projects/wp.png",
       "link": "https://app.wellplayedresearch.com/",
       "public": false,
       "label": "Aplicación de encuestas",
@@ -188,7 +188,7 @@
       "where": "CIER-Sur",
       "from": "2016-01",
       "to": "2016-06",
-      "position": "Web Content Developer",
+      "position": "Desarrollador de contenido web",
       "achievements": [
         "Cree objetos de aprendizaje basados en código Javascript con CSS",
         "Ayuda a construir un framework para reutilizar el código existente en nuevos objetos de aprendizaje"

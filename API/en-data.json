@@ -74,14 +74,14 @@
   ],
   "projects": [
     {
-      "image": "/projects/uv.png",
+      "image": "/images/projects/uv.png",
       "link": "",
       "public": false,
       "label": "Under degree project",
       "description": "Application of Augmented Reality for the Communication of Information related to the self-assessment process of the System Engineering Academic Program"
     },
     {
-      "image": "/projects/deft.png",
+      "image": "/images/projects/deft.png",
       "link": "https://deftsoluciones.com/",
       "public": true,
       "label": "Deft website",
@@ -89,20 +89,20 @@
     },
     {
       "label": "Placa y Cédula (Android)",
-      "image": "/projects/pyc_android.webp",
+      "image": "/images/projects/pyc_android.webp",
       "link": "https://play.google.com/store/apps/details?id=com.herokuapp.placa_y_cedula.twa",
       "public": true,
       "description": "Android app to know when you can go outside during the pandemic situation in Colombia"
     },
     {
       "label": "Placa y Cédula (Web)",
-      "image": "/projects/pyc_web.png",
+      "image": "/images/projects/pyc_web.png",
       "link": "https://placa-y-cedula.herokuapp.com/",
       "public": true,
       "description": "Web app to know when you can go outside during the pandemic situation in Colombia"
     },
     {
-      "image": "/projects/svg.png",
+      "image": "/images/projects/svg.png",
       "link": "https://mariopayan.github.io/SvgLearningTool/",
       "public": true,
       "label": "SVG Learning Tool",
@@ -115,7 +115,7 @@
       "description": "Website I built for fun"
     },
     {
-      "image": "/projects/wp.png",
+      "image": "/images/projects/wp.png",
       "link": "https://app.wellplayedresearch.com/",
       "public": false,
       "label": "Survey Tool",

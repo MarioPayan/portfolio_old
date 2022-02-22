@@ -1,6 +1,7 @@
 import React from 'react'
 import {ProjectCards as ProjectCardsType, Project} from '../types/types'
-import {getKeyFromLabel, image404, openInNewTab} from '../utils/utils'
+import {getKeyFromLabel, openInNewTab} from '../utils/utils'
+import {image404} from '../utils/assets'
 import {
   Grid,
   Card,

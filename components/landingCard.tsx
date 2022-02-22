@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import {LandingCard as LandingCardType} from '../types/types'
+import {LandingCard as LandingCardType, Mode} from '../types/types'
 import {cvPdf, social} from '../API/data'
 import {openInNewTab} from '../utils/utils'
 import Grid from '@mui/material/Grid'
@@ -21,6 +21,7 @@ import {
   LinkedIn
 } from '@mui/icons-material'
 import Context from './context'
+import {profile, pixelProfile} from '../utils/assets'
 
 const LandingCard: LandingCardType = () => {
   return (
@@ -32,7 +33,7 @@ const LandingCard: LandingCardType = () => {
               <Grid item xs={12} lg={4}>
                 <Box display="flex" sx={{justifyContent: 'center'}}>
                   <Image
-                    src={'/profile.jpg'}
+                    src={{business: profile, fun: pixelProfile}[mode as Mode]}
                     className="profile-picture"
                     width={300}
                     height={300}/>
