@@ -29,7 +29,8 @@ const Home: NextPage = () => {
   const [experienceRef, experienceInView] = useInView(inViewOptions)
   const [projectsRef, projectsInView] = useInView(inViewOptions)
   const [educationRef, educationInView] = useInView(inViewOptions)
-  // const [musicRef, musicInView] = useInView(inViewOptions)
+  const [musicRef, musicInView] = useInView(inViewOptions)
+  const [martialArtsRef, martialArtsInView] = useInView(inViewOptions)
 
   const [aboutShowed, setAboutShowed] = useState(aboutInView)
   const [hardSkillShowed, setCodeSkillShowed] = useState(hardSkillsInView)
@@ -37,7 +38,8 @@ const Home: NextPage = () => {
   const [experienceShowed, setExperienceShowed] = useState(experienceInView)
   const [projectsShowed, setProjectsShowed] = useState(projectsInView)
   const [educationShowed, setEducationShowed] = useState(educationInView)
-  // const [musicShowed, setMusicShowed] = useState(musicInView)
+  const [musicShowed, setMusicShowed] = useState(musicInView)
+  const [martialArtsShowed, setMartialArtsShowed] = useState(martialArtsInView)
 
   useEffect(() => {
     lastSectionVisible()
@@ -63,23 +65,28 @@ const Home: NextPage = () => {
     lastSectionVisible()
     if (educationInView) setEducationShowed(true)
   }, [educationInView])
-  // useEffect(() => {
-  //   lastSectionVisible()
-  //   if (musicInView) setMusicShowed(true)
-  // }, [musicInView])
+  useEffect(() => {
+    lastSectionVisible()
+    if (musicInView) setMusicShowed(true)
+  }, [musicInView])
+  useEffect(() => {
+    lastSectionVisible()
+    if (martialArtsInView) setMartialArtsShowed(true)
+  }, [martialArtsInView])
 
-  const onChangeTab = () => {
-    if (
-      [
+  const onChangeTab = (mode: Mode) => {
+    const sections = {
+      business: [
         aboutShowed,
         hardSkillShowed,
         softSkillShowed,
         experienceShowed,
         projectsShowed,
         educationShowed,
-        // musicShowed,
-      ].every(e => e)
-    ) {
+      ],
+      fun: [musicShowed, martialArtsShowed],
+    }[mode]
+    if (sections.every(e => e)) {
       setWatchScroll(false)
       setTimeout(() => {
         setWatchScroll(true)
@@ -128,6 +135,8 @@ const Home: NextPage = () => {
     else if (experienceInView) setActiveSection('experience')
     else if (educationInView) setActiveSection('education')
     else if (projectsInView) setActiveSection('projects')
+    else if (musicInView) setActiveSection('music')
+    else if (martialArtsInView) setActiveSection('martialArts')
     else setActiveSection('')
   }
 
@@ -183,8 +192,20 @@ const Home: NextPage = () => {
       sx={{paddingTop: 8}}
       justifyContent="center">
       {growComponent(LandingCard, {}, 'about', aboutRef, aboutShowed)}
-      <Hobby section="music"></Hobby>
-      <Hobby section="martialArts"></Hobby>
+      {growComponent(
+        Hobby,
+        {section: 'music'},
+        'music',
+        musicRef,
+        musicShowed
+      )}
+      {growComponent(
+        Hobby,
+        {section: 'martialArts'},
+        'martialArts',
+        martialArtsRef,
+        martialArtsShowed
+      )}
     </Stack>
   )
 
@@ -198,14 +219,10 @@ const Home: NextPage = () => {
           </Head>
           <TopBar
             sections={
-              mode === 'business' ? (t('sections', {
-                returnObjects: true,
-              }) as unknown as Section[]) : (t('hobbySections', {
-                returnObjects: true,
-              }) as unknown as Section[])
-            }
+              t('sections', {returnObjects: true}) as unknown as Section[]
+            } // TODO: Add hobbies topbar
             lastSectionActive={activeSection}
-            onChangeTab={onChangeTab}/>
+            onChangeTab={() => onChangeTab(mode as Mode)}/>
           <LandingBackground showParticles={watchScroll} />
           {{business: businessStack, fun: funStack}[mode as Mode]()}
         </>

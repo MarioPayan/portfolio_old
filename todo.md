@@ -7,4 +7,4 @@
 https://particles.js.org/docs/interfaces/Options_Interfaces_IOptions.IOptions.html
 
 # TODO
-- Add performance mode (remove particles)
+- Add performance mode (remove particles, setWatchScroll false)

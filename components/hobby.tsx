@@ -19,15 +19,14 @@ const Hobby = ({section}: any): JSX.Element => {
 
   const cardImageSize: React.CSSProperties = {
     height: 400,
-    maxWidth: '90vw',
-    maxHeight: '90vw',
+    // width: 400,
   }
   const cardImageBorder: React.CSSProperties = {
     borderRadius: 2,
     border: 'solid',
   }
 
-  const Item = (image: any, title: string): JSX.Element => (
+  const Item = (image: any, title: string, BottomBar: any): JSX.Element => (
     <Grid item xs={12}>
       <CardMedia
         image={image}
@@ -42,9 +41,7 @@ const Hobby = ({section}: any): JSX.Element => {
               width: 1,
               justifyContent: 'center',
             }}>
-            <Typography variant="h3" color="white">
-              {title}
-            </Typography>
+            {BottomBar()}
           </Box>
         </Box>
       </CardMedia>
@@ -54,7 +51,7 @@ const Hobby = ({section}: any): JSX.Element => {
   return (
     <Context.Consumer>
       {({t, i18n}) => (
-        <Grid container width={4 / 5}>
+        <Grid container width={9 / 10} spacing={5}>
           <Typography variant="h4" sx={{pb: 5}}>
             {t(`hobbies.${section}.description`)}
           </Typography>
@@ -68,29 +65,30 @@ const Hobby = ({section}: any): JSX.Element => {
               container
               key={i}
               xs={12}
+              md={6}
               display="flex"
               spacing={1}
+              direction="row"
               paddingBottom={5}>
               <Grid
                 item
                 display="flex"
                 direction="column"
-                md={8}
+                md={6}
                 xs={12}
                 padding={2}>
                 <Typography variant="h2">{ss.title}</Typography>
                 <Typography variant="h5">{ss.description}</Typography>
-                <Box sx={{marginTop: 'auto'}}>
-                  {SocialMediaIcons({
+              </Grid>
+              <Grid item md={6} xs={12} sx={cardImageSize}>
+                <Carousel sx={cardImageSize} {...settings}>
+                  {ss.images.map((item: any) => Item(item, ss.title, () => SocialMediaIcons({
                     t,
                     i18n,
                     tKey: `hobbies.${section}.sections.${i}.social`,
-                  })}
-                </Box>
-              </Grid>
-              <Grid item md={4} xs={12} sx={cardImageSize}>
-                <Carousel sx={cardImageSize} {...settings}>
-                  {ss.images.map((item: any) => Item(item, ss.title))}
+                  })
+                  )
+                  )}
                 </Carousel>
               </Grid>
             </Grid>
