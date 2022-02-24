@@ -29,7 +29,7 @@ const Home: NextPage = () => {
   const [experienceRef, experienceInView] = useInView(inViewOptions)
   const [projectsRef, projectsInView] = useInView(inViewOptions)
   const [educationRef, educationInView] = useInView(inViewOptions)
-  const [musicRef, musicInView] = useInView(inViewOptions)
+  // const [musicRef, musicInView] = useInView(inViewOptions)
 
   const [aboutShowed, setAboutShowed] = useState(aboutInView)
   const [hardSkillShowed, setCodeSkillShowed] = useState(hardSkillsInView)
@@ -37,7 +37,7 @@ const Home: NextPage = () => {
   const [experienceShowed, setExperienceShowed] = useState(experienceInView)
   const [projectsShowed, setProjectsShowed] = useState(projectsInView)
   const [educationShowed, setEducationShowed] = useState(educationInView)
-  const [musicShowed, setMusicShowed] = useState(musicInView)
+  // const [musicShowed, setMusicShowed] = useState(musicInView)
 
   useEffect(() => {
     lastSectionVisible()
@@ -63,10 +63,10 @@ const Home: NextPage = () => {
     lastSectionVisible()
     if (educationInView) setEducationShowed(true)
   }, [educationInView])
-  useEffect(() => {
-    lastSectionVisible()
-    if (musicInView) setMusicShowed(true)
-  }, [musicInView])
+  // useEffect(() => {
+  //   lastSectionVisible()
+  //   if (musicInView) setMusicShowed(true)
+  // }, [musicInView])
 
   const onChangeTab = () => {
     if (
@@ -77,7 +77,7 @@ const Home: NextPage = () => {
         experienceShowed,
         projectsShowed,
         educationShowed,
-        musicShowed,
+        // musicShowed,
       ].every(e => e)
     ) {
       setWatchScroll(false)
@@ -183,13 +183,8 @@ const Home: NextPage = () => {
       sx={{paddingTop: 8}}
       justifyContent="center">
       {growComponent(LandingCard, {}, 'about', aboutRef, aboutShowed)}
-      {growComponent(
-        Hobby,
-        {section: 'music'},
-        'music',
-        musicRef,
-        musicShowed
-      )}
+      <Hobby section="music"></Hobby>
+      <Hobby section="martialArts"></Hobby>
     </Stack>
   )
 

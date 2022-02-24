@@ -64,8 +64,8 @@
     "button": {
       "en-main": "Do nothing",
       "es-main": "No hago nada",
-      "en-download_cv": "Download CV",
-      "es-download_cv": "Descargar HV",
+      "en-downloadCV": "Download CV",
+      "es-downloadCV": "Descargar HV",
       "en-visit": "Visit",
       "es-visit": "Visitar"
     },
@@ -430,33 +430,66 @@
           "title": "Solo",
           "en-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
           "es-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-          "images": ["/images/music/solo1.jpg"]
+          "images": [
+            "/images/hobbies/music/solo1.jpg",
+            "/images/hobbies/music/solo2.jpg",
+            "/images/hobbies/music/solo3.jpg",
+            "/images/hobbies/music/solo4.jpg",
+            "/images/hobbies/music/solo5.jpg",
+            "/images/hobbies/music/solo6.jpg"
+          ]
         },
         {
           "title": "Falsete Proyecto",
           "en-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
           "es-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
           "images": [
-            "/images/music/falsete1.jpg",
-            "/images/music/falsete2.jpg",
-            "/images/music/falsete3.jpg",
-            "/images/music/falsete4.jpg",
-            "/images/music/cero_grados1.jpg"
+            "/images/hobbies/music/falsete1.jpg",
+            "/images/hobbies/music/falsete2.jpg",
+            "/images/hobbies/music/falsete3.jpg",
+            "/images/hobbies/music/falsete4.jpg",
+            "/images/hobbies/music/falsete5.jpg",
+            "/images/hobbies/music/falsete6.JPG"
           ],
           "social": {
             "facebook": "https://www.facebook.com/proyectofalsete",
             "instagram": "https://www.instagram.com/falsete.proyecto/",
             "youtube": "https://www.youtube.com/channel/UCTespFNTty8D1wSWhQiUmHA",
             "en-whatsapp": "https://wa.me/573127266099?text=Hey!",
-            "es-whatsapp": "https://wa.me/573127266099?text=¡Hola!",
-            "email": "mailto:mpayan.av@gmail.com"
+            "es-whatsapp": "https://wa.me/573127266099?text=¡Hola!"
           }
         },
         {
           "title": "Cero Grados",
           "en-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
           "es-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-          "images": ["/images/music/cero_grados1.jpg"]
+          "images": ["/images/hobbies/music/cero_grados1.jpg"],
+          "social": {
+            "facebook": "https://www.facebook.com/cerogradosmusic",
+            "instagram": "https://www.instagram.com/cerogradosmusic/",
+            "youtube": "https://www.youtube.com/channel/UCfI30-3Jxhtdy9v0ZYnzcbw"
+          }
+        }
+      ]
+    },
+    "martialArts": {
+      "en-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "es-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "sections": [
+        {
+          "title": "Kung Fu Xiaolin 2021",
+          "en-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "es-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "images": [
+            "/images/hobbies/martial_arts/martial_arts1.jpg",
+            "/images/hobbies/martial_arts/martial_arts2.jpg"
+          ]
+        },
+        {
+          "title": "Kung Fu Xiaolin 2011",
+          "en-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "es-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "images": []
         }
       ]
     }

@@ -14,8 +14,8 @@ import {
 export const SocialMediaIcons = (
   {t, i18n, tKey}: { t: (key: string) => string; i18n: any; tKey: string },
   showArray: string[] = []
-) => {
-  const show = (socialMedia: string) => {
+): JSX.Element => {
+  const show = (socialMedia: string): boolean => {
     if (i18n.exists(`${tKey}.${socialMedia}`)) {
       return showArray.includes(socialMedia) || showArray.length === 0
     }
@@ -38,7 +38,7 @@ export const SocialMediaIcons = (
       )}
       {show('whatsapp') && (
         <IconButton
-          aria-label="Whatsapp"
+          aria-label="WhatsApp"
           onClick={() => openInNewTab(t(`${tKey}.whatsapp`))}>
           <WhatsApp />
         </IconButton>
@@ -74,7 +74,7 @@ export const SocialMediaIcons = (
       {show('youtube') && (
         <IconButton
           aria-label="Youtube"
-          onClick={() => openInNewTab(t(`${tKey}.facebook`))}>
+          onClick={() => openInNewTab(t(`${tKey}.youtube`))}>
           <YouTube />
         </IconButton>
       )}

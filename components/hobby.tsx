@@ -4,8 +4,8 @@ import Context from './context'
 import {Box, Grid, Typography, CardMedia} from '@mui/material'
 import {SocialMediaIcons} from './socialMediaIcons'
 
-const Hobby: any = ({section}: any) => {
-  const settings = {
+const Hobby = ({section}: any): JSX.Element => {
+  const settings: any = {
     autoPlay: true,
     animation: 'fade' as 'slide' | 'fade',
     indicators: false,
@@ -17,11 +17,22 @@ const Hobby: any = ({section}: any) => {
     swipe: true,
   }
 
-  const cardImageSize = {height: 400, maxWidth: '90vw', maxHeight: '90vw'}
+  const cardImageSize: React.CSSProperties = {
+    height: 400,
+    maxWidth: '90vw',
+    maxHeight: '90vw',
+  }
+  const cardImageBorder: React.CSSProperties = {
+    borderRadius: 2,
+    border: 'solid',
+  }
 
-  const Item = (image: any, title: string) => (
+  const Item = (image: any, title: string): JSX.Element => (
     <Grid item xs={12}>
-      <CardMedia image={image} title={title} sx={cardImageSize}>
+      <CardMedia
+        image={image}
+        title={title}
+        sx={{...cardImageSize, ...cardImageBorder}}>
         <Box display="flex" sx={{height: 1}}>
           <Box
             display="flex"
@@ -31,7 +42,7 @@ const Hobby: any = ({section}: any) => {
               width: 1,
               justifyContent: 'center',
             }}>
-            <Typography variant="h2" color="white">
+            <Typography variant="h3" color="white">
               {title}
             </Typography>
           </Box>
@@ -43,18 +54,23 @@ const Hobby: any = ({section}: any) => {
   return (
     <Context.Consumer>
       {({t, i18n}) => (
-        <Grid
-          container
-          xs={12}
-          display="flex"
-          sx={{width: '80vw'}}
-          spacing={1}>
+        <Grid container width={4 / 5}>
+          <Typography variant="h4" sx={{pb: 5}}>
+            {t(`hobbies.${section}.description`)}
+          </Typography>
           {(
             t(`hobbies.${section}.sections`, {
               returnObjects: true,
             }) as unknown as any[]
           ).map((ss: any, i: number) => (
-            <>
+            <Grid
+              item
+              container
+              key={i}
+              xs={12}
+              display="flex"
+              spacing={1}
+              paddingBottom={5}>
               <Grid
                 item
                 display="flex"
@@ -62,7 +78,7 @@ const Hobby: any = ({section}: any) => {
                 md={8}
                 xs={12}
                 padding={2}>
-                <Typography variant="h4">{ss.title}</Typography>
+                <Typography variant="h2">{ss.title}</Typography>
                 <Typography variant="h5">{ss.description}</Typography>
                 <Box sx={{marginTop: 'auto'}}>
                   {SocialMediaIcons({
@@ -77,7 +93,7 @@ const Hobby: any = ({section}: any) => {
                   {ss.images.map((item: any) => Item(item, ss.title))}
                 </Carousel>
               </Grid>
-            </>
+            </Grid>
           ))}
         </Grid>
       )}

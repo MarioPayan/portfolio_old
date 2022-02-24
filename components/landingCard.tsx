@@ -12,7 +12,7 @@ import {profile, pixelProfile} from '../utils/assets'
 const LandingCard: LandingCardType = () => {
   const getSocialMediaItems = (mode: Mode): string[] => ({
     business: ['linkedin', 'github', 'email'],
-    fun: ['linkedin', 'whatsapp', 'github', 'email', 'instagram', 'facebook'],
+    fun: ['whatsapp', 'instagram', 'facebook'],
   }[mode])
 
   return (
@@ -80,7 +80,7 @@ const LandingCard: LandingCardType = () => {
                         variant="contained"
                         sx={{fontWeight: 'bold'}}
                         onClick={() => openInNewTab(cvPdf)}>
-                        {t('misc.button.download_cv')}
+                        {t('misc.button.downloadCV')}
                       </Button>
                     </Grid>
                   </Grid>
