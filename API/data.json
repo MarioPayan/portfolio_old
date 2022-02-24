@@ -31,6 +31,13 @@
       "id": "education"
     }
   ],
+  "hobbySections": [
+    {
+      "en-label": "Music",
+      "es-label": "Música",
+      "id": "music"
+    }
+  ],
   "misc": {
     "label": {
       "en-configurations": "Configurations",
@@ -80,7 +87,8 @@
       "instagram": "https://www.instagram.com/mario.a.payan/",
       "github": "https://github.com/marioPayan",
       "linkedin": "https://www.linkedin.com/in/mario-payan/",
-      "whatsapp": "https://wa.me/573186151646?text=Hey!",
+      "en-whatsapp": "https://wa.me/573186151646?text=Hey!",
+      "es-whatsapp": "https://wa.me/573186151646?text=¡Hola!",
       "email": "mailto:mpayan.av@gmail.com"
     }
   },
@@ -102,8 +110,7 @@
     },
     {
       "label": "ReactJS",
-      "en-type": "code",
-      "es-type": "código"
+      "type": "frameworks"
     },
     {
       "en-label": "Spanish",
@@ -413,5 +420,45 @@
         "Becas académicas otorgadas por estar entre los mejores del semestre"
       ]
     }
-  ]
+  ],
+  "hobbies": {
+    "music": {
+      "en-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "es-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "sections": [
+        {
+          "title": "Solo",
+          "en-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "es-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "images": ["/images/music/solo1.jpg"]
+        },
+        {
+          "title": "Falsete Proyecto",
+          "en-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "es-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "images": [
+            "/images/music/falsete1.jpg",
+            "/images/music/falsete2.jpg",
+            "/images/music/falsete3.jpg",
+            "/images/music/falsete4.jpg",
+            "/images/music/cero_grados1.jpg"
+          ],
+          "social": {
+            "facebook": "https://www.facebook.com/proyectofalsete",
+            "instagram": "https://www.instagram.com/falsete.proyecto/",
+            "youtube": "https://www.youtube.com/channel/UCTespFNTty8D1wSWhQiUmHA",
+            "en-whatsapp": "https://wa.me/573127266099?text=Hey!",
+            "es-whatsapp": "https://wa.me/573127266099?text=¡Hola!",
+            "email": "mailto:mpayan.av@gmail.com"
+          }
+        },
+        {
+          "title": "Cero Grados",
+          "en-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "es-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "images": ["/images/music/cero_grados1.jpg"]
+        }
+      ]
+    }
+  }
 }

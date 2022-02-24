@@ -10,8 +10,9 @@ import LandingBackground from '../components/landingBackground'
 import ProjectCards from '../components/projectCards'
 import {Grid, Grow, Stack} from '@mui/material'
 import Context from '../components/context'
-import {Section} from '../types/types'
+import {Mode, Section} from '../types/types'
 import {favicon} from '../utils/assets'
+import Hobby from '../components/hobby'
 
 const Home: NextPage = () => {
   const [activeSection, setActiveSection] = useState('')
@@ -28,6 +29,7 @@ const Home: NextPage = () => {
   const [experienceRef, experienceInView] = useInView(inViewOptions)
   const [projectsRef, projectsInView] = useInView(inViewOptions)
   const [educationRef, educationInView] = useInView(inViewOptions)
+  const [musicRef, musicInView] = useInView(inViewOptions)
 
   const [aboutShowed, setAboutShowed] = useState(aboutInView)
   const [hardSkillShowed, setCodeSkillShowed] = useState(hardSkillsInView)
@@ -35,6 +37,7 @@ const Home: NextPage = () => {
   const [experienceShowed, setExperienceShowed] = useState(experienceInView)
   const [projectsShowed, setProjectsShowed] = useState(projectsInView)
   const [educationShowed, setEducationShowed] = useState(educationInView)
+  const [musicShowed, setMusicShowed] = useState(musicInView)
 
   useEffect(() => {
     lastSectionVisible()
@@ -60,6 +63,10 @@ const Home: NextPage = () => {
     lastSectionVisible()
     if (educationInView) setEducationShowed(true)
   }, [educationInView])
+  useEffect(() => {
+    lastSectionVisible()
+    if (musicInView) setMusicShowed(true)
+  }, [musicInView])
 
   const onChangeTab = () => {
     if (
@@ -70,6 +77,7 @@ const Home: NextPage = () => {
         experienceShowed,
         projectsShowed,
         educationShowed,
+        musicShowed,
       ].every(e => e)
     ) {
       setWatchScroll(false)
@@ -123,9 +131,71 @@ const Home: NextPage = () => {
     else setActiveSection('')
   }
 
+  const businessStack = () => (
+    <Stack
+      direction="column"
+      spacing={10}
+      padding={3}
+      display="flex"
+      alignItems="center"
+      sx={{paddingTop: 8}}
+      justifyContent="center">
+      {growComponent(LandingCard, {}, 'about', aboutRef, aboutShowed)}
+      {growComponent(
+        SkillChips,
+        {typeSkills: 'hardSkills'},
+        'hardSkills',
+        hardSkillsRef,
+        hardSkillShowed
+      )}
+      {growComponent(
+        SkillChips,
+        {typeSkills: 'softSkills'},
+        'softSkills',
+        softSkillsRef,
+        softSkillShowed
+      )}
+      {growComponent(
+        TimeLine,
+        {typeItems: 'experiences'},
+        'experience',
+        experienceRef,
+        experienceShowed
+      )}
+      {growComponent(ProjectCards, {}, 'projects', projectsRef, projectsShowed)}
+      {growComponent(
+        TimeLine,
+        {typeItems: 'education'},
+        'education',
+        educationRef,
+        educationShowed
+      )}
+    </Stack>
+  )
+
+  const funStack = () => (
+    <Stack
+      direction="column"
+      spacing={10}
+      padding={3}
+      display="flex"
+      alignItems="center"
+      sx={{paddingTop: 8}}
+      justifyContent="center">
+      {growComponent(LandingCard, {}, 'about', aboutRef, aboutShowed)}
+      {growComponent(
+        Hobby,
+        {section: 'music'},
+        'music',
+        musicRef,
+        musicShowed
+      )}
+    </Stack>
+  )
+
   return (
     <Context.Consumer>
-      {({t}) => (
+      {({t, mode}) => (
         <>
           <Head>
             <title>{t('personal.name')}</title>
@@ -133,56 +203,16 @@ const Home: NextPage = () => {
           </Head>
           <TopBar
             sections={
-              t('sections', {returnObjects: true}) as unknown as Section[]
+              mode === 'business' ? (t('sections', {
+                returnObjects: true,
+              }) as unknown as Section[]) : (t('hobbySections', {
+                returnObjects: true,
+              }) as unknown as Section[])
             }
             lastSectionActive={activeSection}
             onChangeTab={onChangeTab}/>
           <LandingBackground showParticles={watchScroll} />
-          <Stack
-            direction="column"
-            spacing={10}
-            padding={3}
-            display="flex"
-            alignItems="center"
-            sx={{paddingTop: 8}}
-            justifyContent="center">
-            {growComponent(LandingCard, {}, 'about', aboutRef, aboutShowed)}
-            {growComponent(
-              SkillChips,
-              {typeSkills: 'hardSkills'},
-              'hardSkills',
-              hardSkillsRef,
-              hardSkillShowed
-            )}
-            {growComponent(
-              SkillChips,
-              {typeSkills: 'softSkills'},
-              'softSkills',
-              softSkillsRef,
-              softSkillShowed
-            )}
-            {growComponent(
-              TimeLine,
-              {typeItems: 'experiences'},
-              'experience',
-              experienceRef,
-              experienceShowed
-            )}
-            {growComponent(
-              ProjectCards,
-              {},
-              'projects',
-              projectsRef,
-              projectsShowed
-            )}
-            {growComponent(
-              TimeLine,
-              {typeItems: 'education'},
-              'education',
-              educationRef,
-              educationShowed
-            )}
-          </Stack>
+          {{business: businessStack, fun: funStack}[mode as Mode]()}
         </>
       )}
     </Context.Consumer>

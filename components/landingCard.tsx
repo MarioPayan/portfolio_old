@@ -4,29 +4,20 @@ import {LandingCard as LandingCardType, Mode} from '../types/types'
 import {cvPdf} from '../utils/assets'
 import {openInNewTab} from '../utils/utils'
 import Grid from '@mui/material/Grid'
-import {
-  Box,
-  Button,
-  IconButton,
-  Paper,
-  Stack,
-  Typography
-} from '@mui/material'
-import {
-  Facebook,
-  Instagram,
-  GitHub,
-  WhatsApp,
-  Email,
-  LinkedIn
-} from '@mui/icons-material'
+import {Box, Button, Paper, Typography} from '@mui/material'
+import {SocialMediaIcons} from './socialMediaIcons'
 import Context from './context'
 import {profile, pixelProfile} from '../utils/assets'
 
 const LandingCard: LandingCardType = () => {
+  const getSocialMediaItems = (mode: Mode): string[] => ({
+    business: ['linkedin', 'github', 'email'],
+    fun: ['linkedin', 'whatsapp', 'github', 'email', 'instagram', 'facebook'],
+  }[mode])
+
   return (
     <Context.Consumer>
-      {({t, mode}) => (
+      {({t, i18n, mode}) => (
         <Grid item xs={12} md={9}>
           <Paper elevation={3} sx={{justifyContent: 'center'}}>
             <Grid container spacing={2} sx={{padding: '40px'}}>
@@ -95,55 +86,10 @@ const LandingCard: LandingCardType = () => {
                   </Grid>
                 </Grid>
                 <Grid item xs={12}>
-                  <Stack
-                    direction="row"
-                    spacing={1}
-                    flexWrap="wrap"
-                    display="flex"
-                    justifyContent="right">
-                    <IconButton
-                      aria-label="Linked In"
-                      onClick={() => openInNewTab(t('personal.social.linkedin'))
-                      }>
-                      <LinkedIn />
-                    </IconButton>
-                    {mode === 'fun' && (
-                      <IconButton
-                        aria-label="Whatsapp"
-                        onClick={() => openInNewTab(t('personal.social.whatsapp'))
-                        }>
-                        <WhatsApp />
-                      </IconButton>
-                    )}
-
-                    <IconButton
-                      aria-label="Git Hub"
-                      onClick={() => openInNewTab(t('personal.social.github'))}>
-                      <GitHub />
-                    </IconButton>
-                    <IconButton
-                      aria-label="Email"
-                      onClick={() => openInNewTab(t('personal.social.email'))}>
-                      <Email />
-                    </IconButton>
-                    {mode === 'fun' && (
-                      <IconButton
-                        aria-label="Instagram"
-                        onClick={() => openInNewTab(t('personal.social.instagram'))
-                        }>
-                        <Instagram />
-                      </IconButton>
-                    )}
-
-                    {mode === 'fun' && (
-                      <IconButton
-                        aria-label="Facebook"
-                        onClick={() => openInNewTab(t('personal.social.facebook'))
-                        }>
-                        <Facebook />
-                      </IconButton>
-                    )}
-                  </Stack>
+                  {SocialMediaIcons(
+                    {t, i18n, tKey: 'personal.social'},
+                    getSocialMediaItems(mode as Mode)
+                  )}
                 </Grid>
               </Grid>
             </Grid>

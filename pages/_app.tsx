@@ -34,7 +34,7 @@ const App = ({Component, pageProps}: AppProps) => {
     theme: 'dark',
     language: 'en',
     mode: 'business',
-  })
+  }) // TODO: use params
   const [theme, setTheme] = useState<Theme>(createTheme('dark')) // TODO: initTheme
   const [themeMode, setThemeMode] = useState<ThemeMode>('dark')
   const [mode, setMode] = useState<Mode>(initMode('business'))

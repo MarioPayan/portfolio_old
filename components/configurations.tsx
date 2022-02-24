@@ -143,7 +143,10 @@ const Configurations: ConfigurationsType = () => {
     <Context.Consumer>
       {({setThemeMode, setLanguage, setMode, t}) => (
         <>
-          <IconButton onClick={() => toggleDrawer()} size='large' sx={{minWidth: 50}}>
+          <IconButton
+            onClick={() => toggleDrawer()}
+            size="large"
+            sx={{minWidth: 50}}>
             <Settings color="secondary" />
           </IconButton>
           <SwipeableDrawer

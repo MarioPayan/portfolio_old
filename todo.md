@@ -7,4 +7,4 @@
 https://particles.js.org/docs/interfaces/Options_Interfaces_IOptions.IOptions.html
 
 # TODO
-- Generate data from 1 file
+- Add performance mode (remove particles)

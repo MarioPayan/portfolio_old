@@ -17,6 +17,7 @@
     "@mui/icons-material": "^5.2.5",
     "@mui/lab": "^5.0.0-alpha.62",
     "@mui/material": "^5.2.6",
+    "@mui/styles": "^5.4.2",
     "cookies-next": "^2.0.3",
     "i18next": "^21.6.6",
     "next": "12.0.7",
@@ -24,6 +25,7 @@
     "react-dom": "17.0.2",
     "react-i18next": "^11.15.3",
     "react-intersection-observer": "^8.33.1",
+    "react-material-ui-carousel": "^3.2.0",
     "react-tsparticles": "^1.39.0"
   },
   "devDependencies": {

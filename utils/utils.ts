@@ -3,6 +3,18 @@ export const openInNewTab = (url: string) => {
   const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
   if (newWindow) newWindow.opener = null
 }
+export const rotateArray = (arr: any[], times = 1, reverse = false): any[] => {
+  const rightWay = (arr: any[]) => arr.push(arr.shift())
+  const leftWay = (arr: any[]) => arr.unshift(arr.pop())
+  const loop = (callback: (arr: any[]) => number, times: number) => {
+    for (let i = 0; i < times; i++) {
+      callback(arr)
+    }
+  }
+  if (reverse) loop(leftWay, times)
+  else loop(rightWay, times)
+  return arr
+}
 export const tsParticlesOptions: any = (show = true) => ({
   background: {
     color: {

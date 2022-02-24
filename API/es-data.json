@@ -7,6 +7,7 @@
     { "id": "projects", "label": "Proyectos" },
     { "id": "education", "label": "Educación" }
   ],
+  "hobbySections": [{ "id": "music", "label": "Música" }],
   "misc": {
     "label": {
       "configurations": "Configuración",
@@ -37,8 +38,8 @@
       "instagram": "https://www.instagram.com/mario.a.payan/",
       "github": "https://github.com/marioPayan",
       "linkedin": "https://www.linkedin.com/in/mario-payan/",
-      "whatsapp": "https://wa.me/573186151646?text=Hey!",
-      "email": "mailto:mpayan.av@gmail.com"
+      "email": "mailto:mpayan.av@gmail.com",
+      "whatsapp": "https://wa.me/573186151646?text=¡Hola!"
     },
     "title": "Desarrollador de Software",
     "subtitle": "Desarrollador Full Stack | Javascript & Python | Django & React",
@@ -48,7 +49,7 @@
     { "label": "Javascript", "type": "código" },
     { "label": "Typescript", "type": "código" },
     { "label": "Python", "type": "código" },
-    { "label": "ReactJS", "type": "código" },
+    { "label": "ReactJS", "type": "frameworks" },
     { "label": "Español", "type": "idiomas" },
     { "label": "Inglés", "type": "idiomas" },
     { "label": "Django", "type": "frameworks" },
@@ -206,5 +207,40 @@
         "Becas académicas otorgadas por estar entre los mejores del semestre"
       ]
     }
-  ]
+  ],
+  "hobbies": {
+    "music": {
+      "sections": [
+        {
+          "title": "Solo",
+          "images": ["/images/music/solo1.jpg"],
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        },
+        {
+          "title": "Falsete Proyecto",
+          "images": [
+            "/images/music/falsete1.jpg",
+            "/images/music/falsete2.jpg",
+            "/images/music/falsete3.jpg",
+            "/images/music/falsete4.jpg",
+            "/images/music/cero_grados1.jpg"
+          ],
+          "social": {
+            "facebook": "https://www.facebook.com/proyectofalsete",
+            "instagram": "https://www.instagram.com/falsete.proyecto/",
+            "youtube": "https://www.youtube.com/channel/UCTespFNTty8D1wSWhQiUmHA",
+            "email": "mailto:mpayan.av@gmail.com",
+            "whatsapp": "https://wa.me/573127266099?text=¡Hola!"
+          },
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        },
+        {
+          "title": "Cero Grados",
+          "images": ["/images/music/cero_grados1.jpg"],
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        }
+      ],
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    }
+  }
 }
