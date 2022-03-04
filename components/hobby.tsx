@@ -52,9 +52,14 @@ const Hobby = ({section}: any): JSX.Element => {
     <Context.Consumer>
       {({t, i18n}) => (
         <Grid container width={9 / 10} spacing={5}>
-          <Typography variant="h4" sx={{pb: 5}}>
-            {t(`hobbies.${section}.description`)}
-          </Typography>
+          <Grid item xs={12} sx={{pb: 5}}>
+            <Typography variant="h1">
+              {t(`hobbies.${section}.title`)}
+            </Typography>
+            <Typography variant="h6">
+              {t(`hobbies.${section}.description`)}
+            </Typography>
+          </Grid>
           {(
             t(`hobbies.${section}.sections`, {
               returnObjects: true,

@@ -8,3 +8,4 @@ https://particles.js.org/docs/interfaces/Options_Interfaces_IOptions.IOptions.ht
 
 # TODO
 - Add performance mode (remove particles, setWatchScroll false)
+- remove particles after x Resolution

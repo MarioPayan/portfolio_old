@@ -135,8 +135,8 @@ const Home: NextPage = () => {
     else if (experienceInView) setActiveSection('experience')
     else if (educationInView) setActiveSection('education')
     else if (projectsInView) setActiveSection('projects')
-    else if (musicInView) setActiveSection('music')
-    else if (martialArtsInView) setActiveSection('martialArts')
+    // else if (musicInView) setActiveSection('music')
+    // else if (martialArtsInView) setActiveSection('martialArts')
     else setActiveSection('')
   }
 

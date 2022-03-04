@@ -231,7 +231,7 @@
             "/images/hobbies/music/falsete3.jpg",
             "/images/hobbies/music/falsete4.jpg",
             "/images/hobbies/music/falsete5.jpg",
-            "/images/hobbies/music/falsete6.JPG"
+            "/images/hobbies/music/falsete6.jpg"
           ],
           "social": {
             "facebook": "https://www.facebook.com/proyectofalsete",
@@ -252,6 +252,7 @@
           "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
         }
       ],
+      "title": "Music",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
     },
     "martialArts": {
@@ -270,6 +271,7 @@
           "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
         }
       ],
+      "title": "Martial Arts",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
     }
   }

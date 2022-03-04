@@ -30,16 +30,23 @@ i18n.use(initReactI18next).init({
 })
 
 const App = ({Component, pageProps}: AppProps) => {
+  const [theme, setTheme] = useState<Theme>(createTheme('dark')) // TODO: initTheme
+  const [themeMode, setThemeMode] = useState<ThemeMode>('dark')
+  const [mode, setMode] = useState<Mode>('business')
+  const setLanguage = (language: Language) => i18n.changeLanguage(language)
+  const {t} = useTranslation()
+
   const params = setConfigFromParams({
     theme: 'dark',
     language: 'en',
     mode: 'business',
-  }) // TODO: use params
-  const [theme, setTheme] = useState<Theme>(createTheme('dark')) // TODO: initTheme
-  const [themeMode, setThemeMode] = useState<ThemeMode>('dark')
-  const [mode, setMode] = useState<Mode>(initMode('business'))
-  const setLanguage = (language: Language) => i18n.changeLanguage(language)
-  const {t} = useTranslation()
+  })
+
+  useEffect(() => {
+    setThemeMode(params.theme)
+    setMode(params.mode)
+    setLanguage(params.language)
+  }, [])
 
   useEffect(() => {
     setTheme(createTheme(themeMode))
