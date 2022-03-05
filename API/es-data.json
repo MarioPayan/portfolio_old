@@ -12,7 +12,9 @@
     "label": {
       "configurations": "Configuración",
       "underConstruction": "En Construcción",
-      "all": "Todo"
+      "all": "Todo",
+      "seeMore": "Ver más",
+      "seeLess": "Ver menos"
     },
     "time": {
       "year": "Año",
@@ -106,7 +108,7 @@
       "image": "/images/projects/svg.png",
       "link": "https://mariopayan.github.io/SvgLearningTool/",
       "public": true,
-      "label": "Herramienta de aprendizaje de SVG",
+      "label": "Aprendizaje SVG",
       "description": "Una herramienta muy básica para entender de manera sencilla cómo funcionan los SVG"
     },
     {

@@ -45,7 +45,11 @@
       "en-underConstruction": "Under construction",
       "es-underConstruction": "En Construcción",
       "en-all": "All",
-      "es-all": "Todo"
+      "es-all": "Todo",
+      "en-seeMore": "See more",
+      "es-seeMore": "Ver más",
+      "en-seeLess": "See less",
+      "es-seeLess": "Ver menos"
     },
     "time": {
       "en-year": "Year",
@@ -244,7 +248,7 @@
     },
     {
       "en-label": "SVG Learning Tool",
-      "es-label": "Herramienta de aprendizaje de SVG",
+      "es-label": "Aprendizaje SVG",
       "en-description": "A simple tool to understand how SVG works that I made in my free time to help some mates",
       "es-description": "Una herramienta muy básica para entender de manera sencilla cómo funcionan los SVG",
       "image": "/images/projects/svg.png",
