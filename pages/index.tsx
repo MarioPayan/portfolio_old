@@ -30,7 +30,7 @@ const Home: NextPage = () => {
   const [projectsRef, projectsInView] = useInView(inViewOptions)
   const [educationRef, educationInView] = useInView(inViewOptions)
   const [musicRef, musicInView] = useInView(inViewOptions)
-  const [martialArtsRef, martialArtsInView] = useInView(inViewOptions)
+  const [sportRef, sportInView] = useInView(inViewOptions)
 
   const [aboutShowed, setAboutShowed] = useState(aboutInView)
   const [hardSkillShowed, setCodeSkillShowed] = useState(hardSkillsInView)
@@ -39,7 +39,7 @@ const Home: NextPage = () => {
   const [projectsShowed, setProjectsShowed] = useState(projectsInView)
   const [educationShowed, setEducationShowed] = useState(educationInView)
   const [musicShowed, setMusicShowed] = useState(musicInView)
-  const [martialArtsShowed, setMartialArtsShowed] = useState(martialArtsInView)
+  const [sportShowed, setSportShowed] = useState(sportInView)
 
   useEffect(() => {
     lastSectionVisible()
@@ -71,8 +71,8 @@ const Home: NextPage = () => {
   }, [musicInView])
   useEffect(() => {
     lastSectionVisible()
-    if (martialArtsInView) setMartialArtsShowed(true)
-  }, [martialArtsInView])
+    if (sportInView) setSportShowed(true)
+  }, [sportInView])
 
   const onChangeTab = (mode: Mode) => {
     const sections = {
@@ -84,7 +84,7 @@ const Home: NextPage = () => {
         projectsShowed,
         educationShowed,
       ],
-      fun: [musicShowed, martialArtsShowed],
+      fun: [musicShowed, sportShowed],
     }[mode]
     if (sections.every(e => e)) {
       setWatchScroll(false)
@@ -136,7 +136,7 @@ const Home: NextPage = () => {
     else if (educationInView) setActiveSection('education')
     else if (projectsInView) setActiveSection('projects')
     // else if (musicInView) setActiveSection('music')
-    // else if (martialArtsInView) setActiveSection('martialArts')
+    // else if (sportInView) setActiveSection('sport')
     else setActiveSection('')
   }
 
@@ -201,10 +201,18 @@ const Home: NextPage = () => {
       )}
       {growComponent(
         Hobby,
-        {section: 'martialArts'},
-        'martialArts',
-        martialArtsRef,
-        martialArtsShowed
+        {section: 'colombiaTraveling'},
+        'colombiaTraveling',
+        null,
+        true
+      )}
+      {growComponent(Hobby, {section: 'animals'}, 'animals', null, true)}
+      {growComponent(
+        Hobby,
+        {section: 'sports'},
+        'sports',
+        sportRef,
+        sportShowed
       )}
     </Stack>
   )

@@ -260,6 +260,7 @@
       "es-label": "Esta página web",
       "en-description": "Website I built for fun",
       "es-description": "Página que hice por diversión",
+      "image": "/images/pixel_profile.png",
       "link": "https://www.mariopayan.com/",
       "public": true
     },
@@ -478,14 +479,89 @@
         }
       ]
     },
-    "martialArts": {
-      "en-title": "Martial Arts",
-      "es-title": "Artes Marciales",
+    "colombiaTraveling": {
+      "en-title": "Colombia Traveling",
+      "es-title": "Viajes en Colombia",
       "en-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
       "es-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
       "sections": [
         {
-          "title": "Kung Fu Xiaolin 2021",
+          "title": "TODO",
+          "en-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "es-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "images": [
+            "/images/hobbies/colombia_traveling/colombia_traveling_1.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_2.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_3.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_4.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_5.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_6.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_7.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_8.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_9.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_10.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_11.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_12.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_13.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_14.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_15.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_16.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_17.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_18.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_19.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_20.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_21.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_22.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_23.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_24.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_25.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_26.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_27.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_28.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_29.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_30.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_31.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_32.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_33.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_34.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_35.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_36.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_37.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_38.jpg",
+            "/images/hobbies/colombia_traveling/colombia_traveling_39.jpg"
+          ]
+        }
+      ]
+    },
+    "animals": {
+      "en-title": "Dogs",
+      "es-title": "Perros",
+      "en-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "es-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "sections": [
+        {
+          "title": "Sora",
+          "en-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "es-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "images": [
+            "/images/hobbies/dogs/Sora_1.jpg",
+            "/images/hobbies/dogs/Sora_2.jpg",
+            "/images/hobbies/dogs/Sora_3.jpg",
+            "/images/hobbies/dogs/Sora_4.jpg",
+            "/images/hobbies/dogs/Sora_5.jpg",
+            "/images/hobbies/dogs/Sora_6.jpg"
+          ]
+        }
+      ]
+    },
+    "sports": {
+      "en-title": "Sports",
+      "es-title": "Deportes",
+      "en-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "es-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "sections": [
+        {
+          "title": "Kung Fu Xiaolin",
           "en-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
           "es-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
           "images": [
@@ -494,10 +570,14 @@
           ]
         },
         {
-          "title": "Kung Fu Xiaolin 2011",
+          "en-title": "Hiking",
+          "es-title": "Senderismo",
           "en-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
           "es-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-          "images": []
+          "images": [
+            "/images/hobbies/hiking/hiking_1.jpg",
+            "/images/hobbies/hiking/hiking_2.jpg"
+          ]
         }
       ]
     }
