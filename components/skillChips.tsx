@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {Skill, SkillChips as SkillChipsType} from '../types/types'
 import {getKeyFromLabel} from '../utils/utils'
-import {Chip, Grid, Tab, Tabs, Grow} from '@mui/material'
+import {Chip, Grid, Tab, Tabs, Grow, Tooltip} from '@mui/material'
 import {
   Code,
   IntegrationInstructions,
@@ -102,13 +102,16 @@ const SkillChips: SkillChipsType = ({typeSkills}) => {
           ).map(skill => (
             <Grid item key={getKeyFromLabel(skill.label)}>
               <Grow in={[defaultFilterKey, skill.type].includes(filter)}>
-                <Chip
-                  label={skill.label}
-                  component="a"
-                  icon={getIcon(skill.type)}
-                  variant="outlined"
-                  sx={{fontSize: 16, borderWidth: 2, borderColor: 'gray'}}
-                  clickable/>
+                <Tooltip
+                  title={skill.description || t('misc.missing.description')}>
+                  <Chip
+                    label={skill.label}
+                    component="a"
+                    icon={getIcon(skill.type)}
+                    variant="outlined"
+                    sx={{fontSize: 16, borderWidth: 2, borderColor: 'gray'}}
+                    clickable/>
+                </Tooltip>
               </Grow>
             </Grid>
           ))}

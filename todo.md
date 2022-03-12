@@ -13,3 +13,4 @@ https://particles.js.org/docs/interfaces/Options_Interfaces_IOptions.IOptions.ht
 - dns projects mariopayan.com
 - Randomizer images
 - Changing about on fun mode
+- Add missing chips descriptions

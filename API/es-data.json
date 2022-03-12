@@ -31,7 +31,8 @@
     },
     "text": {
       "underConstruction": "Hola! Gracias por visitar mi web, aún está en construcción pero puedes ver lo que estoy haciendo y sientete libre de hacerme sugerencias"
-    }
+    },
+    "missing": { "description": "Falta esta descripción ¯\\_(ツ)_/¯" }
   },
   "personal": {
     "name": "Mario Payan",
@@ -48,32 +49,96 @@
     "summary": "Desarrollador full stack con enfoque en desarrollo de software, diseño de algoritmos, software como servicio, y código limpio. Impulsado por los desafíos, siempre dispuesto a aprender, apasionado por las nuevas tecnologías, el trabajo en equipo y escribir código de calidad."
   },
   "hardSkills": [
-    { "label": "Javascript", "type": "código" },
-    { "label": "Typescript", "type": "código" },
-    { "label": "Python", "type": "código" },
-    { "label": "ReactJS", "type": "frameworks" },
-    { "label": "Español", "type": "idiomas" },
-    { "label": "Inglés", "type": "idiomas" },
-    { "label": "Django", "type": "frameworks" },
-    { "label": "Django REST", "type": "frameworks" },
-    { "label": "Angular", "type": "frameworks" },
-    { "label": "HTML5", "type": "html" },
-    { "label": "CSS3", "type": "css" },
-    { "label": "Bootstrap", "type": "css" },
-    { "label": "Material UI", "type": "css" },
-    { "label": "PostgreSQL", "type": "base_de_datos" },
-    { "label": "SQLite", "type": "base_de_datos" },
-    { "label": "Git", "type": "git" },
-    { "label": "GitHub", "type": "git" },
-    { "label": "GitLab", "type": "git" },
-    { "label": "BitBucket", "type": "git" },
-    { "label": "Shell", "type": "code" },
-    { "label": "Jasmine", "type": "test" },
-    { "label": "Puppeteer", "type": "test" },
-    { "label": "Appium", "type": "test" },
-    { "label": "Linux", "type": "os" },
-    { "label": "OSx", "type": "os" },
-    { "label": "Flexbox", "type": "css" }
+    {
+      "label": "Javascript",
+      "type": "código",
+      "description": "JavaScript (JS) es un lenguaje de programación ligero, interpretado, o compilado justo-a-tiempo (just-in-time) con funciones de primera clase"
+    },
+    {
+      "label": "Typescript",
+      "type": "código",
+      "description": "TypeScript es un lenguaje de programación fuertemente tipado que se basa en JavaScript, lo que le brinda mejores herramientas a cualquier escala"
+    },
+    {
+      "label": "Python",
+      "type": "código",
+      "description": "Python es un lenguaje de programación interpretado cuya filosofía hace hincapié en la legibilidad de su código"
+    },
+    {
+      "label": "ReactJS",
+      "type": "frameworks",
+      "description": "Una biblioteca de JavaScript para crear interfaces de usuario"
+    },
+    { "label": "Español", "type": "idiomas", "description": "" },
+    { "label": "Inglés", "type": "idiomas", "description": "" },
+    {
+      "label": "Django",
+      "type": "frameworks",
+      "description": "Django es un framework web de alto nivel que permite el desarrollo rápido de sitios web seguros y mantenibles"
+    },
+    {
+      "label": "Django REST",
+      "type": "frameworks",
+      "description": "Django REST framework es un conjunto de herramientas potente y flexible para crear APIs web"
+    },
+    {
+      "label": "Angular",
+      "type": "frameworks",
+      "description": "Angular es un framework para aplicaciones web desarrollado en TypeScript, de código abierto, mantenido por Google, que se utiliza para crear y mantener aplicaciones web de una sola página"
+    },
+    {
+      "label": "HTML5",
+      "type": "html",
+      "description": "HTML (Lenguaje de Marcas de Hipertexto, del inglés HyperText Markup Language) es el componente más básico de la Web. Define el significado y la estructura del contenido web"
+    },
+    {
+      "label": "CSS3",
+      "type": "css",
+      "description": "Hojas de Estilo en Cascada (del inglés Cascading Style Sheets) o CSS es el lenguaje de estilos utilizado para describir la presentación de documentos HTML o XML. CSS describe como debe ser renderizado el elemento estructurado en la pantalla, en papel, en el habla o en otros medios"
+    },
+    {
+      "label": "Bootstrap",
+      "type": "css",
+      "description": "Bootstrap es una biblioteca multiplataforma o conjunto de herramientas de código abierto para diseño de sitios y aplicaciones web"
+    },
+    {
+      "label": "Material UI",
+      "type": "css",
+      "description": "Material UI es una normativa de diseño enfocado en la visualización del sistema operativo Android, además en la web y en cualquier plataforma desarrollado por Goolge"
+    },
+    {
+      "label": "PostgreSQL",
+      "type": "base_de_datos",
+      "description": "PostgreSQL es un poderoso sistema de base de datos relacional de objetos de código abierto con más de 30 años de desarrollo activo que le ha valido una sólida reputación por su confiabilidad, robustez de funciones y rendimiento"
+    },
+    {
+      "label": "SQLite",
+      "type": "base_de_datos",
+      "description": "SQLite es una biblioteca en lenguaje C que implementa un motor de base de datos SQL pequeño, rápido, autónomo, de alta confiabilidad y con todas las funciones"
+    },
+    {
+      "label": "Git",
+      "type": "git",
+      "description": "Git es un sistema de control de versiones distribuido gratuito y de código abierto diseñado para manejar todo, desde proyectos pequeños hasta proyectos muy grandes, con rapidez y eficiencia"
+    },
+    {
+      "label": "GitHub",
+      "type": "git",
+      "description": "GitHub es una forja (plataforma de desarrollo colaborativo) para alojar proyectos utilizando el sistema de control de versiones Git"
+    },
+    {
+      "label": "GitLab",
+      "type": "git",
+      "description": "GitLab es la plataforma DevOps que permite a las organizaciones maximizar el rendimiento general del desarrollo de software mediante la entrega de software de manera más rápida y eficiente, al tiempo que fortalece la seguridad y el cumplimiento"
+    },
+    { "label": "BitBucket", "type": "git", "description": "" },
+    { "label": "Shell", "type": "code", "description": "" },
+    { "label": "Jasmine", "type": "test", "description": "" },
+    { "label": "Puppeteer", "type": "test", "description": "" },
+    { "label": "Appium", "type": "test", "description": "" },
+    { "label": "Linux", "type": "os", "description": "" },
+    { "label": "OSx", "type": "os", "description": "" },
+    { "label": "Flexbox", "type": "css", "description": "" }
   ],
   "projects": [
     {

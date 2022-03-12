@@ -7,8 +7,7 @@ import {
   Typography,
   CardMedia,
   CardActionArea,
-  Dialog,
-  Fade
+  Dialog
 } from '@mui/material'
 import {SocialMediaIcons} from './socialMediaIcons'
 
@@ -119,7 +118,8 @@ const Hobby = ({section}: any): JSX.Element => {
             open={openModal}
             onClose={() => {
               setOpenModal(false)
-            }}>
+            }}
+            maxWidth="lg">
             <img src={modalImage} alt="TODO" />
           </Dialog>
         </Grid>

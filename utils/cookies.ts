@@ -4,6 +4,7 @@ import {Language, Mode, Theme} from '../types/types'
 const languageKey = 'language'
 const themeKey = 'theme'
 const modeKey = 'mode'
+const visitedKey = 'visited'
 
 export const setLanguage = (language: Language): void => setCookies(languageKey, language + '')
 export const getLanguage = (): Language | null => getCookie(languageKey) as Language
@@ -33,4 +34,14 @@ export const initMode = (defaultMode: Mode): Mode => {
   if (mode) return mode
   setMode(defaultMode)
   return defaultMode
+}
+
+export const setVisited = (visited: boolean): void => setCookies(visitedKey, visited)
+export const getVisited = (): boolean | null => getCookie(visitedKey) as boolean
+export const clearVisited = (): void => removeCookies(visitedKey)
+export const initVisited = (): boolean => {
+  const visited = getVisited()
+  if (visited) return visited
+  setVisited(false)
+  return false
 }

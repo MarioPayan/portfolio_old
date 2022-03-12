@@ -178,22 +178,6 @@ const Configurations: ConfigurationsType = () => {
                 label="Mode"
                 component={<ModeButtons setAppMode={setMode} />}></ListConfigItem>
               <Divider />
-              <ListItem sx={{position: 'fixed', bottom: 0}}>
-                <ListItemText
-                  primary={
-                    <Typography variant="h5">
-                      {t('misc.label.underConstruction')}
-                    </Typography>
-                  }
-                  secondary={
-                    <Typography
-                      display="flex"
-                      sx={{width: 200}}
-                      variant="subtitle1">
-                      {t('misc.text.underConstruction')}
-                    </Typography>
-                  }></ListItemText>
-              </ListItem>
             </List>
           </SwipeableDrawer>
         </>

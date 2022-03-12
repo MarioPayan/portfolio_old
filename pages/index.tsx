@@ -8,6 +8,7 @@ import SkillChips from '../components/skillChips'
 import TimeLine from '../components/timeline'
 import LandingBackground from '../components/landingBackground'
 import ProjectCards from '../components/projectCards'
+import UnderConstruction from '../components/underConstruction'
 import {Grid, Grow, Stack} from '@mui/material'
 import Context from '../components/context'
 import {Mode, Section} from '../types/types'
@@ -233,6 +234,7 @@ const Home: NextPage = () => {
             onChangeTab={() => onChangeTab(mode as Mode)}/>
           <LandingBackground showParticles={watchScroll} />
           {{business: businessStack, fun: funStack}[mode as Mode]()}
+          <UnderConstruction></UnderConstruction>
         </>
       )}
     </Context.Consumer>

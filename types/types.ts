@@ -1,4 +1,4 @@
-export type Skill = { label: string; type: string };
+export type Skill = { label: string; type: string; description: string };
 export type LandingCardData = {
   name: string;
   title: string;

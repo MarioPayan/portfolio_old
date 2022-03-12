@@ -31,7 +31,8 @@
     },
     "text": {
       "underConstruction": "Hey, thanks for visiting my website, this site is under construction yet but feel free to visit it and check it whenever you want"
-    }
+    },
+    "missing": { "description": "Missing description ¯\\_(ツ)_/¯" }
   },
   "personal": {
     "name": "Mario Payan",
@@ -48,32 +49,96 @@
     "summary": "Fullstack developer with focus on software development, algorithms design, software as a service and clean code. Challenge driven, always willing to learn, passionate about new technologies, teamwork and code writing."
   },
   "hardSkills": [
-    { "label": "Javascript", "type": "code" },
-    { "label": "Typescript", "type": "code" },
-    { "label": "Python", "type": "code" },
-    { "label": "ReactJS", "type": "frameworks" },
-    { "label": "Spanish", "type": "languages" },
-    { "label": "English", "type": "languages" },
-    { "label": "Django", "type": "frameworks" },
-    { "label": "Django REST", "type": "frameworks" },
-    { "label": "Angular", "type": "frameworks" },
-    { "label": "HTML5", "type": "html" },
-    { "label": "CSS3", "type": "css" },
-    { "label": "Bootstrap", "type": "css" },
-    { "label": "Material UI", "type": "css" },
-    { "label": "PostgreSQL", "type": "database" },
-    { "label": "SQLite", "type": "database" },
-    { "label": "Git", "type": "git" },
-    { "label": "GitHub", "type": "git" },
-    { "label": "GitLab", "type": "git" },
-    { "label": "BitBucket", "type": "git" },
-    { "label": "Shell", "type": "code" },
-    { "label": "Jasmine", "type": "test" },
-    { "label": "Puppeteer", "type": "test" },
-    { "label": "Appium", "type": "test" },
-    { "label": "Linux", "type": "os" },
-    { "label": "OSx", "type": "os" },
-    { "label": "Flexbox", "type": "css" }
+    {
+      "label": "Javascript",
+      "type": "code",
+      "description": "JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions"
+    },
+    {
+      "label": "Typescript",
+      "type": "code",
+      "description": "TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale"
+    },
+    {
+      "label": "Python",
+      "type": "code",
+      "description": "Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation"
+    },
+    {
+      "label": "ReactJS",
+      "type": "frameworks",
+      "description": "A JavaScript library for building user interfaces"
+    },
+    { "label": "Spanish", "type": "languages", "description": "" },
+    { "label": "English", "type": "languages", "description": "" },
+    {
+      "label": "Django",
+      "type": "frameworks",
+      "description": "Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design"
+    },
+    {
+      "label": "Django REST",
+      "type": "frameworks",
+      "description": "Django REST framework is a powerful and flexible toolkit for building Web APIs"
+    },
+    {
+      "label": "Angular",
+      "type": "frameworks",
+      "description": "Angular is a TypeScript-based free and open-source web application framework led by the Angular Team at Google used to build and mantain SPAs"
+    },
+    {
+      "label": "HTML5",
+      "type": "html",
+      "description": "HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content"
+    },
+    {
+      "label": "CSS3",
+      "type": "css",
+      "description": "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML. CSS describes how elements should be rendered on screen, on paper, in speech, or on other media"
+    },
+    {
+      "label": "Bootstrap",
+      "type": "css",
+      "description": "Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development"
+    },
+    {
+      "label": "Material UI",
+      "type": "css",
+      "description": "Material UI is a design language developed by Google"
+    },
+    {
+      "label": "PostgreSQL",
+      "type": "database",
+      "description": "PostgreSQL is a powerful, open source object-relational database system with over 30 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance"
+    },
+    {
+      "label": "SQLite",
+      "type": "database",
+      "description": "SQLite is a C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine"
+    },
+    {
+      "label": "Git",
+      "type": "git",
+      "description": "Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency"
+    },
+    {
+      "label": "GitHub",
+      "type": "git",
+      "description": "GitHub is a provider of Internet hosting for software development and version control using Git"
+    },
+    {
+      "label": "GitLab",
+      "type": "git",
+      "description": "GitLab is The DevOps platform that empowers organizations to maximize the overall return on software development by delivering software faster and efficiently, while strengthening security and compliance"
+    },
+    { "label": "BitBucket", "type": "git", "description": "" },
+    { "label": "Shell", "type": "code", "description": "" },
+    { "label": "Jasmine", "type": "test", "description": "" },
+    { "label": "Puppeteer", "type": "test", "description": "" },
+    { "label": "Appium", "type": "test", "description": "" },
+    { "label": "Linux", "type": "os", "description": "" },
+    { "label": "OSx", "type": "os", "description": "" },
+    { "label": "Flexbox", "type": "css", "description": "" }
   ],
   "projects": [
     {
