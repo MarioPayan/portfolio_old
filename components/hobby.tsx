@@ -107,6 +107,7 @@ const Hobby = ({section}: any): JSX.Element => {
                     t,
                     i18n,
                     tKey: `hobbies.${section}.sections.${i}.social`,
+                    style: 'white',
                   })
                   )
                   )}

@@ -189,6 +189,27 @@
       "public": false,
       "label": "Survey Tool",
       "description": "Survey tool that TODO"
+    },
+    {
+      "image": "/images/projects/alert_logic_web.png",
+      "link": "https://alertlogic.com/",
+      "public": false,
+      "label": "Alert Logic web app",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry TODO"
+    },
+    {
+      "image": "/images/projects/alert_logic_mobile.jpg",
+      "link": "https://alertlogic.com/",
+      "public": false,
+      "label": "Alert Logic mobile app",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry TODO"
+    },
+    {
+      "image": "/images/projects/alert_logic_heimdall.jpg",
+      "link": "https://alertlogic.com/",
+      "public": false,
+      "label": "Alert Logic internal service TODO",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry TODO"
     }
   ],
   "softSkills": [

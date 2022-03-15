@@ -328,6 +328,33 @@
       "image": "/images/projects/wp.png",
       "link": "https://app.wellplayedresearch.com/",
       "public": false
+    },
+    {
+      "en-label": "Alert Logic web app",
+      "es-label": "Web de Alert Logic",
+      "en-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry TODO",
+      "es-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry TODO",
+      "image": "/images/projects/alert_logic_web.png",
+      "link": "https://alertlogic.com/",
+      "public": false
+    },
+    {
+      "en-label": "Alert Logic mobile app",
+      "es-label": "Aplicación movil de Alert Logic",
+      "en-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry TODO",
+      "es-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry TODO",
+      "image": "/images/projects/alert_logic_mobile.jpg",
+      "link": "https://alertlogic.com/",
+      "public": false
+    },
+    {
+      "en-label": "Alert Logic internal service TODO",
+      "es-label": "Lorem Ipsum is simply dummy TODO",
+      "en-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry TODO",
+      "es-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry TODO",
+      "image": "/images/projects/alert_logic_heimdall.jpg",
+      "link": "https://alertlogic.com/",
+      "public": false
     }
   ],
   "softSkills": [

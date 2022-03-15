@@ -7,10 +7,32 @@
 https://particles.js.org/docs/interfaces/Options_Interfaces_IOptions.IOptions.html
 
 # TODO
+
+## Features
 - Add performance mode (remove particles, setWatchScroll false)
-- remove particles after x Resolution
-- Animation on see less
-- dns projects mariopayan.com
-- Randomizer images
 - Changing about on fun mode
+- CHanging TopBar on fun mode
+- Add sections:
+    Dogs: Puca
+    Gaming
+    Music: Band AL
+- Add AL web page as project
+- Resize TopBar label on change
+- Add Redux information
+
+## Enhancements
+- Remove particles after x Resolution
+- Randomizer images
 - Add missing chips descriptions
+- Move timeline to left
+- Replace visit button by an float eye
+- ? Add data to projects at the end (free project | private project)
+
+## Issues
+- Animation on see less
+- On fast scroll, elements appears too slow
+- Organize projects
+
+## Spike
+- dns projects mariopayan.com
+- explore tsparticles alternatives
