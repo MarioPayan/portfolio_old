@@ -19,7 +19,7 @@ export const SocialMediaIcons = (
     i18n,
     tKey,
     style = 'default',
-  }: { t: (key: string) => string; i18n: any; tKey: string; style: Style },
+  }: { t: (key: string) => string; i18n: any; tKey: string; style?: Style },
   showArray: string[] = []
 ): JSX.Element => {
   const show = (socialMedia: string): boolean => {

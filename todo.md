@@ -13,9 +13,7 @@ https://particles.js.org/docs/interfaces/Options_Interfaces_IOptions.IOptions.ht
 - Changing about on fun mode
 - CHanging TopBar on fun mode
 - Add sections:
-    Dogs: Puca
-    Gaming
-    Music: Band AL
+    Random: Boy scout
 - Add AL web page as project
 - Resize TopBar label on change
 - Add Redux information

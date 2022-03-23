@@ -88,8 +88,8 @@
     "es-title": "Desarrollador de Software",
     "en-subtitle": "Full Stack Engineer | Javascript & Python | Django & React",
     "es-subtitle": "Desarrollador Full Stack | Javascript & Python | Django & React",
-    "en-summary": "Fullstack developer with focus on software development, algorithms design, software as a service and clean code. Challenge driven, always willing to learn, passionate about new technologies, teamwork and code writing.",
-    "es-summary": "Desarrollador full stack con enfoque en desarrollo de software, diseño de algoritmos, software como servicio, y código limpio. Impulsado por los desafíos, siempre dispuesto a aprender, apasionado por las nuevas tecnologías, el trabajo en equipo y escribir código de calidad.",
+    "en-summary": "Fullstack developer with focus on software development, algorithms design, software as a service and clean code. Challenge driven, always willing to learn, passionate about new technologies, teamwork and code writing",
+    "es-summary": "Desarrollador full stack con enfoque en desarrollo de software, diseño de algoritmos, software como servicio, y código limpio. Impulsado por los desafíos, siempre dispuesto a aprender, apasionado por las nuevas tecnologías, el trabajo en equipo y escribir código de calidad",
     "social": {
       "facebook": "https://www.facebook.com/Mario.A.Payan.V",
       "instagram": "https://www.instagram.com/mario.a.payan/",
@@ -190,15 +190,15 @@
       "label": "PostgreSQL",
       "en-type": "database",
       "es-type": "base_de_datos",
-      "en-description": "PostgreSQL is a powerful, open source object-relational database system with over 30 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance",
-      "es-description": "PostgreSQL es un poderoso sistema de base de datos relacional de objetos de código abierto con más de 30 años de desarrollo activo que le ha valido una sólida reputación por su confiabilidad, robustez de funciones y rendimiento"
+      "en-description": "PostgreSQL also known as Postgres, is a free and open-source relational database management system (RDBMS) emphasizing extensibility and SQL compliance",
+      "es-description": "PostgreSQL, también llamado Postgres, es un sistema de gestión de bases de datos relacional orientado a objetos y de código abierto, publicado bajo la licencia PostgreSQL, similar a la BSD o la MIT"
     },
     {
       "label": "SQLite",
       "en-type": "database",
       "es-type": "base_de_datos",
-      "en-description": "SQLite is a C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine",
-      "es-description": "SQLite es una biblioteca en lenguaje C que implementa un motor de base de datos SQL pequeño, rápido, autónomo, de alta confiabilidad y con todas las funciones"
+      "en-description": "SQLite is a database engine, written in the C language. It is not a standalone app; rather, it is a library that software developers embed in their apps",
+      "es-description": "SQLite es un sistema de gestión de bases de datos relacional compatible con ACID, contenida en una relativamente pequeña (~275 kiB) biblioteca escrita en C"
     },
     {
       "label": "Git",
@@ -215,14 +215,14 @@
     {
       "label": "GitLab",
       "type": "git",
-      "en-description": "GitLab is The DevOps platform that empowers organizations to maximize the overall return on software development by delivering software faster and efficiently, while strengthening security and compliance",
-      "es-description": "GitLab es la plataforma DevOps que permite a las organizaciones maximizar el rendimiento general del desarrollo de software mediante la entrega de software de manera más rápida y eficiente, al tiempo que fortalece la seguridad y el cumplimiento"
+      "en-description": "GitLab is a DevOps software that combines the ability to develop, secure, and operate software in a single application",
+      "es-description": "GitLab es un servicio web de forja, control de versiones y DevOps basado en Git"
     },
     {
       "label": "BitBucket",
       "type": "git",
-      "en-description": "",
-      "es-description": ""
+      "en-description": "Bitbucket is a Git-based source code repository hosting service owned by Atlassian",
+      "es-description": "Bitbucket es un servicio de alojamiento basado en web, para los proyectos que utilizan el sistema de control de versiones Mercurial y Git"
     },
     {
       "label": "Shell",
@@ -233,38 +233,38 @@
     {
       "label": "Jasmine",
       "type": "test",
-      "en-description": "",
-      "es-description": ""
+      "en-description": "Jasmine is a behavior-driven development framework for testing JavaScript code",
+      "es-description": "Jasmine es un marco de desarrollo basado en el comportamiento para probar código JavaScript"
     },
     {
       "label": "Puppeteer",
       "type": "test",
-      "en-description": "",
-      "es-description": ""
+      "en-description": "Puppeteer is a Node library which provides a high-level API to control Chrome or Chromium over the DevTools Protocol",
+      "es-description": "Puppeteer es una biblioteca de Node que proporciona una API de alto nivel para controlar Chrome o Chromium a través del protocolo DevTools"
     },
     {
       "label": "Appium",
       "type": "test",
-      "en-description": "",
-      "es-description": ""
+      "en-description": "Appium is an open source test automation framework for use with native, hybrid and mobile web apps",
+      "es-description": "Appium es un marco de programación de código abierto de testeo automatizado para el uso con aplicaciones nativas e híbridas"
     },
     {
       "label": "Linux",
       "type": "os",
-      "en-description": "",
-      "es-description": ""
+      "en-description": "Linux is a family of open-source Unix-like operating systems based on the Linux kernel, an operating system kernel first released on September 17, 1991, by Linus Torvalds. Linux is typically packaged in a Linux distribution",
+      "es-description": "GNU/Linux es la denominación técnica y generalizada que reciben una serie de sistemas operativos de tipo Unix, que también suelen ser de código abierto, multiplataforma, multiusuario y multitarea"
     },
     {
       "label": "OSx",
       "type": "os",
-      "en-description": "",
-      "es-description": ""
+      "en-description": "macOS previously Mac OS X and later OS X) is a proprietary graphical operating system developed and marketed by Apple Inc. since 2001",
+      "es-description": "macOS (previamente Mac OS X, luego OS X) es una serie de sistemas operativos gráficos desarrollados y comercializados por Apple desde 2001"
     },
     {
       "label": "Flexbox",
       "type": "css",
-      "en-description": "",
-      "es-description": ""
+      "en-description": "The Flexible Box Module, usually referred to as flexbox, was designed as a one-dimensional layout model, and as a method that could offer space distribution between items in an interface and powerful alignment capabilities",
+      "es-description": "El Módulo de Caja Flexible, comúnmente llamado flexbox, fue diseñado como un modelo unidimensional de layout, y como un método que pueda ayudar a distribuir el espacio entre los ítems de una interfaz y mejorar las capacidades de alineación"
     }
   ],
   "projects": [
@@ -323,8 +323,8 @@
     {
       "en-label": "Survey Tool",
       "es-label": "Aplicación de encuestas",
-      "en-description": "Survey tool that TODO",
-      "es-description": "Herramienta de encuestas que TODO",
+      "en-description": "A tool that allows characterizing users through surveys to find the perfect match for any specific need",
+      "es-description": "Una herramienta que permite caracterizar a los usuarios a través de encuestas para encontrar la combinación perfecta para cualquier necesidad específica",
       "image": "/images/projects/wp.png",
       "link": "https://app.wellplayedresearch.com/",
       "public": false
@@ -332,8 +332,7 @@
     {
       "en-label": "Alert Logic web app",
       "es-label": "Web de Alert Logic",
-      "en-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry TODO",
-      "es-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry TODO",
+      "description": "",
       "image": "/images/projects/alert_logic_web.png",
       "link": "https://alertlogic.com/",
       "public": false
@@ -341,17 +340,15 @@
     {
       "en-label": "Alert Logic mobile app",
       "es-label": "Aplicación movil de Alert Logic",
-      "en-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry TODO",
-      "es-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry TODO",
+      "description": "",
       "image": "/images/projects/alert_logic_mobile.jpg",
       "link": "https://alertlogic.com/",
       "public": false
     },
     {
-      "en-label": "Alert Logic internal service TODO",
-      "es-label": "Lorem Ipsum is simply dummy TODO",
-      "en-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry TODO",
-      "es-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry TODO",
+      "en-label": "Alert Logic internal services",
+      "es-label": "Servicios internos de Alert Logic",
+      "description": "",
       "image": "/images/projects/alert_logic_heimdall.jpg",
       "link": "https://alertlogic.com/",
       "public": false
@@ -513,33 +510,33 @@
     "music": {
       "en-title": "Music",
       "es-title": "Música",
-      "en-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "es-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "en-description": "I've been an empirical musician since I was 14 years old, not very good since I don't dedicate myself 100% to it, but that doesn't stop me from enjoying and sharing what I do",
+      "es-description": "Soy músico empírico desde los 14 años, no muy bueno desde que no me dedico al 100% a ello, pero eso no me impide disfrutar y compartir lo que hago",
       "sections": [
         {
           "title": "Solo",
-          "en-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-          "es-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "en-description": "I'm mainly a guitarist, although I can play a little of everything and do backing vocals, I usually make a lot of music at home just for myself",
+          "es-description": "Soy principalmente guitarrista, aunque puedo tocar un poco de todo y hacer segundas voces, suelo hacer mucha música en mi casa solo para mí",
           "images": [
-            "/images/hobbies/music/solo1.jpg",
-            "/images/hobbies/music/solo2.jpg",
-            "/images/hobbies/music/solo3.jpg",
-            "/images/hobbies/music/solo4.jpg",
-            "/images/hobbies/music/solo5.jpg",
-            "/images/hobbies/music/solo6.jpg"
+            "/images/hobbies/music/solo/img_1.jpg",
+            "/images/hobbies/music/solo/img_2.jpg",
+            "/images/hobbies/music/solo/img_3.jpg",
+            "/images/hobbies/music/solo/img_4.jpg",
+            "/images/hobbies/music/solo/img_5.jpg",
+            "/images/hobbies/music/solo/img_6.jpg"
           ]
         },
         {
           "title": "Falsete Proyecto",
-          "en-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-          "es-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "en-description": "My favorite music project with college friends. We like to do ballads, Pacific music, reggaeton, salsa, and everything in our own style",
+          "es-description": "Mi proyecto musical favorito hecho por amigos de la universidad. Nos gusta hacer baladas, música del pacífico, reggaetón, salsa, y todo en nuestro propio estilo",
           "images": [
-            "/images/hobbies/music/falsete1.jpg",
-            "/images/hobbies/music/falsete2.jpg",
-            "/images/hobbies/music/falsete3.jpg",
-            "/images/hobbies/music/falsete4.jpg",
-            "/images/hobbies/music/falsete5.jpg",
-            "/images/hobbies/music/falsete6.jpg"
+            "/images/hobbies/music/falsete/img_1.jpg",
+            "/images/hobbies/music/falsete/img_2.jpg",
+            "/images/hobbies/music/falsete/img_3.jpg",
+            "/images/hobbies/music/falsete/img_4.jpg",
+            "/images/hobbies/music/falsete/img_5.jpg",
+            "/images/hobbies/music/falsete/img_6.jpg"
           ],
           "social": {
             "facebook": "https://www.facebook.com/proyectofalsete",
@@ -551,88 +548,150 @@
         },
         {
           "title": "Cero Grados",
-          "en-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-          "es-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-          "images": ["/images/hobbies/music/cero_grados1.jpg"],
+          "en-description": "Urban music project that I was part of to experiment with different music",
+          "es-description": "Proyecto de música urbana del que hice parte para experimentar con música distinta",
+          "images": ["/images/hobbies/music/cero_grados/img_1.jpg"],
           "social": {
             "facebook": "https://www.facebook.com/cerogradosmusic",
             "instagram": "https://www.instagram.com/cerogradosmusic/",
             "youtube": "https://www.youtube.com/channel/UCfI30-3Jxhtdy9v0ZYnzcbw"
           }
-        }
-      ]
-    },
-    "colombiaTraveling": {
-      "en-title": "Colombia Traveling",
-      "es-title": "Viajes en Colombia",
-      "en-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "es-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "sections": [
+        },
         {
-          "title": "TODO",
-          "en-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-          "es-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "title": "Band AL",
+          "en-description": "A band formed for fun at one of the companies I worked for the sole purpose of hanging out, but we ended up having gigs to entertain the rest of the company",
+          "es-description": "Una banda formada por diversión en una de las empresas que trabajé con el único propósito de pasar el rato, pero terminamos teniendo presentaciones para entretener al resto de la empresa",
           "images": [
-            "/images/hobbies/colombia_traveling/colombia_traveling_1.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_2.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_3.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_4.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_5.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_6.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_7.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_8.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_9.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_10.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_11.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_12.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_13.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_14.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_15.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_16.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_17.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_18.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_19.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_20.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_21.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_22.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_23.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_24.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_25.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_26.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_27.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_28.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_29.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_30.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_31.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_32.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_33.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_34.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_35.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_36.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_37.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_38.jpg",
-            "/images/hobbies/colombia_traveling/colombia_traveling_39.jpg"
+            "/images/hobbies/music/band_al/img_1.jpg",
+            "/images/hobbies/music/band_al/img_2.jpg",
+            "/images/hobbies/music/band_al/img_3.jpg",
+            "/images/hobbies/music/band_al/img_4.jpg",
+            "/images/hobbies/music/band_al/img_5.jpg"
           ]
         }
       ]
     },
-    "animals": {
+    "traveling": {
+      "en-title": "Traveling",
+      "es-title": "Viajes",
+      "en-description": "Traveling is one of the things I enjoy the most, there is much you can learn and experience during no matter how small it is",
+      "es-description": "Viajar es una de las cosas que más disfruto, es mucho lo que puedes aprender y experimentar durante por muy pequeño que sea",
+      "sections": [
+        {
+          "title": "Colombia",
+          "en-description": "Colombia is a country full of small very beautiful places, I have lived here all my life and I still find places that I did not know",
+          "es-description": "Colombia es un país lleno de pequeños lugares muy bellos, he vivido aquí toda mi vida y aún me encuentro con lugares que no conocía",
+          "images": [
+            "/images/hobbies/traveling/colombia/img_1.jpg",
+            "/images/hobbies/traveling/colombia/img_2.jpg",
+            "/images/hobbies/traveling/colombia/img_3.jpg",
+            "/images/hobbies/traveling/colombia/img_4.jpg",
+            "/images/hobbies/traveling/colombia/img_5.jpg",
+            "/images/hobbies/traveling/colombia/img_6.jpg",
+            "/images/hobbies/traveling/colombia/img_7.jpg",
+            "/images/hobbies/traveling/colombia/img_8.jpg",
+            "/images/hobbies/traveling/colombia/img_9.jpg",
+            "/images/hobbies/traveling/colombia/img_10.jpg",
+            "/images/hobbies/traveling/colombia/img_11.jpg",
+            "/images/hobbies/traveling/colombia/img_12.jpg",
+            "/images/hobbies/traveling/colombia/img_13.jpg",
+            "/images/hobbies/traveling/colombia/img_14.jpg",
+            "/images/hobbies/traveling/colombia/img_15.jpg",
+            "/images/hobbies/traveling/colombia/img_16.jpg",
+            "/images/hobbies/traveling/colombia/img_17.jpg",
+            "/images/hobbies/traveling/colombia/img_18.jpg",
+            "/images/hobbies/traveling/colombia/img_19.jpg",
+            "/images/hobbies/traveling/colombia/img_20.jpg",
+            "/images/hobbies/traveling/colombia/img_21.jpg",
+            "/images/hobbies/traveling/colombia/img_22.jpg",
+            "/images/hobbies/traveling/colombia/img_23.jpg",
+            "/images/hobbies/traveling/colombia/img_24.jpg",
+            "/images/hobbies/traveling/colombia/img_25.jpg",
+            "/images/hobbies/traveling/colombia/img_26.jpg",
+            "/images/hobbies/traveling/colombia/img_27.jpg",
+            "/images/hobbies/traveling/colombia/img_28.jpg",
+            "/images/hobbies/traveling/colombia/img_29.jpg",
+            "/images/hobbies/traveling/colombia/img_30.jpg",
+            "/images/hobbies/traveling/colombia/img_31.jpg",
+            "/images/hobbies/traveling/colombia/img_32.jpg",
+            "/images/hobbies/traveling/colombia/img_33.jpg",
+            "/images/hobbies/traveling/colombia/img_34.jpg",
+            "/images/hobbies/traveling/colombia/img_35.jpg",
+            "/images/hobbies/traveling/colombia/img_36.jpg",
+            "/images/hobbies/traveling/colombia/img_37.jpg",
+            "/images/hobbies/traveling/colombia/img_38.jpg",
+            "/images/hobbies/traveling/colombia/img_39.jpg"
+          ]
+        }
+      ]
+    },
+    "dogs": {
       "en-title": "Dogs",
       "es-title": "Perros",
-      "en-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "es-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "en-description": "It is very difficult for me to see a dog and not pet it, that's why this section is essential if I am going to talk about myself",
+      "es-description": "Es muy difícil para mí ver un perro y no acariciarlo, por eso creo que esta sección es indispensable si voy a hablar de mí",
       "sections": [
         {
           "title": "Sora",
-          "en-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-          "es-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "en-description": "Sora is a dog that I rescued, I don't think I need to talk much about her, the photos speak for themselves",
+          "es-description": "Sora es una perrita que rescaté y ahora es bastante feliz, creo que no necesito hablar mucho de ella, las fotos hablan por sí solas",
           "images": [
-            "/images/hobbies/dogs/Sora_1.jpg",
-            "/images/hobbies/dogs/Sora_2.jpg",
-            "/images/hobbies/dogs/Sora_3.jpg",
-            "/images/hobbies/dogs/Sora_4.jpg",
-            "/images/hobbies/dogs/Sora_5.jpg",
-            "/images/hobbies/dogs/Sora_6.jpg"
+            "/images/hobbies/dogs/sora/img_1.jpg",
+            "/images/hobbies/dogs/sora/img_2.jpg",
+            "/images/hobbies/dogs/sora/img_3.jpg",
+            "/images/hobbies/dogs/sora/img_4.jpg",
+            "/images/hobbies/dogs/sora/img_5.jpg",
+            "/images/hobbies/dogs/sora/img_6.jpg"
+          ]
+        },
+        {
+          "title": "Puca",
+          "en-description": "Puca is a dog that my mother adopted and became part of the family, aggressive like no one with strangers but lovely with the family",
+          "es-description": "Puca es una perrita que mi madre adoptó y se convirtió en parte de la familia, agresiva como nadie con extraños pero un amor con la familia",
+          "images": [
+            "/images/hobbies/dogs/puca/img_1.jpg",
+            "/images/hobbies/dogs/puca/img_2.jpg",
+            "/images/hobbies/dogs/puca/img_3.jpg",
+            "/images/hobbies/dogs/puca/img_4.jpg",
+            "/images/hobbies/dogs/puca/img_5.jpg",
+            "/images/hobbies/dogs/puca/img_6.jpg",
+            "/images/hobbies/dogs/puca/img_7.jpeg",
+            "/images/hobbies/dogs/puca/img_8.png"
+          ]
+        }
+      ]
+    },
+    "geek": {
+      "en-title": "Geek",
+      "es-title": "Nerd",
+      "en-description": "I'm a fan of many things that make me look geek, technology, games, geopolitics, philosophy, and some other things. I really like to know things",
+      "es-description": "Soy un fan de muchas cosas que me hacen ver como nerd, tecnología, juegos, geopolítica, filosofía, y algunas otras cosas. Me gusta mucho saber cosas",
+      "sections": [
+        {
+          "en-title": "Videogames",
+          "es-title": "Videojuegos",
+          "en-description": "Games to me are the sum of many arts, music, film, writing, painting, and other forms of art that work together and constantly change to immerse you in an experience, so how could I not play?",
+          "es-description": "Los juegos son para mí la suma de muchas artes, música, cine, escritura, pintura, y otras maneras de arte que trabajan juntas y cambian constantemente para sumergirte en una experiencia, así que ¿cómo no jugaría?",
+          "images": [
+            "/images/hobbies/geek/games/img_1.jpg",
+            "/images/hobbies/geek/games/img_2.jpg",
+            "/images/hobbies/geek/games/img_3.jpg",
+            "/images/hobbies/geek/games/img_4.jpeg",
+            "/images/hobbies/geek/games/img_5.jpg",
+            "/images/hobbies/geek/games/img_6.jpg",
+            "/images/hobbies/geek/games/img_7.jpg",
+            "/images/hobbies/geek/games/img_8.jpeg",
+            "/images/hobbies/geek/games/img_9.jpeg"
+          ]
+        },
+        {
+          "en-title": "Code challenges",
+          "es-title": "Desafíos de código",
+          "en-description": "Challenging myself to make code more and more efficient, readable, practical, and with the best practices is something that I really do for fun, I like challenges and even more so if they are in an area in which I feel that I stand out",
+          "es-description": "Desafiarme a mí mismo para hacer código cada vez más eficiente, legible, práctico, y bajo los mejores estándares es algo que realmente hago por diversión, me gustan los desafíos y más si son en un área en la que siento que destaco",
+          "images": [
+            "/images/hobbies/geek/code/img_1.png",
+            "/images/hobbies/geek/code/img_2.jpg"
           ]
         }
       ]
@@ -640,27 +699,49 @@
     "sports": {
       "en-title": "Sports",
       "es-title": "Deportes",
-      "en-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "es-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "en-description": "I'm not a fan of watching sports, but I am a fan of playing sports, I have been in many sports in my life, and I will be in many more if I get the chance, but there are only a couple that I do frequently",
+      "es-description": "No soy fan de ver deportes, pero sí soy fan de practicarlos, he estado en muchos deportes durante mi vida, y estaré en muchos más si tengo la oportunidad, pero hay solo un par que realizo con frecuencia",
       "sections": [
         {
           "title": "Kung Fu Xiaolin",
-          "en-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-          "es-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "en-description": "Martial arts are great, in general I like any sport that can make my body do more things than I think it can do, and martial arts can reach and break those limits faster than any other sport",
+          "es-description": "Las artes marciales son geniales, en general me gusta cualquier deporte que logre hacer que mi cuerpo haga más cosas de las que creo que puede hacer, y las artes marciales logran alcanzar y romper esos límites más rápido que cualquier otro deporte",
           "images": [
-            "/images/hobbies/martial_arts/martial_arts1.jpg",
-            "/images/hobbies/martial_arts/martial_arts2.jpg"
+            "/images/hobbies/sports/martial_arts/img_1.jpg",
+            "/images/hobbies/sports/martial_arts/img_2.jpg"
           ]
         },
         {
           "en-title": "Hiking",
           "es-title": "Senderismo",
-          "en-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-          "es-description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "en-description": "I like to walk, but like for real, I would walk for hours if there's something nice to see, like mountains, valleys or just a blue sky, the peace you can get doing it is something hard to describe",
+          "es-description": "Me gusta caminar, pero de verdad, caminaría durante horas si hay algo bonito para ver, como montañas, valles o simplemente un cielo azul, la paz que puedes sentir al hacerlo es algo difícil de describir",
           "images": [
-            "/images/hobbies/hiking/hiking_1.jpg",
-            "/images/hobbies/hiking/hiking_2.jpg"
+            "/images/hobbies/sports/hiking/img_1.jpg",
+            "/images/hobbies/sports/hiking/img_2.jpg"
           ]
+        }
+      ]
+    },
+    "random": {
+      "title": "Random",
+      "en-description": "TODO",
+      "es-description": "TODO",
+      "sections": [
+        {
+          "en-title": "Short films",
+          "es-title": "Cortometraje",
+          "en-description": "I have participated in 2 short films, one of them as a main actor and the other as a secondary character",
+          "es-description": "He participado en 2 cortometrajes, uno de ellos como actor principal y el otro como personaje secundario",
+          "images": [
+            "/images/hobbies/random/short_films/img_1.jpg",
+            "/images/hobbies/random/short_films/img_2.jpg",
+            "/images/hobbies/random/short_films/img_3.jpg",
+            "/images/hobbies/random/short_films/img_4.jpg"
+          ],
+          "social": {
+            "youtube": "https://www.youtube.com/channel/UCNyP-BLXPVA5PS0epWcDCiQ"
+          }
         }
       ]
     }

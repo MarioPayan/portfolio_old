@@ -89,9 +89,9 @@ const Home: NextPage = () => {
     }[mode]
     if (sections.every(e => e)) {
       setWatchScroll(false)
-      setTimeout(() => {
-        setWatchScroll(true)
-      }, 750)
+      // setTimeout(() => {
+      //   setWatchScroll(true)
+      // }, 750)
     }
   }
 
@@ -200,14 +200,9 @@ const Home: NextPage = () => {
         musicRef,
         musicShowed
       )}
-      {growComponent(
-        Hobby,
-        {section: 'colombiaTraveling'},
-        'colombiaTraveling',
-        null,
-        true
-      )}
-      {growComponent(Hobby, {section: 'animals'}, 'animals', null, true)}
+      {growComponent(Hobby, {section: 'traveling'}, 'traveling', null, true)}
+      {growComponent(Hobby, {section: 'dogs'}, 'dogs', null, true)}
+      {growComponent(Hobby, {section: 'geek'}, 'geek', null, true)}
       {growComponent(
         Hobby,
         {section: 'sports'},
@@ -215,6 +210,7 @@ const Home: NextPage = () => {
         sportRef,
         sportShowed
       )}
+      {growComponent(Hobby, {section: 'random'}, 'random', null, true)}
     </Stack>
   )
 
@@ -232,7 +228,7 @@ const Home: NextPage = () => {
             } // TODO: Add hobbies topbar
             lastSectionActive={activeSection}
             onChangeTab={() => onChangeTab(mode as Mode)}/>
-          <LandingBackground showParticles={watchScroll} />
+          {/* <LandingBackground showParticles={watchScroll} /> */}
           {{business: businessStack, fun: funStack}[mode as Mode]()}
           <UnderConstruction></UnderConstruction>
         </>
