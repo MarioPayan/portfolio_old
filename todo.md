@@ -11,12 +11,11 @@ https://particles.js.org/docs/interfaces/Options_Interfaces_IOptions.IOptions.ht
 ## Features
 - Add performance mode (remove particles, setWatchScroll false)
 - Changing about on fun mode
-- CHanging TopBar on fun mode
-- Add sections:
-    Random: Boy scout
+- Changing TopBar on fun mode
 - Add AL web page as project
 - Resize TopBar label on change
 - Add Redux information
+- Add photo counter
 
 ## Enhancements
 - Remove particles after x Resolution

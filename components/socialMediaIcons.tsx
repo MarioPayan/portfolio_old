@@ -11,7 +11,7 @@ import {
   YouTube
 } from '@mui/icons-material'
 
-type Style = 'default' | 'white';
+type Style = 'default' | 'white'; // TODO: check names
 
 export const SocialMediaIcons = (
   {

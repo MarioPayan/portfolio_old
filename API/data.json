@@ -523,7 +523,14 @@
             "/images/hobbies/music/solo/img_3.jpg",
             "/images/hobbies/music/solo/img_4.jpg",
             "/images/hobbies/music/solo/img_5.jpg",
-            "/images/hobbies/music/solo/img_6.jpg"
+            "/images/hobbies/music/solo/img_6.jpg",
+            "/images/hobbies/music/solo/img_7.jpg",
+            "/images/hobbies/music/solo/img_8.jpg",
+            "/images/hobbies/music/solo/img_9.jpg",
+            "/images/hobbies/music/solo/img_10.jpg",
+            "/images/hobbies/music/solo/img_11.jpg",
+            "/images/hobbies/music/solo/img_12.jpg",
+            "/images/hobbies/music/solo/img_13.jpg"
           ]
         },
         {
@@ -536,7 +543,20 @@
             "/images/hobbies/music/falsete/img_3.jpg",
             "/images/hobbies/music/falsete/img_4.jpg",
             "/images/hobbies/music/falsete/img_5.jpg",
-            "/images/hobbies/music/falsete/img_6.jpg"
+            "/images/hobbies/music/falsete/img_6.jpg",
+            "/images/hobbies/music/falsete/img_7.jpg",
+            "/images/hobbies/music/falsete/img_8.jpg",
+            "/images/hobbies/music/falsete/img_9.jpg",
+            "/images/hobbies/music/falsete/img_10.jpg",
+            "/images/hobbies/music/falsete/img_11.jpg",
+            "/images/hobbies/music/falsete/img_12.jpg",
+            "/images/hobbies/music/falsete/img_13.jpg",
+            "/images/hobbies/music/falsete/img_14.jpg",
+            "/images/hobbies/music/falsete/img_15.jpg",
+            "/images/hobbies/music/falsete/img_16.jpg",
+            "/images/hobbies/music/falsete/img_17.jpg",
+            "/images/hobbies/music/falsete/img_18.jpg",
+            "/images/hobbies/music/falsete/img_19.jpg"
           ],
           "social": {
             "facebook": "https://www.facebook.com/proyectofalsete",
@@ -566,7 +586,34 @@
             "/images/hobbies/music/band_al/img_2.jpg",
             "/images/hobbies/music/band_al/img_3.jpg",
             "/images/hobbies/music/band_al/img_4.jpg",
-            "/images/hobbies/music/band_al/img_5.jpg"
+            "/images/hobbies/music/band_al/img_5.jpg",
+            "/images/hobbies/music/band_al/img_6.jpg",
+            "/images/hobbies/music/band_al/img_7.jpg"
+          ]
+        },
+        {
+          "title": "Closed Eyes",
+          "en-description": "TODO:",
+          "es-description": "TODO:",
+          "images": [
+            "/images/hobbies/music/closed_eyes/img_1.jpg",
+            "/images/hobbies/music/closed_eyes/img_2.jpg",
+            "/images/hobbies/music/closed_eyes/img_3.jpg",
+            "/images/hobbies/music/closed_eyes/img_4.jpg"
+          ],
+          "social": {
+            "facebook": "https://www.facebook.com/cerogradosmusic",
+            "instagram": "https://www.instagram.com/cerogradosmusic/",
+            "youtube": "https://www.youtube.com/user/ClosedEyesMetal"
+          }
+        },
+        {
+          "title": "K&R",
+          "en-description": "TODO:",
+          "es-description": "TODO:",
+          "images": [
+            "/images/hobbies/music/kyr/img_1.jpg",
+            "/images/hobbies/music/kyr/img_2.jpg"
           ]
         }
       ]
@@ -588,6 +635,7 @@
             "/images/hobbies/traveling/colombia/img_4.jpg",
             "/images/hobbies/traveling/colombia/img_5.jpg",
             "/images/hobbies/traveling/colombia/img_6.jpg",
+
             "/images/hobbies/traveling/colombia/img_7.jpg",
             "/images/hobbies/traveling/colombia/img_8.jpg",
             "/images/hobbies/traveling/colombia/img_9.jpg",
@@ -620,7 +668,35 @@
             "/images/hobbies/traveling/colombia/img_36.jpg",
             "/images/hobbies/traveling/colombia/img_37.jpg",
             "/images/hobbies/traveling/colombia/img_38.jpg",
-            "/images/hobbies/traveling/colombia/img_39.jpg"
+            "/images/hobbies/traveling/colombia/img_39.jpg",
+            "/images/hobbies/traveling/colombia/img_40.jpg",
+            "/images/hobbies/traveling/colombia/img_41.jpg",
+            "/images/hobbies/traveling/colombia/img_42.jpg",
+            "/images/hobbies/traveling/colombia/img_43.jpg",
+            "/images/hobbies/traveling/colombia/img_44.jpg",
+            "/images/hobbies/traveling/colombia/img_45.jpg",
+            "/images/hobbies/traveling/colombia/img_46.jpg",
+            "/images/hobbies/traveling/colombia/img_47.jpg",
+            "/images/hobbies/traveling/colombia/img_48.jpg",
+            "/images/hobbies/traveling/colombia/img_49.jpg",
+            "/images/hobbies/traveling/colombia/img_50.jpg",
+            "/images/hobbies/traveling/colombia/img_51.jpg",
+            "/images/hobbies/traveling/colombia/img_52.jpg",
+            "/images/hobbies/traveling/colombia/img_53.jpg",
+            "/images/hobbies/traveling/colombia/img_54.jpg",
+            "/images/hobbies/traveling/colombia/img_55.jpg",
+            "/images/hobbies/traveling/colombia/img_56.jpg",
+            "/images/hobbies/traveling/colombia/img_57.jpg",
+            "/images/hobbies/traveling/colombia/img_58.jpg",
+            "/images/hobbies/traveling/colombia/img_59.jpg",
+            "/images/hobbies/traveling/colombia/img_60.jpg",
+            "/images/hobbies/traveling/colombia/img_61.jpg",
+            "/images/hobbies/traveling/colombia/img_62.jpg",
+            "/images/hobbies/traveling/colombia/img_63.jpg",
+            "/images/hobbies/traveling/colombia/img_64.jpg",
+            "/images/hobbies/traveling/colombia/img_65.jpg",
+            "/images/hobbies/traveling/colombia/img_66.jpg",
+            "/images/hobbies/traveling/colombia/img_67.jpg"
           ]
         }
       ]
@@ -641,7 +717,11 @@
             "/images/hobbies/dogs/sora/img_3.jpg",
             "/images/hobbies/dogs/sora/img_4.jpg",
             "/images/hobbies/dogs/sora/img_5.jpg",
-            "/images/hobbies/dogs/sora/img_6.jpg"
+            "/images/hobbies/dogs/sora/img_6.jpg",
+            "/images/hobbies/dogs/sora/img_7.jpg",
+            "/images/hobbies/dogs/sora/img_8.jpg",
+            "/images/hobbies/dogs/sora/img_9.jpg",
+            "/images/hobbies/dogs/sora/img_10.jpg"
           ]
         },
         {
@@ -656,7 +736,26 @@
             "/images/hobbies/dogs/puca/img_5.jpg",
             "/images/hobbies/dogs/puca/img_6.jpg",
             "/images/hobbies/dogs/puca/img_7.jpeg",
-            "/images/hobbies/dogs/puca/img_8.png"
+            "/images/hobbies/dogs/puca/img_8.png",
+            "/images/hobbies/dogs/puca/img_9.jpg",
+            "/images/hobbies/dogs/puca/img_10.jpg"
+          ]
+        },
+        {
+          "es-title": "TODO:",
+          "en-title": "TODO:",
+          "en-description": "TODO:",
+          "es-description": "TODO:",
+          "images": [
+            "/images/hobbies/dogs/others/img_1.jpg",
+            "/images/hobbies/dogs/others/img_2.jpg",
+            "/images/hobbies/dogs/others/img_3.jpg",
+            "/images/hobbies/dogs/others/img_4.jpeg",
+            "/images/hobbies/dogs/others/img_5.jpg",
+            "/images/hobbies/dogs/others/img_6.jpg",
+            "/images/hobbies/dogs/others/img_7.jpg",
+            "/images/hobbies/dogs/others/img_8.jpg",
+            "/images/hobbies/dogs/others/img_9.jpeg"
           ]
         }
       ]
@@ -673,15 +772,21 @@
           "en-description": "Games to me are the sum of many arts, music, film, writing, painting, and other forms of art that work together and constantly change to immerse you in an experience, so how could I not play?",
           "es-description": "Los juegos son para mí la suma de muchas artes, música, cine, escritura, pintura, y otras maneras de arte que trabajan juntas y cambian constantemente para sumergirte en una experiencia, así que ¿cómo no jugaría?",
           "images": [
-            "/images/hobbies/geek/games/img_1.jpg",
-            "/images/hobbies/geek/games/img_2.jpg",
+            "/images/hobbies/geek/games/img_1.jpeg",
+            "/images/hobbies/geek/games/img_2.png",
             "/images/hobbies/geek/games/img_3.jpg",
-            "/images/hobbies/geek/games/img_4.jpeg",
+            "/images/hobbies/geek/games/img_4.jpg",
             "/images/hobbies/geek/games/img_5.jpg",
             "/images/hobbies/geek/games/img_6.jpg",
             "/images/hobbies/geek/games/img_7.jpg",
             "/images/hobbies/geek/games/img_8.jpeg",
-            "/images/hobbies/geek/games/img_9.jpeg"
+            "/images/hobbies/geek/games/img_9.jpg",
+
+            "/images/hobbies/geek/games/img_10.jpg",
+            "/images/hobbies/geek/games/img_11.jpg",
+            "/images/hobbies/geek/games/img_12.jpeg",
+            "/images/hobbies/geek/games/img_13.jpg",
+            "/images/hobbies/geek/games/img_14.png"
           ]
         },
         {
@@ -690,8 +795,9 @@
           "en-description": "Challenging myself to make code more and more efficient, readable, practical, and with the best practices is something that I really do for fun, I like challenges and even more so if they are in an area in which I feel that I stand out",
           "es-description": "Desafiarme a mí mismo para hacer código cada vez más eficiente, legible, práctico, y bajo los mejores estándares es algo que realmente hago por diversión, me gustan los desafíos y más si son en un área en la que siento que destaco",
           "images": [
-            "/images/hobbies/geek/code/img_1.png",
-            "/images/hobbies/geek/code/img_2.jpg"
+            "/images/hobbies/geek/code/img_1.jpg",
+            "/images/hobbies/geek/code/img_2.png",
+            "/images/hobbies/geek/code/img_3.jpg"
           ]
         }
       ]
@@ -708,7 +814,72 @@
           "es-description": "Las artes marciales son geniales, en general me gusta cualquier deporte que logre hacer que mi cuerpo haga más cosas de las que creo que puede hacer, y las artes marciales logran alcanzar y romper esos límites más rápido que cualquier otro deporte",
           "images": [
             "/images/hobbies/sports/martial_arts/img_1.jpg",
-            "/images/hobbies/sports/martial_arts/img_2.jpg"
+            "/images/hobbies/sports/martial_arts/img_2.jpg",
+            "/images/hobbies/sports/martial_arts/img_3.jpg"
+          ]
+        },
+        {
+          "en-title": "Cycling",
+          "es-title": "Ciclismo",
+          "en-description": "TODO:",
+          "es-description": "TODO:",
+          "images": [
+            "/images/hobbies/sports/cycling/img_1.jpg",
+            "/images/hobbies/sports/cycling/img_2.jpg"
+          ]
+        },
+        {
+          "en-title": "Paintball",
+          "en-description": "TODO:",
+          "es-description": "TODO:",
+          "images": [
+            "/images/hobbies/sports/paintball/img_1.jpg",
+            "/images/hobbies/sports/paintball/img_2.jpg",
+            "/images/hobbies/sports/paintball/img_3.jpg",
+            "/images/hobbies/sports/paintball/img_4.jpg",
+            "/images/hobbies/sports/paintball/img_5.jpg",
+            "/images/hobbies/sports/paintball/img_6.jpg",
+            "/images/hobbies/sports/paintball/img_7.jpg",
+            "/images/hobbies/sports/paintball/img_8.jpg",
+            "/images/hobbies/sports/paintball/img_9.jpg",
+            "/images/hobbies/sports/paintball/img_10.jpg",
+            "/images/hobbies/sports/paintball/img_11.jpg",
+            "/images/hobbies/sports/paintball/img_12.jpg",
+            "/images/hobbies/sports/paintball/img_13.jpg"
+          ]
+        },
+        {
+          "en-title": "Skateboarding",
+          "es-title": "Patineta",
+          "en-description": "TODO:",
+          "es-description": "TODO:",
+          "images": [
+            "/images/hobbies/sports/skate_boarding/img_1.jpg",
+            "/images/hobbies/sports/skate_boarding/img_2.jpg"
+          ]
+        },
+        {
+          "en-title": "Soccer",
+          "es-title": "Fútbol",
+          "en-description": "TODO:",
+          "es-description": "TODO:",
+          "images": [
+            "/images/hobbies/sports/soccer/img_1.jpg",
+            "/images/hobbies/sports/soccer/img_2.jpg",
+            "/images/hobbies/sports/soccer/img_3.jpg"
+          ]
+        },
+        {
+          "en-title": "Others",
+          "es-title": "Otros",
+          "en-description": "TODO:",
+          "es-description": "TODO: Natación, parkour",
+          "images": [
+            "/images/hobbies/sports/others/img_1.jpg",
+            "/images/hobbies/sports/others/img_2.jpg",
+            "/images/hobbies/sports/others/img_3.JPG",
+            "/images/hobbies/sports/others/img_4.jpg",
+            "/images/hobbies/sports/others/img_5.jpg"
           ]
         },
         {
@@ -718,15 +889,21 @@
           "es-description": "Me gusta caminar, pero de verdad, caminaría durante horas si hay algo bonito para ver, como montañas, valles o simplemente un cielo azul, la paz que puedes sentir al hacerlo es algo difícil de describir",
           "images": [
             "/images/hobbies/sports/hiking/img_1.jpg",
-            "/images/hobbies/sports/hiking/img_2.jpg"
+            "/images/hobbies/sports/hiking/img_2.jpg",
+            "/images/hobbies/sports/hiking/img_3.jpg",
+            "/images/hobbies/sports/hiking/img_4.jpg",
+            "/images/hobbies/sports/hiking/img_5.jpg",
+            "/images/hobbies/sports/hiking/img_6.jpg",
+            "/images/hobbies/sports/hiking/img_7.jpg",
+            "/images/hobbies/sports/hiking/img_8.jpg"
           ]
         }
       ]
     },
-    "random": {
-      "title": "Random",
-      "en-description": "TODO",
-      "es-description": "TODO",
+    "roles": {
+      "title": "Roles",
+      "en-description": "TODO:",
+      "es-description": "TODO:",
       "sections": [
         {
           "en-title": "Short films",
@@ -734,14 +911,111 @@
           "en-description": "I have participated in 2 short films, one of them as a main actor and the other as a secondary character",
           "es-description": "He participado en 2 cortometrajes, uno de ellos como actor principal y el otro como personaje secundario",
           "images": [
-            "/images/hobbies/random/short_films/img_1.jpg",
-            "/images/hobbies/random/short_films/img_2.jpg",
-            "/images/hobbies/random/short_films/img_3.jpg",
-            "/images/hobbies/random/short_films/img_4.jpg"
+            "/images/hobbies/roles/short_films/img_1.jpg",
+            "/images/hobbies/roles/short_films/img_2.jpg",
+            "/images/hobbies/roles/short_films/img_3.jpg",
+            "/images/hobbies/roles/short_films/img_4.jpg",
+            "/images/hobbies/roles/short_films/img_5.jpg"
           ],
           "social": {
             "youtube": "https://www.youtube.com/channel/UCNyP-BLXPVA5PS0epWcDCiQ"
           }
+        },
+        {
+          "title": "Boy scout",
+          "en-description": "TODO:",
+          "es-description": "TODO:",
+          "images": [
+            "/images/hobbies/roles/boy_scout/img_1.jpg",
+            "/images/hobbies/roles/boy_scout/img_2.jpg",
+            "/images/hobbies/roles/boy_scout/img_3.jpg",
+            "/images/hobbies/roles/boy_scout/img_4.jpg",
+            "/images/hobbies/roles/boy_scout/img_5.jpg"
+          ],
+          "social": {
+            "youtube": "https://www.youtube.com/channel/UCNyP-BLXPVA5PS0epWcDCiQ"
+          }
+        }
+      ]
+    },
+    "films": {
+      "title": "Roles",
+      "en-description": "Films",
+      "es-description": "Series y películas",
+      "sections": [
+        {
+          "en-title": "Movies",
+          "es-title": "Películas",
+          "en-description": "TODO:",
+          "es-description": "TODO:",
+          "images": ["/images/hobbies/films/movies/img_1.jpeg"]
+        },
+        {
+          "title": "Series",
+          "en-description": "TODO:",
+          "es-description": "TODO:",
+          "images": [
+            "/images/hobbies/films/series/img_1.jpg",
+            "/images/hobbies/films/series/img_2.jpg",
+            "/images/hobbies/films/series/img_3.jpeg",
+            "/images/hobbies/films/series/img_4.jpg"
+          ]
+        },
+        {
+          "title": "Anime",
+          "en-description": "TODO:",
+          "es-description": "TODO:",
+          "images": [
+            "/images/hobbies/films/anime/img_1.jpg",
+            "/images/hobbies/films/anime/img_2.png",
+            "/images/hobbies/films/anime/img_3.jpg",
+            "/images/hobbies/films/anime/img_4.png",
+            "/images/hobbies/films/anime/img_5.jpg"
+          ]
+        }
+      ]
+    },
+    "Random": {
+      "title": "Random",
+      "en-description": "Random",
+      "es-description": "Aleatorio",
+      "sections": [
+        {
+          "en-title": "Random",
+          "es-title": "Aleatorio",
+          "en-description": "TODO:",
+          "es-description": "TODO:",
+          "images": [
+            "/images/hobbies/random/img_1.jpg",
+            "/images/hobbies/random/img_2.jpg",
+            "/images/hobbies/random/img_3.jpg",
+            "/images/hobbies/random/img_4.jpg",
+            "/images/hobbies/random/img_5.jpg",
+            "/images/hobbies/random/img_6.jpg",
+            "/images/hobbies/random/img_7.jpg",
+            "/images/hobbies/random/img_8.jpg",
+            "/images/hobbies/random/img_9.jpg",
+            "/images/hobbies/random/img_10.jpg",
+            "/images/hobbies/random/img_11.jpg",
+            "/images/hobbies/random/img_12.jpg",
+            "/images/hobbies/random/img_13.jpeg",
+            "/images/hobbies/random/img_14.jpg",
+            "/images/hobbies/random/img_15.jpg",
+            "/images/hobbies/random/img_16.jpg",
+            "/images/hobbies/random/img_17.jpg",
+            "/images/hobbies/random/img_18.jpg",
+            "/images/hobbies/random/img_19.jpg",
+            "/images/hobbies/random/img_20.jpg",
+            "/images/hobbies/random/img_21.jpg",
+            "/images/hobbies/random/img_22.jpg",
+            "/images/hobbies/random/img_23.jpeg",
+            "/images/hobbies/random/img_24.jpeg",
+            "/images/hobbies/random/img_25.jpeg",
+            "/images/hobbies/random/img_26.jpg",
+            "/images/hobbies/random/img_27.jpg",
+            "/images/hobbies/random/img_28.jpeg",
+            "/images/hobbies/random/img_29.jpeg"
+          ]
         }
       ]
     }
