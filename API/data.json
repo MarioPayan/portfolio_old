@@ -49,7 +49,13 @@
       "en-seeMore": "See more",
       "es-seeMore": "Ver más",
       "en-seeLess": "See less",
-      "es-seeLess": "Ver menos"
+      "es-seeLess": "Ver menos",
+      "en-language": "Language",
+      "es-language": "Idioma",
+      "en-theme": "Theme",
+      "es-theme": "Tema",
+      "en-mode": "Mode",
+      "es-mode": "Modo"
     },
     "time": {
       "en-year": "Year",
@@ -84,12 +90,23 @@
   },
   "personal": {
     "name": "Mario Payan",
-    "en-title": "Software Developer",
-    "es-title": "Desarrollador de Software",
-    "en-subtitle": "Full Stack Engineer | Javascript & Python | Django & React",
-    "es-subtitle": "Desarrollador Full Stack | Javascript & Python | Django & React",
-    "en-summary": "Fullstack developer with focus on software development, algorithms design, software as a service and clean code. Challenge driven, always willing to learn, passionate about new technologies, teamwork and code writing",
-    "es-summary": "Desarrollador full stack con enfoque en desarrollo de software, diseño de algoritmos, software como servicio, y código limpio. Impulsado por los desafíos, siempre dispuesto a aprender, apasionado por las nuevas tecnologías, el trabajo en equipo y escribir código de calidad",
+    "business": {
+      "en-title": "Software Developer",
+      "es-title": "Desarrollador de Software",
+      "en-subtitle": "Full Stack Engineer | Javascript & Python | Django & React",
+      "es-subtitle": "Desarrollador Full Stack | Javascript & Python | Django & React",
+      "en-summary": "Fullstack developer with focus on software development, algorithms design, software as a service and clean code. Challenge driven, always willing to learn, passionate about new technologies, teamwork and code writing",
+      "es-summary": "Desarrollador full stack con enfoque en desarrollo de software, diseño de algoritmos, software como servicio, y código limpio. Impulsado por los desafíos, siempre dispuesto a aprender, apasionado por las nuevas tecnologías, el trabajo en equipo y escribir código de calidad"
+    },
+    "fun": {
+      "en-title": "¯\\_(ツ)_/¯",
+      "es-title": "¯\\_(ツ)_/¯",
+      "en-subtitle": "TODO",
+      "es-subtitle": "TODO",
+      "en-summary": "TODO",
+      "es-summary": "TODO"
+    },
+    "en-title": "",
     "social": {
       "facebook": "https://www.facebook.com/Mario.A.Payan.V",
       "instagram": "https://www.instagram.com/mario.a.payan/",
@@ -611,10 +628,7 @@
           "title": "K&R",
           "en-description": "TODO:",
           "es-description": "TODO:",
-          "images": [
-            "/images/hobbies/music/kyr/img_1.jpg",
-            "/images/hobbies/music/kyr/img_2.jpg"
-          ]
+          "images": ["/images/hobbies/music/kyr/img_1.jpg", "/images/hobbies/music/kyr/img_2.jpg"]
         }
       ]
     },
@@ -781,7 +795,6 @@
             "/images/hobbies/geek/games/img_7.jpg",
             "/images/hobbies/geek/games/img_8.jpeg",
             "/images/hobbies/geek/games/img_9.jpg",
-
             "/images/hobbies/geek/games/img_10.jpg",
             "/images/hobbies/geek/games/img_11.jpg",
             "/images/hobbies/geek/games/img_12.jpeg",
@@ -823,10 +836,7 @@
           "es-title": "Ciclismo",
           "en-description": "TODO:",
           "es-description": "TODO:",
-          "images": [
-            "/images/hobbies/sports/cycling/img_1.jpg",
-            "/images/hobbies/sports/cycling/img_2.jpg"
-          ]
+          "images": ["/images/hobbies/sports/cycling/img_1.jpg", "/images/hobbies/sports/cycling/img_2.jpg"]
         },
         {
           "en-title": "Paintball",
@@ -975,7 +985,7 @@
         }
       ]
     },
-    "Random": {
+    "random": {
       "title": "Random",
       "en-description": "Random",
       "es-description": "Aleatorio",

@@ -1,17 +1,8 @@
 import {useRouter} from 'next/router'
 import {ConfigOptions, Language, Mode, Theme} from '../types/types'
-import {
-  initTheme,
-  setTheme,
-  initLanguage,
-  setLanguage,
-  initMode,
-  setMode
-} from './cookies'
+import {initTheme, setTheme, initLanguage, setLanguage, initMode, setMode} from './cookies'
 
-export const setConfigFromParams = (
-  defaultConfig: ConfigOptions
-): ConfigOptions => {
+export const setConfigFromParams = (defaultConfig: ConfigOptions): ConfigOptions => {
   const router = useRouter()
   const params = router.asPath.match(new RegExp(/(\w+=\w+)/gi)) || []
   const keys = {

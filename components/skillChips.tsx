@@ -38,7 +38,7 @@ const SkillChips: SkillChipsType = ({typeSkills}) => {
 
   const getIcon = (type: string): JSX.Element => {
     let icon = <QuestionMark />
-    const icons: { [type: string]: JSX.Element } = {
+    const icons: {[type: string]: JSX.Element} = {
       code: <Code />,
       código: <Code />,
       frameworks: <IntegrationInstructions />,
@@ -64,29 +64,19 @@ const SkillChips: SkillChipsType = ({typeSkills}) => {
   return (
     <Context.Consumer>
       {({t}) => (
-        <Grid
-          container
-          item
-          spacing={1}
-          xs={12}
-          md={8}
-          sx={{justifyContent: 'center'}}>
-          <Grid item display="flex" justifyContent="center" xs={12}>
+        <Grid container item spacing={1} xs={12} md={8} sx={{justifyContent: 'center'}}>
+          <Grid item display='flex' justifyContent='center' xs={12}>
             <Tabs
-              variant="scrollable"
+              variant='scrollable'
               allowScrollButtonsMobile
               value={filter}
               onChange={changeFilter}
-              scrollButtons="auto"
-              textColor="secondary"
-              indicatorColor="secondary">
+              scrollButtons='auto'
+              textColor='secondary'
+              indicatorColor='secondary'>
               {[
                 t('misc.label.all'),
-                ...new Set(
-                  (
-                    t(typeSkills, {returnObjects: true}) as unknown as Skill[]
-                  ).map(skill => skill.type)
-                ),
+                ...new Set((t(typeSkills, {returnObjects: true}) as unknown as Skill[]).map(skill => skill.type)),
               ].map((filter: string, i) => (
                 <Tab
                   key={i !== 0 ? getKeyFromLabel(filter) : 'all'}
@@ -97,18 +87,15 @@ const SkillChips: SkillChipsType = ({typeSkills}) => {
             </Tabs>
           </Grid>
 
-          {filterSkills(
-            t(typeSkills, {returnObjects: true}) as unknown as Skill[]
-          ).map(skill => (
+          {filterSkills(t(typeSkills, {returnObjects: true}) as unknown as Skill[]).map(skill => (
             <Grid item key={getKeyFromLabel(skill.label)}>
               <Grow in={[defaultFilterKey, skill.type].includes(filter)}>
-                <Tooltip
-                  title={skill.description || t('misc.missing.description')}>
+                <Tooltip title={skill.description || t('misc.missing.description')}>
                   <Chip
                     label={skill.label}
-                    component="a"
+                    component='a'
                     icon={getIcon(skill.type)}
-                    variant="outlined"
+                    variant='outlined'
                     sx={{fontSize: 16, borderWidth: 2, borderColor: 'gray'}}
                     clickable/>
                 </Tooltip>

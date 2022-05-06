@@ -20,13 +20,7 @@ import {
   ToggleButtonGroup,
   Typography
 } from '@mui/material'
-import {
-  DarkMode,
-  LightMode,
-  Settings,
-  Business,
-  Coffee
-} from '@mui/icons-material'
+import {DarkMode, LightMode, Settings, Business, Coffee} from '@mui/icons-material'
 import Context from './context'
 import {
   getLanguage,
@@ -66,74 +60,45 @@ const Configurations: ConfigurationsType = () => {
     setAppMode(mode)
   }
 
-  const ThemeButtons = ({setAppTheme}: { setAppTheme: SetTheme }) => (
-    <ToggleButtonGroup
-      value={theme}
-      onChange={(_, value) => changeTheme(value, setAppTheme)}
-      exclusive={true}>
-      <ToggleButton value="light" key="light">
+  const ThemeButtons = ({setAppTheme}: {setAppTheme: SetTheme}) => (
+    <ToggleButtonGroup value={theme} onChange={(_, value) => changeTheme(value, setAppTheme)} exclusive={true}>
+      <ToggleButton value='light' key='light'>
         <LightMode color={theme === 'light' ? 'secondary' : 'warning'} />
       </ToggleButton>
-      <ToggleButton value="dark" key="dark">
+      <ToggleButton value='dark' key='dark'>
         <DarkMode color={theme === 'dark' ? 'secondary' : 'warning'} />
       </ToggleButton>
     </ToggleButtonGroup>
   )
 
-  const LanguageButtons = ({
-    setAppLanguage,
-  }: {
-    setAppLanguage: SetLanguage;
-  }) => (
-    <ToggleButtonGroup
-      value={language}
-      onChange={(_, value) => changeLanguage(value, setAppLanguage)}
-      exclusive={true}>
-      <ToggleButton value="en" key="en">
+  const LanguageButtons = ({setAppLanguage}: {setAppLanguage: SetLanguage}) => (
+    <ToggleButtonGroup value={language} onChange={(_, value) => changeLanguage(value, setAppLanguage)} exclusive={true}>
+      <ToggleButton value='en' key='en'>
         <Typography sx={{fontWeight: 'bold'}}>EN</Typography>
       </ToggleButton>
-      <ToggleButton value="es" key="es">
+      <ToggleButton value='es' key='es'>
         <Typography sx={{fontWeight: 'bold'}}>ES</Typography>
       </ToggleButton>
     </ToggleButtonGroup>
   )
 
-  const ModeButtons = ({setAppMode}: { setAppMode: SetMode }) => (
-    <ToggleButtonGroup
-      value={mode}
-      onChange={(_, value) => changeMode(value, setAppMode)}
-      exclusive={true}>
-      <ToggleButton value="business" key="business">
+  const ModeButtons = ({setAppMode}: {setAppMode: SetMode}) => (
+    <ToggleButtonGroup value={mode} onChange={(_, value) => changeMode(value, setAppMode)} exclusive={true}>
+      <ToggleButton value='business' key='business'>
         <Business color={mode === 'business' ? 'secondary' : 'warning'} />
       </ToggleButton>
-      <ToggleButton value="fun" key="fun">
+      <ToggleButton value='fun' key='fun'>
         <Coffee color={mode === 'fun' ? 'secondary' : 'warning'} />
       </ToggleButton>
     </ToggleButtonGroup>
   )
 
-  const ListConfigItem = ({
-    label,
-    component,
-  }: {
-    label: string;
-    component: JSX.Element;
-  }) => (
+  const ListConfigItem = ({label, component}: {label: string; component: JSX.Element}) => (
     <ListItem>
-      <Grid
-        item
-        xs={6}
-        sx={{height: 'inherit'}}
-        display="flex"
-        alignItems="center">
-        <Typography variant="h5">{label}</Typography>
+      <Grid item xs={6} sx={{height: 'inherit'}} display='flex' alignItems='center'>
+        <Typography variant='h5'>{label}</Typography>
       </Grid>
-      <Grid
-        item
-        xs={6}
-        display="flex"
-        justifyContent="center"
-        sx={{height: 'inherit'}}>
+      <Grid item xs={6} display='flex' justifyContent='center' sx={{height: 'inherit'}}>
         {component}
       </Grid>
     </ListItem>
@@ -143,39 +108,30 @@ const Configurations: ConfigurationsType = () => {
     <Context.Consumer>
       {({setThemeMode, setLanguage, setMode, t}) => (
         <>
-          <IconButton
-            onClick={() => toggleDrawer()}
-            size="large"
-            sx={{minWidth: 50}}>
-            <Settings color="secondary" />
+          <IconButton onClick={() => toggleDrawer()} size='large' sx={{minWidth: 50}}>
+            <Settings color='secondary' />
           </IconButton>
           <SwipeableDrawer
             anchor={'right'}
             open={open}
             onClose={() => toggleDrawer(false)}
             onOpen={() => toggleDrawer()}>
-            <List
-              sx={{p: 1, width: 270}}
-              onClick={() => toggleDrawer(false)}
-              onKeyDown={() => toggleDrawer(false)}>
+            <List sx={{p: 1, width: 270}} onClick={() => toggleDrawer(false)} onKeyDown={() => toggleDrawer(false)}>
               <ListItemText
                 primary={
-                  <Typography
-                    display="flex"
-                    justifyContent="center"
-                    variant="h4">
+                  <Typography display='flex' justifyContent='center' variant='h4'>
                     {t('misc.label.configurations')}
                   </Typography>
                 }></ListItemText>
               <Divider />
               <ListConfigItem
-                label="Theme"
+                label={t('misc.label.theme')}
                 component={<ThemeButtons setAppTheme={setThemeMode} />}></ListConfigItem>
               <ListConfigItem
-                label="Language"
+                label={t('misc.label.language')}
                 component={<LanguageButtons setAppLanguage={setLanguage} />}></ListConfigItem>
               <ListConfigItem
-                label="Mode"
+                label={t('misc.label.mode')}
                 component={<ModeButtons setAppMode={setMode} />}></ListConfigItem>
               <Divider />
             </List>

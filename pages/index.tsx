@@ -20,8 +20,7 @@ const Home: NextPage = () => {
   const [watchScroll, setWatchScroll] = useState(true)
   const inViewOptions = {
     skip: !watchScroll,
-    threshold:
-      (typeof window !== 'undefined' && window.innerHeight) < 1000 ? 0.1 : 0.6,
+    threshold: (typeof window !== 'undefined' && window.innerHeight) < 1000 ? 0.1 : 0.6,
     fallbackInView: true,
   }
   const [aboutRef, aboutInView] = useInView(inViewOptions)
@@ -30,8 +29,6 @@ const Home: NextPage = () => {
   const [experienceRef, experienceInView] = useInView(inViewOptions)
   const [projectsRef, projectsInView] = useInView(inViewOptions)
   const [educationRef, educationInView] = useInView(inViewOptions)
-  const [musicRef, musicInView] = useInView(inViewOptions)
-  const [sportRef, sportInView] = useInView(inViewOptions)
 
   const [aboutShowed, setAboutShowed] = useState(aboutInView)
   const [hardSkillShowed, setCodeSkillShowed] = useState(hardSkillsInView)
@@ -39,8 +36,6 @@ const Home: NextPage = () => {
   const [experienceShowed, setExperienceShowed] = useState(experienceInView)
   const [projectsShowed, setProjectsShowed] = useState(projectsInView)
   const [educationShowed, setEducationShowed] = useState(educationInView)
-  const [musicShowed, setMusicShowed] = useState(musicInView)
-  const [sportShowed, setSportShowed] = useState(sportInView)
 
   useEffect(() => {
     lastSectionVisible()
@@ -66,38 +61,17 @@ const Home: NextPage = () => {
     lastSectionVisible()
     if (educationInView) setEducationShowed(true)
   }, [educationInView])
-  useEffect(() => {
-    lastSectionVisible()
-    if (musicInView) setMusicShowed(true)
-  }, [musicInView])
-  useEffect(() => {
-    lastSectionVisible()
-    if (sportInView) setSportShowed(true)
-  }, [sportInView])
 
-  const onChangeTab = (mode: Mode) => {
-    const sections = {
-      business: [
-        aboutShowed,
-        hardSkillShowed,
-        softSkillShowed,
-        experienceShowed,
-        projectsShowed,
-        educationShowed,
-      ],
-      fun: [musicShowed, sportShowed],
-    }[mode]
+  const onChangeTab = () => {
+    const sections = [aboutShowed, hardSkillShowed, softSkillShowed, experienceShowed, projectsShowed, educationShowed]
     if (sections.every(e => e)) {
       setWatchScroll(false)
-      // setTimeout(() => {
-      //   setWatchScroll(true)
-      // }, 750)
     }
   }
 
   const growComponent = (
     Component: (props: any) => JSX.Element,
-    props: { [key: string]: unknown },
+    props: {[key: string]: unknown},
     id: string,
     ref: LegacyRef<HTMLDivElement>,
     inView: boolean
@@ -136,81 +110,45 @@ const Home: NextPage = () => {
     else if (experienceInView) setActiveSection('experience')
     else if (educationInView) setActiveSection('education')
     else if (projectsInView) setActiveSection('projects')
-    // else if (musicInView) setActiveSection('music')
-    // else if (sportInView) setActiveSection('sport')
     else setActiveSection('')
   }
 
   const businessStack = () => (
     <Stack
-      direction="column"
+      direction='column'
       spacing={10}
       padding={3}
-      display="flex"
-      alignItems="center"
+      display='flex'
+      alignItems='center'
       sx={{paddingTop: 8}}
-      justifyContent="center">
+      justifyContent='center'>
       {growComponent(LandingCard, {}, 'about', aboutRef, aboutShowed)}
-      {growComponent(
-        SkillChips,
-        {typeSkills: 'hardSkills'},
-        'hardSkills',
-        hardSkillsRef,
-        hardSkillShowed
-      )}
-      {growComponent(
-        SkillChips,
-        {typeSkills: 'softSkills'},
-        'softSkills',
-        softSkillsRef,
-        softSkillShowed
-      )}
-      {growComponent(
-        TimeLine,
-        {typeItems: 'experiences'},
-        'experience',
-        experienceRef,
-        experienceShowed
-      )}
+      {growComponent(SkillChips, {typeSkills: 'hardSkills'}, 'hardSkills', hardSkillsRef, hardSkillShowed)}
+      {growComponent(SkillChips, {typeSkills: 'softSkills'}, 'softSkills', softSkillsRef, softSkillShowed)}
+      {growComponent(TimeLine, {typeItems: 'experiences'}, 'experience', experienceRef, experienceShowed)}
       {growComponent(ProjectCards, {}, 'projects', projectsRef, projectsShowed)}
-      {growComponent(
-        TimeLine,
-        {typeItems: 'education'},
-        'education',
-        educationRef,
-        educationShowed
-      )}
+      {growComponent(TimeLine, {typeItems: 'education'}, 'education', educationRef, educationShowed)}
     </Stack>
   )
 
   const funStack = () => (
     <Stack
-      direction="column"
+      direction='column'
       spacing={10}
       padding={3}
-      display="flex"
-      alignItems="center"
+      display='flex'
+      alignItems='center'
       sx={{paddingTop: 8}}
-      justifyContent="center">
+      justifyContent='center'>
       {growComponent(LandingCard, {}, 'about', aboutRef, aboutShowed)}
-      {growComponent(
-        Hobby,
-        {section: 'music'},
-        'music',
-        musicRef,
-        musicShowed
-      )}
+      {growComponent(Hobby, {section: 'music'}, 'music', null, true)}
       {growComponent(Hobby, {section: 'traveling'}, 'traveling', null, true)}
       {growComponent(Hobby, {section: 'dogs'}, 'dogs', null, true)}
       {growComponent(Hobby, {section: 'geek'}, 'geek', null, true)}
-      {growComponent(
-        Hobby,
-        {section: 'sports'},
-        'sports',
-        sportRef,
-        sportShowed
-      )}
+      {growComponent(Hobby, {section: 'roles'}, 'roles', null, true)}
       {growComponent(Hobby, {section: 'random'}, 'random', null, true)}
+      {growComponent(Hobby, {section: 'films'}, 'films', null, true)}
+      {growComponent(Hobby, {section: 'sports'}, 'sports', null, true)}
     </Stack>
   )
 
@@ -220,15 +158,13 @@ const Home: NextPage = () => {
         <>
           <Head>
             <title>{t('personal.name')}</title>
-            <link rel="shortcut icon" href={favicon} />
+            <link rel='shortcut icon' href={favicon} />
           </Head>
           <TopBar
-            sections={
-              t('sections', {returnObjects: true}) as unknown as Section[]
-            } // TODO: Add hobbies topbar
+            sections={t('sections', {returnObjects: true}) as unknown as Section[]}
             lastSectionActive={activeSection}
-            onChangeTab={() => onChangeTab(mode as Mode)}/>
-          {/* <LandingBackground showParticles={watchScroll} /> */}
+            onChangeTab={() => onChangeTab()}/>
+          <LandingBackground />
           {{business: businessStack, fun: funStack}[mode as Mode]()}
           <UnderConstruction></UnderConstruction>
         </>

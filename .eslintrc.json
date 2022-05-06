@@ -30,26 +30,17 @@
     "max-len": [
       "error",
       {
-        "code": 105,
+        "code": 120,
         "ignoreStrings": true
       }
     ],
-    "object-curly-newline": [
-      "error",
-      { "multiline": true, "consistent": true }
-    ],
-    "no-confusing-arrow": ["warn", { "allowParens": true }],
+    "object-curly-newline": ["error", {"multiline": true, "consistent": true}],
+    "no-confusing-arrow": ["warn", {"allowParens": true}],
     "implicit-arrow-linebreak": ["error", "beside"],
     "operator-linebreak": ["error", "none"],
     "no-multi-spaces": ["error"],
-    "react/jsx-filename-extension": [
-      2,
-      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
-    ],
-    "react/jsx-closing-bracket-location": [
-      2,
-      { "selfClosing": "after-props", "nonEmpty": "after-props" }
-    ],
+    "react/jsx-filename-extension": [2, {"extensions": [".js", ".jsx", ".ts", ".tsx"]}],
+    "react/jsx-closing-bracket-location": [2, {"selfClosing": "after-props", "nonEmpty": "after-props"}],
     "arrow-parens": ["error", "as-needed"],
     "arrow-spacing": [
       "error",

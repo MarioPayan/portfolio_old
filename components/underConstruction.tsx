@@ -1,12 +1,5 @@
 import React, {useState} from 'react'
-import {
-  Dialog,
-  DialogTitle,
-  DialogContentText,
-  DialogActions,
-  Button,
-  DialogContent
-} from '@mui/material'
+import {Dialog, DialogTitle, DialogContentText, DialogActions, Button, DialogContent} from '@mui/material'
 import Context from './context'
 import {initVisited, setVisited} from '../utils/cookies'
 
@@ -29,12 +22,10 @@ const UnderConstruction: any = () => {
             }}>
             <DialogTitle>{t('misc.label.underConstruction')}</DialogTitle>
             <DialogContent>
-              <DialogContentText>
-                {t('misc.text.underConstruction')}
-              </DialogContentText>
+              <DialogContentText>{t('misc.text.underConstruction')}</DialogContentText>
             </DialogContent>
             <DialogActions>
-              <Button color="secondary" variant="contained" onClick={visited}>
+              <Button color='secondary' variant='contained' onClick={visited}>
                 Ok
               </Button>
             </DialogActions>

@@ -1,25 +1,12 @@
 import React from 'react'
 import {IconButton, Stack, SxProps} from '@mui/material'
 import {openInNewTab} from '../utils/utils'
-import {
-  Facebook,
-  Instagram,
-  GitHub,
-  WhatsApp,
-  Email,
-  LinkedIn,
-  YouTube
-} from '@mui/icons-material'
+import {Facebook, Instagram, GitHub, WhatsApp, Email, LinkedIn, YouTube} from '@mui/icons-material'
 
-type Style = 'default' | 'white'; // TODO: check names
+type Style = 'default' | 'white' // TODO: check names
 
 export const SocialMediaIcons = (
-  {
-    t,
-    i18n,
-    tKey,
-    style = 'default',
-  }: { t: (key: string) => string; i18n: any; tKey: string; style?: Style },
+  {t, i18n, tKey, style = 'default'}: {t: (key: string) => string; i18n: any; tKey: string; style?: Style},
   showArray: string[] = []
 ): JSX.Element => {
   const show = (socialMedia: string): boolean => {
@@ -32,65 +19,39 @@ export const SocialMediaIcons = (
   const iconStyle = (style: Style): SxProps => ({default: {}, white: {color: 'white'}}[style])
 
   return (
-    <Stack
-      direction="row"
-      spacing={1}
-      flexWrap="wrap"
-      display="flex"
-      justifyContent="right">
+    <Stack direction='row' spacing={1} flexWrap='wrap' display='flex' justifyContent='right'>
       {show('linkedin') && (
-        <IconButton
-          aria-label="Linked In"
-          sx={iconStyle(style)}
-          onClick={() => openInNewTab(t(`${tKey}.linkedin`))}>
+        <IconButton aria-label='Linked In' sx={iconStyle(style)} onClick={() => openInNewTab(t(`${tKey}.linkedin`))}>
           <LinkedIn />
         </IconButton>
       )}
       {show('whatsapp') && (
-        <IconButton
-          aria-label="WhatsApp"
-          sx={iconStyle(style)}
-          onClick={() => openInNewTab(t(`${tKey}.whatsapp`))}>
+        <IconButton aria-label='WhatsApp' sx={iconStyle(style)} onClick={() => openInNewTab(t(`${tKey}.whatsapp`))}>
           <WhatsApp />
         </IconButton>
       )}
       {show('github') && (
-        <IconButton
-          aria-label="Git Hub"
-          sx={iconStyle(style)}
-          onClick={() => openInNewTab(t(`${tKey}.github`))}>
+        <IconButton aria-label='Git Hub' sx={iconStyle(style)} onClick={() => openInNewTab(t(`${tKey}.github`))}>
           <GitHub />
         </IconButton>
       )}
       {show('email') && (
-        <IconButton
-          aria-label="Email"
-          sx={iconStyle(style)}
-          onClick={() => openInNewTab(t(`${tKey}.email`))}>
+        <IconButton aria-label='Email' sx={iconStyle(style)} onClick={() => openInNewTab(t(`${tKey}.email`))}>
           <Email />
         </IconButton>
       )}
       {show('instagram') && (
-        <IconButton
-          aria-label="Instagram"
-          sx={iconStyle(style)}
-          onClick={() => openInNewTab(t(`${tKey}.instagram`))}>
+        <IconButton aria-label='Instagram' sx={iconStyle(style)} onClick={() => openInNewTab(t(`${tKey}.instagram`))}>
           <Instagram />
         </IconButton>
       )}
       {show('facebook') && (
-        <IconButton
-          aria-label="Facebook"
-          sx={iconStyle(style)}
-          onClick={() => openInNewTab(t(`${tKey}.facebook`))}>
+        <IconButton aria-label='Facebook' sx={iconStyle(style)} onClick={() => openInNewTab(t(`${tKey}.facebook`))}>
           <Facebook />
         </IconButton>
       )}
       {show('youtube') && (
-        <IconButton
-          aria-label="Youtube"
-          sx={iconStyle(style)}
-          onClick={() => openInNewTab(t(`${tKey}.youtube`))}>
+        <IconButton aria-label='Youtube' sx={iconStyle(style)} onClick={() => openInNewTab(t(`${tKey}.youtube`))}>
           <YouTube />
         </IconButton>
       )}

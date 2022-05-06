@@ -1,14 +1,7 @@
 import React, {useState} from 'react'
 import Carousel from 'react-material-ui-carousel'
 import Context from './context'
-import {
-  Box,
-  Grid,
-  Typography,
-  CardMedia,
-  CardActionArea,
-  Dialog
-} from '@mui/material'
+import {Box, Grid, Typography, CardMedia, CardActionArea, Dialog} from '@mui/material'
 import {SocialMediaIcons} from './socialMediaIcons'
 
 const Hobby = ({section}: any): JSX.Element => {
@@ -43,13 +36,10 @@ const Hobby = ({section}: any): JSX.Element => {
           setOpenModal(true)
           setModalImage(image)
         }}>
-        <CardMedia
-          image={image}
-          title={title}
-          sx={{...cardImageSize, ...cardImageBorder}}>
-          <Box display="flex" sx={{height: 1}}>
+        <CardMedia image={image} title={title} sx={{...cardImageSize, ...cardImageBorder}}>
+          <Box display='flex' sx={{height: 1}}>
             <Box
-              display="flex"
+              display='flex'
               sx={{
                 backgroundColor: 'rgba(0,0,0,0.8)',
                 alignSelf: 'flex-end',
@@ -69,37 +59,18 @@ const Hobby = ({section}: any): JSX.Element => {
       {({t, i18n}) => (
         <Grid container width={9 / 10} spacing={5}>
           <Grid item xs={12} sx={{pb: 5}}>
-            <Typography variant="h1">
-              {t(`hobbies.${section}.title`)}
-            </Typography>
-            <Typography variant="h6">
-              {t(`hobbies.${section}.description`)}
-            </Typography>
+            <Typography variant='h1'>{t(`hobbies.${section}.title`)}</Typography>
+            <Typography variant='h6'>{t(`hobbies.${section}.description`)}</Typography>
           </Grid>
           {(
             t(`hobbies.${section}.sections`, {
               returnObjects: true,
             }) as unknown as any[]
           ).map((ss: any, i: number) => (
-            <Grid
-              item
-              container
-              key={i}
-              xs={12}
-              md={6}
-              display="flex"
-              spacing={1}
-              direction="row"
-              paddingBottom={5}>
-              <Grid
-                item
-                display="flex"
-                direction="column"
-                md={6}
-                xs={12}
-                padding={2}>
-                <Typography variant="h2">{ss.title}</Typography>
-                <Typography variant="h5">{ss.description}</Typography>
+            <Grid item container key={i} xs={12} md={6} display='flex' spacing={1} direction='row' paddingBottom={5}>
+              <Grid item display='flex' direction='column' md={6} xs={12} padding={2}>
+                <Typography variant='h2'>{ss.title}</Typography>
+                <Typography variant='h5'>{ss.description}</Typography>
               </Grid>
               <Grid item md={6} xs={12} sx={cardImageSize}>
                 <Carousel sx={cardImageSize} {...settings}>
@@ -120,8 +91,8 @@ const Hobby = ({section}: any): JSX.Element => {
             onClose={() => {
               setOpenModal(false)
             }}
-            maxWidth="lg">
-            <img src={modalImage} alt="TODO" />
+            maxWidth='lg'>
+            <img src={modalImage} alt='TODO' />
           </Dialog>
         </Grid>
       )}

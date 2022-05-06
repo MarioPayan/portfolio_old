@@ -61,6 +61,7 @@ const App = ({Component, pageProps}: AppProps) => {
         setThemeMode,
         setMode,
         mode,
+        themeMode,
       }}>
       <ThemeProvider theme={theme}>
         <CssBaseline />

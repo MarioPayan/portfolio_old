@@ -24,6 +24,7 @@ https://particles.js.org/docs/interfaces/Options_Interfaces_IOptions.IOptions.ht
 - Move timeline to left
 - Replace visit button by an float eye
 - ? Add data to projects at the end (free project | private project)
+- Add: Xenogears, Octopath, TWEWY, L4D2
 
 ## Issues
 - Animation on see less

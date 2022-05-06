@@ -22,10 +22,10 @@ const LandingCard: LandingCardType = () => {
           <Paper elevation={3} sx={{justifyContent: 'center'}}>
             <Grid container spacing={2} sx={{padding: '40px'}}>
               <Grid item xs={12} lg={4}>
-                <Box display="flex" sx={{justifyContent: 'center'}}>
+                <Box display='flex' sx={{justifyContent: 'center'}}>
                   <Image
                     src={{business: profile, fun: pixelProfile}[mode as Mode]}
-                    className="profile-picture"
+                    className='profile-picture'
                     width={300}
                     height={300}/>
                   <style>{`
@@ -40,44 +40,36 @@ const LandingCard: LandingCardType = () => {
               </Grid>
               <Grid container item xs={12} lg={8} spacing={2}>
                 <Grid item xs={12}>
-                  <Typography variant="h1" component="h1">
+                  <Typography variant='h1' component='h1'>
                     {t('personal.name')}
                   </Typography>
                 </Grid>
                 <Grid item xs={12}>
-                  <Typography variant="h3" component="h2">
-                    {t('personal.title')}
+                  <Typography variant='h3' component='h2'>
+                    {t(`personal.${mode}.title`)}
                   </Typography>
                 </Grid>
                 <Grid item xs={12}>
-                  <Typography variant="h5" component="h5">
-                    {t('personal.subtitle')}
+                  <Typography variant='h5' component='h5'>
+                    {t(`personal.${mode}.subtitle`)}
                   </Typography>
                 </Grid>
                 <Grid item xs={12}>
-                  <Typography variant="body1" component="p">
-                    {t('personal.summary')}
+                  <Typography variant='body1' component='p'>
+                    {t(`personal.${mode}.summary`)}
                   </Typography>
                 </Grid>
                 <Grid item xs={12}>
-                  <Grid
-                    container
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="center"
-                    spacing={1}>
+                  <Grid container display='flex' alignItems='center' justifyContent='center' spacing={1}>
                     <Grid item>
-                      <Button
-                        color="primary"
-                        variant="contained"
-                        sx={{fontWeight: 'bold'}}>
+                      <Button color='primary' variant='contained' sx={{fontWeight: 'bold'}}>
                         {t('misc.button.main')}
                       </Button>
                     </Grid>
                     <Grid item>
                       <Button
-                        color="secondary"
-                        variant="contained"
+                        color='secondary'
+                        variant='contained'
                         sx={{fontWeight: 'bold'}}
                         onClick={() => openInNewTab(cvPdf)}>
                         {t('misc.button.downloadCV')}
@@ -86,10 +78,7 @@ const LandingCard: LandingCardType = () => {
                   </Grid>
                 </Grid>
                 <Grid item xs={12}>
-                  {SocialMediaIcons(
-                    {t, i18n, tKey: 'personal.social'},
-                    getSocialMediaItems(mode as Mode)
-                  )}
+                  {SocialMediaIcons({t, i18n, tKey: 'personal.social'}, getSocialMediaItems(mode as Mode))}
                 </Grid>
               </Grid>
             </Grid>

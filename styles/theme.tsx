@@ -1,8 +1,4 @@
-import {
-  createTheme as createThemeMUI,
-  responsiveFontSizes,
-  ThemeOptions
-} from '@mui/material/styles'
+import {createTheme as createThemeMUI, responsiveFontSizes, ThemeOptions} from '@mui/material/styles'
 import {Theme} from '../types/types'
 
 const purple = {
