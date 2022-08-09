@@ -27,7 +27,7 @@ import {
   setTheme as setStorageTheme,
   setLanguage as setStorageLanguage,
   setMode as setStorageMode,
-  getTheme,
+  // getTheme,
   getMode
 } from '../utils/cookies'
 

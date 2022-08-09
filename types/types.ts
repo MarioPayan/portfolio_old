@@ -30,7 +30,7 @@ export type TimeLine = (props: {typeItems: string}) => JSX.Element
 export type ProjectCards = (props: any) => JSX.Element
 export type Configurations = () => JSX.Element
 export type LandingCard = (props: any) => JSX.Element
-export type TopBar = (props: {sections: Section[]; lastSectionActive: string; onChangeTab: () => void}) => JSX.Element
+export type TopBar = (props: {sections: Section[]; lastSectionActive: string}) => JSX.Element
 
 export type SetTheme = (theme: Theme) => void
 export type SetLanguage = (theme: Language) => void

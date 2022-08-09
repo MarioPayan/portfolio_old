@@ -9,7 +9,7 @@ import TimeLine from '../components/timeline'
 import LandingBackground from '../components/landingBackground'
 import ProjectCards from '../components/projectCards'
 import UnderConstruction from '../components/underConstruction'
-import {Grid, Grow, Stack} from '@mui/material'
+import {Grid, Stack} from '@mui/material'
 import Context from '../components/context'
 import {Mode, Section} from '../types/types'
 import {favicon} from '../utils/assets'
@@ -17,9 +17,7 @@ import Hobby from '../components/hobby'
 
 const Home: NextPage = () => {
   const [activeSection, setActiveSection] = useState('')
-  const [watchScroll, setWatchScroll] = useState(true)
   const inViewOptions = {
-    skip: !watchScroll,
     threshold: (typeof window !== 'undefined' && window.innerHeight) < 1000 ? 0.1 : 0.6,
     fallbackInView: true,
   }
@@ -30,51 +28,15 @@ const Home: NextPage = () => {
   const [projectsRef, projectsInView] = useInView(inViewOptions)
   const [educationRef, educationInView] = useInView(inViewOptions)
 
-  const [aboutShowed, setAboutShowed] = useState(aboutInView)
-  const [hardSkillShowed, setCodeSkillShowed] = useState(hardSkillsInView)
-  const [softSkillShowed, setSoftSkillShowed] = useState(softSkillsInView)
-  const [experienceShowed, setExperienceShowed] = useState(experienceInView)
-  const [projectsShowed, setProjectsShowed] = useState(projectsInView)
-  const [educationShowed, setEducationShowed] = useState(educationInView)
-
   useEffect(() => {
     lastSectionVisible()
-    if (aboutInView) setAboutShowed(true)
-  }, [aboutInView])
-  useEffect(() => {
-    lastSectionVisible()
-    if (hardSkillsInView) setCodeSkillShowed(true)
-  }, [hardSkillsInView])
-  useEffect(() => {
-    lastSectionVisible()
-    if (softSkillsInView) setSoftSkillShowed(true)
-  }, [softSkillsInView])
-  useEffect(() => {
-    lastSectionVisible()
-    if (experienceInView) setExperienceShowed(true)
-  }, [experienceInView])
-  useEffect(() => {
-    lastSectionVisible()
-    if (projectsInView) setProjectsShowed(true)
-  }, [projectsInView])
-  useEffect(() => {
-    lastSectionVisible()
-    if (educationInView) setEducationShowed(true)
-  }, [educationInView])
-
-  const onChangeTab = () => {
-    const sections = [aboutShowed, hardSkillShowed, softSkillShowed, experienceShowed, projectsShowed, educationShowed]
-    if (sections.every(e => e)) {
-      setWatchScroll(false)
-    }
-  }
+  }, [aboutInView, hardSkillsInView, softSkillsInView, experienceInView, projectsInView, educationInView])
 
   const growComponent = (
     Component: (props: any) => JSX.Element,
     props: {[key: string]: unknown},
     id: string,
-    ref: LegacyRef<HTMLDivElement>,
-    inView: boolean
+    ref: LegacyRef<HTMLDivElement>
   ) => {
     const styleInherit: React.CSSProperties = {
       display: 'flex',
@@ -93,12 +55,10 @@ const Home: NextPage = () => {
     }
     return (
       <>
-        <Grow in={inView}>
-          <Grid container style={{...styleInherit}}>
-            <div id={id} ref={ref} style={invisibleStyle}></div>
-            <Component {...props} />
-          </Grid>
-        </Grow>
+        <Grid container style={{...styleInherit}}>
+          <div id={id} ref={ref} style={invisibleStyle}></div>
+          <Component {...props} />
+        </Grid>
       </>
     )
   }
@@ -122,12 +82,12 @@ const Home: NextPage = () => {
       alignItems='center'
       sx={{paddingTop: 8}}
       justifyContent='center'>
-      {growComponent(LandingCard, {}, 'about', aboutRef, aboutShowed)}
-      {growComponent(SkillChips, {typeSkills: 'hardSkills'}, 'hardSkills', hardSkillsRef, hardSkillShowed)}
-      {growComponent(SkillChips, {typeSkills: 'softSkills'}, 'softSkills', softSkillsRef, softSkillShowed)}
-      {growComponent(TimeLine, {typeItems: 'experiences'}, 'experience', experienceRef, experienceShowed)}
-      {growComponent(ProjectCards, {}, 'projects', projectsRef, projectsShowed)}
-      {growComponent(TimeLine, {typeItems: 'education'}, 'education', educationRef, educationShowed)}
+      {growComponent(LandingCard, {}, 'about', aboutRef)}
+      {growComponent(SkillChips, {typeSkills: 'hardSkills'}, 'hardSkills', hardSkillsRef)}
+      {growComponent(SkillChips, {typeSkills: 'softSkills'}, 'softSkills', softSkillsRef)}
+      {growComponent(TimeLine, {typeItems: 'experiences'}, 'experience', experienceRef)}
+      {growComponent(ProjectCards, {}, 'projects', projectsRef)}
+      {growComponent(TimeLine, {typeItems: 'education'}, 'education', educationRef)}
     </Stack>
   )
 
@@ -140,15 +100,15 @@ const Home: NextPage = () => {
       alignItems='center'
       sx={{paddingTop: 8}}
       justifyContent='center'>
-      {growComponent(LandingCard, {}, 'about', aboutRef, aboutShowed)}
-      {growComponent(Hobby, {section: 'music'}, 'music', null, true)}
-      {growComponent(Hobby, {section: 'traveling'}, 'traveling', null, true)}
-      {growComponent(Hobby, {section: 'dogs'}, 'dogs', null, true)}
-      {growComponent(Hobby, {section: 'geek'}, 'geek', null, true)}
-      {growComponent(Hobby, {section: 'roles'}, 'roles', null, true)}
-      {growComponent(Hobby, {section: 'random'}, 'random', null, true)}
-      {growComponent(Hobby, {section: 'films'}, 'films', null, true)}
-      {growComponent(Hobby, {section: 'sports'}, 'sports', null, true)}
+      {growComponent(LandingCard, {}, 'about', aboutRef)}
+      {growComponent(Hobby, {section: 'music'}, 'music', null)}
+      {growComponent(Hobby, {section: 'traveling'}, 'traveling', null)}
+      {growComponent(Hobby, {section: 'dogs'}, 'dogs', null)}
+      {growComponent(Hobby, {section: 'geek'}, 'geek', null)}
+      {growComponent(Hobby, {section: 'roles'}, 'roles', null)}
+      {growComponent(Hobby, {section: 'random'}, 'random', null)}
+      {growComponent(Hobby, {section: 'films'}, 'films', null)}
+      {growComponent(Hobby, {section: 'sports'}, 'sports', null)}
     </Stack>
   )
 
@@ -159,11 +119,11 @@ const Home: NextPage = () => {
           <Head>
             <title>{t('personal.name')}</title>
             <link rel='shortcut icon' href={favicon} />
+            <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css' />
           </Head>
           <TopBar
             sections={t('sections', {returnObjects: true}) as unknown as Section[]}
-            lastSectionActive={activeSection}
-            onChangeTab={() => onChangeTab()}/>
+            lastSectionActive={activeSection}/>
           <LandingBackground />
           {{business: businessStack, fun: funStack}[mode as Mode]()}
           <UnderConstruction></UnderConstruction>

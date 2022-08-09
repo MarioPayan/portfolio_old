@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {Skill, SkillChips as SkillChipsType} from '../types/types'
 import {getKeyFromLabel} from '../utils/utils'
-import {Chip, Grid, Tab, Tabs, Grow, Tooltip} from '@mui/material'
+import {Grid, Tab, Tabs, Collapse, Tooltip, IconButton, Icon, Box} from '@mui/material'
 import {
   Code,
   IntegrationInstructions,
@@ -19,6 +19,8 @@ import {
 } from '@mui/icons-material/'
 import Context from './context'
 
+type SelectableSkill = Skill & {selected: boolean}
+
 const SkillChips: SkillChipsType = ({typeSkills}) => {
   const defaultFilterKey = 'all'
   const [filter, setFilter] = useState<string>(defaultFilterKey)
@@ -28,37 +30,68 @@ const SkillChips: SkillChipsType = ({typeSkills}) => {
     setFilter(filter)
   }
 
-  const filterSkills = (skills: Skill[]) => {
+  const filterSkills = (skills: SelectableSkill[]) => {
+    let tmpSkills = []
     if (filter === defaultFilterKey) {
-      return skills
+      tmpSkills = skills.map(skill => ({...skill, selected: true}))
     } else {
-      return skills.filter(skill => skill.type === filter)
+      tmpSkills = skills.map(skill => ({...skill, selected: skill.type === filter}))
     }
+    return tmpSkills
   }
 
-  const getIcon = (type: string): JSX.Element => {
+  const getIcon = (type: string, props: any = {}): JSX.Element => {
     let icon = <QuestionMark />
     const icons: {[type: string]: JSX.Element} = {
-      code: <Code />,
-      código: <Code />,
-      frameworks: <IntegrationInstructions />,
-      html: <Html />,
-      css: <Css />,
-      database: <Storage />,
-      base_de_datos: <Storage />,
-      git: <GitHub />,
-      test: <BugReport />,
-      pruebas: <BugReport />,
-      os: <Computer />,
-      languages: <Translate />,
-      idiomas: <Translate />,
-      personal: <SelfImprovement />,
-      social: <Group />,
-      methodical: <Engineering />,
-      metódico: <Engineering />,
+      code: <Code {...props} />,
+      código: <Code {...props} />,
+      frameworks: <IntegrationInstructions {...props} />,
+      html: <Html {...props} />,
+      css: <Css {...props} />,
+      database: <Storage {...props} />,
+      base_de_datos: <Storage {...props} />,
+      git: <GitHub {...props} />,
+      test: <BugReport {...props} />,
+      pruebas: <BugReport {...props} />,
+      os: <Computer {...props} />,
+      languages: <Translate {...props} />,
+      idiomas: <Translate {...props} />,
+      personal: <SelfImprovement {...props} />,
+      social: <Group {...props} />,
+      methodical: <Engineering {...props} />,
+      metódico: <Engineering {...props} />,
     }
     if (type in icons) icon = icons[type]
     return icon
+  }
+
+  const getSkillIcon = (skill: Skill): JSX.Element => {
+    const IconSubIcon = (skill: Skill, className?: string) => (
+      // label={skill.label}
+      <IconButton
+        aria-label={getKeyFromLabel(skill.label)}
+        size='large'
+        sx={{
+          transition: 'transform .5s, box-shadow 1s',
+          '&:hover': {
+            transform: 'scale(1.2) perspective(0px)',
+          },
+        }}>
+        {className ? (
+          <Icon className={`devicon-${className}-plain`} sx={{fontSize: 80}} />
+        ) : (
+          getIcon(skill.type, {sx: {fontSize: 80}})
+        )}
+        <Box sx={{position: 'absolute', bottom: 0, left: 0, backgroundColor: 'rgba(0,0,0,0.5)', borderRadius: 10}}>
+          {getIcon(skill.type)}
+        </Box>
+      </IconButton>
+    )
+    let className = ''
+    const notInDevIcons = ['spanish', 'english', 'español', 'inglés', 'appium', 'osx', 'flexbox']
+    const key = getKeyFromLabel(skill.label.split(' ')[0])
+    if (!notInDevIcons.includes(key) && typeSkills === 'hardSkills') className = key
+    return IconSubIcon(skill, className)
   }
 
   return (
@@ -86,22 +119,13 @@ const SkillChips: SkillChipsType = ({typeSkills}) => {
               ))}
             </Tabs>
           </Grid>
-
-          {filterSkills(t(typeSkills, {returnObjects: true}) as unknown as Skill[]).map(skill => (
-            <Grid item key={getKeyFromLabel(skill.label)}>
-              <Grow in={[defaultFilterKey, skill.type].includes(filter)}>
-                <Tooltip title={skill.description || t('misc.missing.description')}>
-                  <Chip
-                    label={skill.label}
-                    component='a'
-                    icon={getIcon(skill.type)}
-                    variant='outlined'
-                    sx={{fontSize: 16, borderWidth: 2, borderColor: 'gray'}}
-                    clickable/>
-                </Tooltip>
-              </Grow>
-            </Grid>
-          ))}
+          <Grid container item justifyContent='center' xs={12}>
+            {filterSkills(t(typeSkills, {returnObjects: true}) as unknown as SelectableSkill[]).map(skill => (
+              <Collapse key={getKeyFromLabel(skill.label)} in={skill.selected} orientation='horizontal' timeout={750}>
+                <Tooltip title={skill.description || t('misc.missing.description')}>{getSkillIcon(skill)}</Tooltip>
+              </Collapse>
+            ))}
+          </Grid>
         </Grid>
       )}
     </Context.Consumer>

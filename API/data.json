@@ -140,7 +140,7 @@
       "es-description": "Python es un lenguaje de programación interpretado cuya filosofía hace hincapié en la legibilidad de su código"
     },
     {
-      "label": "ReactJS",
+      "label": "React",
       "type": "frameworks",
       "en-description": "A JavaScript library for building user interfaces",
       "es-description": "Una biblioteca de JavaScript para crear interfaces de usuario"
@@ -174,7 +174,7 @@
       "es-description": "Django REST framework es un conjunto de herramientas potente y flexible para crear APIs web"
     },
     {
-      "label": "Angular",
+      "label": "AngularJS",
       "type": "frameworks",
       "en-description": "Angular is a TypeScript-based free and open-source web application framework led by the Angular Team at Google used to build and mantain SPAs",
       "es-description": "Angular es un framework para aplicaciones web desarrollado en TypeScript, de código abierto, mantenido por Google, que se utiliza para crear y mantener aplicaciones web de una sola página"
@@ -198,7 +198,7 @@
       "es-description": "Bootstrap es una biblioteca multiplataforma o conjunto de herramientas de código abierto para diseño de sitios y aplicaciones web"
     },
     {
-      "label": "Material UI",
+      "label": "MaterialUI",
       "type": "css",
       "en-description": "Material UI is a design language developed by Google",
       "es-description": "Material UI es una normativa de diseño enfocado en la visualización del sistema operativo Android, además en la web y en cualquier plataforma desarrollado por Goolge"
@@ -242,7 +242,7 @@
       "es-description": "Bitbucket es un servicio de alojamiento basado en web, para los proyectos que utilizan el sistema de control de versiones Mercurial y Git"
     },
     {
-      "label": "Shell",
+      "label": "Bash",
       "type": "code",
       "en-description": "",
       "es-description": ""
