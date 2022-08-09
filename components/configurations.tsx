@@ -111,11 +111,7 @@ const Configurations: ConfigurationsType = () => {
           <IconButton onClick={() => toggleDrawer()} size='large' sx={{minWidth: 50}}>
             <Settings color='secondary' />
           </IconButton>
-          <SwipeableDrawer
-            anchor={'right'}
-            open={open}
-            onClose={() => toggleDrawer(false)}
-            onOpen={() => toggleDrawer()}>
+          <SwipeableDrawer anchor='right' open={open} onClose={() => toggleDrawer(false)} onOpen={() => toggleDrawer()}>
             <List sx={{p: 1, width: 270}} onClick={() => toggleDrawer(false)} onKeyDown={() => toggleDrawer(false)}>
               <ListItemText
                 primary={

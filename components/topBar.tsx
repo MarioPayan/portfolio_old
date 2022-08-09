@@ -21,7 +21,7 @@ const TopBar: TopBarType = ({sections = [], lastSectionActive = ''}) => {
   return (
     <Context.Consumer>
       {({mode}) => (
-        <AppBar position='sticky'>
+        <AppBar>
           <Box display='flex' justifyContent='space-between'>
             <Box />
             <Collapse in={mode === 'business'}>

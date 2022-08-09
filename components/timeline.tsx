@@ -1,17 +1,7 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 import {Language, TimeLine as TimeLineType, TimeLineItem} from '../types/types'
-import {getKeyFromLabel} from '../utils/utils'
-import {
-  Timeline,
-  TimelineItem,
-  TimelineSeparator,
-  TimelineConnector,
-  TimelineContent,
-  TimelineDot,
-  TimelineOppositeContent
-} from '@mui/lab'
-import {List, ListItem, ListItemIcon, ListItemText, Typography} from '@mui/material'
+import {Grid, List, ListItem, ListItemIcon, ListItemText, Tab, Tabs, Typography} from '@mui/material'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow'
 import Context from './context'
 import {getLanguage} from '../utils/cookies'
@@ -43,50 +33,75 @@ const sortFrom = (a: TimeLineItem, b: TimeLineItem): number => {
 }
 
 const TimeLine: TimeLineType = ({typeItems}) => {
+  const [currentTab, setCurrentTab] = useState<number>(0)
+
+  const changeTab = (event: React.SyntheticEvent, tab: number) => {
+    event.preventDefault()
+    setCurrentTab(tab)
+  }
+
+  const TabPanel = (item: TimeLineItem, show: boolean, t: any, index: number) => {
+    if (!show) return undefined
+
+    return (
+      <Grid container item xs={12} key={index}>
+        <Grid item xs={12}>
+          <Typography variant='h2'>{item.position}</Typography>
+        </Grid>
+        <Grid item xs={12}>
+          <Typography variant='h5'>{item.where}</Typography>
+        </Grid>
+        <Grid container item xs={12} alignItems='center'>
+          <Grid item>
+            <Typography variant='subtitle1'>
+              {toDate(item.from, t)} - {toDate(item.to, t)}
+            </Typography>
+          </Grid>
+
+          <Grid item sx={{paddingLeft: 2}}>
+            <Typography variant='subtitle2'>{dateDiff(item.from, item.to, t)}</Typography>
+          </Grid>
+        </Grid>
+
+        <Grid item xs={12}>
+          <List>
+            {item.achievements.map((achievement, i) => (
+              <ListItem key={i} disablePadding>
+                <ListItemIcon>
+                  <PlayArrowIcon />
+                </ListItemIcon>
+                <ListItemText primary={achievement} />
+              </ListItem>
+            ))}
+          </List>
+        </Grid>
+      </Grid>
+    )
+  }
+
   return (
     <Context.Consumer>
       {({t}) => (
-        <Timeline>
-          {(t(typeItems, {returnObjects: true}) as unknown as TimeLineItem[]).sort(sortFrom).map(item => (
-            <TimelineItem key={getKeyFromLabel(`${item.from}-${item.to}`)}>
-              <TimelineOppositeContent color='text.secondary' sx={{mt: -0.5}}>
-                <Typography variant='h6' component='p'>
-                  {item.where}
-                </Typography>
-                <Typography variant='subtitle1' component='p'>
-                  {toDate(item.from, t)} - {toDate(item.to, t)}
-                </Typography>
-                <Typography variant='subtitle2' component='p'>
-                  {dateDiff(item.from, item.to, t)}
-                </Typography>
-              </TimelineOppositeContent>
-              <TimelineSeparator>
-                <TimelineDot />
-                <TimelineConnector />
-              </TimelineSeparator>
-              <TimelineContent sx={{mb: 2}}>
-                <Typography variant='h5' component='h5' sx={{mt: -0.5, pb: 1}}>
-                  {item.position}
-                </Typography>
-                <List>
-                  {item.achievements.map((achievement, i) => (
-                    <ListItem key={i} disablePadding>
-                      <ListItemIcon
-                        sx={{
-                          height: '24px',
-                          width: '24px',
-                          minWidth: '30px',
-                        }}>
-                        <PlayArrowIcon />
-                      </ListItemIcon>
-                      <ListItemText primary={achievement} />
-                    </ListItem>
-                  ))}
-                </List>
-              </TimelineContent>
-            </TimelineItem>
-          ))}
-        </Timeline>
+        <Grid container item md={8} xs={12} display='flex' justifyContent='center'>
+          <Grid item>
+            <Tabs
+              variant='scrollable'
+              onChange={changeTab}
+              textColor='secondary'
+              indicatorColor='secondary'
+              orientation='vertical'
+              value={currentTab}>
+              {(t(typeItems, {returnObjects: true}) as unknown as TimeLineItem[]).sort(sortFrom).map((item, i) => (
+                <Tab key={i} value={i} label={`${item.where} ${item.from.split('-')[0]}`} sx={{fontWeight: 'bold'}} />
+              ))}
+            </Tabs>
+          </Grid>
+          <Grid item xs={true} md={6} sx={{paddingLeft: 7}}>
+            {(t(typeItems, {returnObjects: true}) as unknown as TimeLineItem[])
+              .sort(sortFrom)
+              .map((item, i) => TabPanel(item, currentTab === i, t, i))}
+          </Grid>
+        </Grid>
       )}
     </Context.Consumer>
   )
