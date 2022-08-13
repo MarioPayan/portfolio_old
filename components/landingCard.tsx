@@ -40,24 +40,16 @@ const LandingCard: LandingCardType = () => {
               </Grid>
               <Grid container item xs={12} lg={8} spacing={2}>
                 <Grid item xs={12}>
-                  <Typography variant='h1' component='h1'>
-                    {t('personal.name')}
-                  </Typography>
+                  <Typography variant='h1'>{t('personal.name')}</Typography>
                 </Grid>
                 <Grid item xs={12}>
-                  <Typography variant='h3' component='h2'>
-                    {t(`personal.${mode}.title`)}
-                  </Typography>
+                  <Typography variant='h2'>{t(`personal.${mode}.title`)}</Typography>
                 </Grid>
                 <Grid item xs={12}>
-                  <Typography variant='h5' component='h5'>
-                    {t(`personal.${mode}.subtitle`)}
-                  </Typography>
+                  <Typography variant='h4'>{t(`personal.${mode}.subtitle`)}</Typography>
                 </Grid>
                 <Grid item xs={12}>
-                  <Typography variant='body1' component='p'>
-                    {t(`personal.${mode}.summary`)}
-                  </Typography>
+                  <Typography variant='h6'>{t(`personal.${mode}.summary`)}</Typography>
                 </Grid>
                 <Grid item xs={12}>
                   <Grid container display='flex' alignItems='center' justifyContent='center' spacing={1}>

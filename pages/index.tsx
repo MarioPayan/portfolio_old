@@ -80,7 +80,7 @@ const Home: NextPage = () => {
       padding={3}
       display='flex'
       alignItems='center'
-      sx={{paddingTop: 8}}
+      sx={{paddingTop: 12}}
       justifyContent='center'>
       {growComponent(LandingCard, {}, 'about', aboutRef)}
       {growComponent(SkillChips, {typeSkills: 'hardSkills'}, 'hardSkills', hardSkillsRef)}
@@ -98,7 +98,7 @@ const Home: NextPage = () => {
       padding={3}
       display='flex'
       alignItems='center'
-      sx={{paddingTop: 8}}
+      sx={{paddingTop: 12}}
       justifyContent='center'>
       {growComponent(LandingCard, {}, 'about', aboutRef)}
       {growComponent(Hobby, {section: 'music'}, 'music', null)}
@@ -126,7 +126,7 @@ const Home: NextPage = () => {
             lastSectionActive={activeSection}/>
           <LandingBackground />
           {{business: businessStack, fun: funStack}[mode as Mode]()}
-          <UnderConstruction></UnderConstruction>
+          <UnderConstruction />
         </>
       )}
     </Context.Consumer>

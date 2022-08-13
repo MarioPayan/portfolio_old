@@ -22,37 +22,37 @@ export const SocialMediaIcons = (
     <Stack direction='row' spacing={1} flexWrap='wrap' display='flex' justifyContent='right'>
       {show('linkedin') && (
         <IconButton aria-label='Linked In' sx={iconStyle(style)} onClick={() => openInNewTab(t(`${tKey}.linkedin`))}>
-          <LinkedIn />
+          <LinkedIn fontSize='large' />
         </IconButton>
       )}
       {show('whatsapp') && (
         <IconButton aria-label='WhatsApp' sx={iconStyle(style)} onClick={() => openInNewTab(t(`${tKey}.whatsapp`))}>
-          <WhatsApp />
+          <WhatsApp fontSize='large' />
         </IconButton>
       )}
       {show('github') && (
         <IconButton aria-label='Git Hub' sx={iconStyle(style)} onClick={() => openInNewTab(t(`${tKey}.github`))}>
-          <GitHub />
+          <GitHub fontSize='large' />
         </IconButton>
       )}
       {show('email') && (
         <IconButton aria-label='Email' sx={iconStyle(style)} onClick={() => openInNewTab(t(`${tKey}.email`))}>
-          <Email />
+          <Email fontSize='large' />
         </IconButton>
       )}
       {show('instagram') && (
         <IconButton aria-label='Instagram' sx={iconStyle(style)} onClick={() => openInNewTab(t(`${tKey}.instagram`))}>
-          <Instagram />
+          <Instagram fontSize='large' />
         </IconButton>
       )}
       {show('facebook') && (
         <IconButton aria-label='Facebook' sx={iconStyle(style)} onClick={() => openInNewTab(t(`${tKey}.facebook`))}>
-          <Facebook />
+          <Facebook fontSize='large' />
         </IconButton>
       )}
       {show('youtube') && (
         <IconButton aria-label='Youtube' sx={iconStyle(style)} onClick={() => openInNewTab(t(`${tKey}.youtube`))}>
-          <YouTube />
+          <YouTube fontSize='large' />
         </IconButton>
       )}
     </Stack>

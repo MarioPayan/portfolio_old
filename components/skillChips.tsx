@@ -88,7 +88,7 @@ const SkillChips: SkillChipsType = ({typeSkills}) => {
       </IconButton>
     )
     let className = ''
-    const notInDevIcons = ['spanish', 'english', 'español', 'inglés', 'appium', 'osx', 'flexbox']
+    const notInDevIcons = ['spanish', 'english', 'español', 'inglés', 'appium', 'osx', 'flexbox', 'puppeteer']
     const key = getKeyFromLabel(skill.label.split(' ')[0])
     if (!notInDevIcons.includes(key) && typeSkills === 'hardSkills') className = key
     return IconSubIcon(skill, className)
@@ -114,6 +114,8 @@ const SkillChips: SkillChipsType = ({typeSkills}) => {
                 <Tab
                   key={i !== 0 ? getKeyFromLabel(filter) : 'all'}
                   value={i !== 0 ? getKeyFromLabel(filter) : 'all'}
+                  icon={i !== 0 ? getIcon(filter) : undefined}
+                  iconPosition='end'
                   label={filter} // TODO: .replaceAll('_', ' ')
                   sx={{fontWeight: 'bold'}}/>
               ))}
