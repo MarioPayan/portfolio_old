@@ -84,7 +84,7 @@ const TimeLine: TimeLineType = ({typeItems}) => {
     <Context.Consumer>
       {({t}) => (
         <Grid container item xs={12} display='flex' justifyContent='center'>
-          <Grid item>
+          <Grid item display='flex' xs={!moreThanMd ? 12 : undefined} width={200}>
             <Tabs
               variant='scrollable'
               allowScrollButtonsMobile
